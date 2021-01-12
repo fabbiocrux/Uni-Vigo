@@ -224,7 +224,7 @@ Thus, it is likely that both modes coexist in this study, which may explain the 
 
 ```{r Fig.results, fig=" Screening Phase 1" , layout="l-page"}
 
-knitr::include_graphics("Phase.1.jpg") 
+knitr::include_graphics("Figures/Phase.1.jpg") 
 
 ```
 
