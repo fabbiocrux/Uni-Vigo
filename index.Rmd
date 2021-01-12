@@ -50,6 +50,11 @@ knitr::opts_chunk$set(echo = FALSE)
 require(tidyverse)
 require(kableExtra)
 
+#library(rticles)
+#render("index.Rmd", output_format = "word_document")
+#render("index.Rmd", output_format = "pdf_document")
+#render("index.Rmd", output_format = "elsevier_article")
+
 ```
 
 
