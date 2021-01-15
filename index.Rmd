@@ -91,39 +91,41 @@ The present study evaluates the mechanical properties of both conventional and r
 
 # Literature review
 
-One of the most common processes in 3D printing is the fused deposition modeling (FDM) process. The process is based on material extrusion, so the material is heated above the melting point of the material and then deposited onto a platform (Wolszczak et al., 2018). 
-In FDM, a variety of thermoplastic materials are commonly used, such as acrylonitrile butadiene styrene (ABS), polyvinylchloride (PVS), polycarbonate (PC), nylon, polifenilsulfona, high density polyethylene (HDPE), low density polyethylene (LDPE), polyethylene terephthalate (PET), high impact polystyrene (HIPS) and polylactic acid (PLA) (Chua et al., 2017) (Zhao et al., 2018b) (Kumar and Singh, 2018).
+One of the most common processes in 3D printing is the fused deposition modeling (FDM) process. The process is based on material extrusion, so the material is heated above the melting point of the material and then deposited onto a platform [@Wolszczak2018]. 
+In FDM, a variety of thermoplastic materials are commonly used, such as acrylonitrile butadiene styrene (ABS), polyvinylchloride (PVS), polycarbonate (PC), nylon, polifenilsulfona, high density polyethylene (HDPE), low density polyethylene (LDPE), polyethylene terephthalate (PET), high impact polystyrene (HIPS) and polylactic acid (PLA) [@Chua2017, @Zhao2018a, @Singh2018e ].
 
 
 
-The development of new materials such as polymers, elastomers and composites in engineering plays a fundamental role in the advance sustainable manufacturing (Ashby and Johnson 2010). 
+The development of new materials such as polymers, elastomers and composites in engineering plays a fundamental role in the advance sustainable manufacturing [@Ashby2013]. 
 The use of biopolymers of natural and renewable origin, replacing synthetic polymers, is the cellulose, hemicellulose, lignin, starch, alginate, chitosan and derivatives derived from them represent the most abundant bio-based and renewable raw materials for different 3D printing technologies. 
-In addition, these biopolymers of natural origin include lignocellulosic materials, seaweed materials and exoskeleton crustacean materials (Liu et al., 2018). 
-Liu et al. (2018) reviews a wide range of biobased printing materials with the adequate printing/solidification approach and printed structures and potential applications. 
+In addition, these biopolymers of natural origin include lignocellulosic materials, seaweed materials and exoskeleton crustacean materials [@Liu2019a]. 
+@Liu2019a reviews a wide range of biobased printing materials with the adequate printing/solidification approach and printed structures and potential applications. 
 Most of them find potential applications in biomedicine such as Cellulose nanofibers (CNF)/alginate and Methylcellulose alginate that have as potential applications cartilage tissue engineering and regenerative therapy, respectively. 
 To print biological matter, new 3D printing methods, such as cryolithography, are appearing. 
-These methods find applications in tissue engineering and food engineering (Zawada et al. (2018)).
+These methods find applications in tissue engineering and food engineering [@Zawada2018].
 
 
 Polylactic acid is a type of natural biopolymer obtained from crops such as starch or sugar cane. 
-It is a biodegradable biopolymer constituted of lactic acid molecules and it is one of the most used materials in 3D printing. In addition, PLA is a sustainable alternative that shows a range of crystallinity and mechanical properties between polystyrene and polyethylene terephthalate (Kumar et al., 2018) (Zhao et al., 2018b).
+It is a biodegradable biopolymer constituted of lactic acid molecules and it is one of the most used materials in 3D printing. 
+In addition, PLA is a sustainable alternative that shows a range of crystallinity and mechanical properties between polystyrene and polyethylene terephthalate [@Kumar2018b, @Zhao2018a].
 
-Recycling (mixing of virgin material with used material) of raw material is a method of special interest to contribute to manufacture in a sustainable way (Zhao et al., 2018a). 
+Recycling (mixing of virgin material with used material) of raw material is a method of special interest to contribute to manufacture in a sustainable way [@Zhao2018]. 
 However, it is important to evaluate the properties of the recycled materials before substituting virgin for recycled materials. 
 
-In this sense, Kumar et al. (2018) compared the elongation at break, load at break, flow index, Young's module and breaking stress of recycled ABS, high impact polystyrene (HIPS) and PLA. 
+In this sense, @Kumar2018b compared the elongation at break, load at break, flow index, Young's module and breaking stress of recycled ABS, high impact polystyrene (HIPS) and PLA. 
 The PLA showed the highest elongation at break along with the ABS. In addition, the PLA had a higher breaking load and breaking stress, although a smaller Young's modulus. 
-Other authors such as Gu et al. (2016) identified the suitability of using recycled polypropylene instead of virgin polypropylene based on mechanical properties. 
+Other authors such as @Gu2016 identified the suitability of using recycled polypropylene instead of virgin polypropylene based on mechanical properties. 
 Specifically, they found that the use of fillers (talc and glass fibre) improved the mechanical properties. 
-Babagowda et al. (2018) studied the influence of the percentage of recycled PLA used in the filament (i.e., 10 to 50 %) showing that the smaller the percentage the higher the ultimate tensile strength. 
-Pinho et al. (2020) obtained higher values of tensile stress for recycled PLA when comparing to the virgin one. Nur-A-Tomal et al. (2020) presented a paper to evaluate the reusing of waste children’s toys as raw material for 3D printing.
+@Babagowda2018 studied the influence of the percentage of recycled PLA used in the filament (i.e., 10 to 50 %) showing that the smaller the percentage the higher the ultimate tensile strength. 
+@Pinho2020 obtained higher values of tensile stress for recycled PLA when comparing to the virgin one. 
+@Nur-A-Tomal2020 presented a paper to evaluate the reusing of waste children’s toys as raw material for 3D printing.
 
-As Suárez and Domínguez (2020) pointed out, the use of recycled materials is still uncertain because the potential changes in the material properties then recycling. 
-Zhao et al. (2018a) studied the cycles of printing that is able to withstand the PLA until it loses much of its properties. 
+As @Suarez2020 pointed out, the use of recycled materials is still uncertain because the potential changes in the material properties then recycling. 
+@Zhao2018 studied the cycles of printing that is able to withstand the PLA until it loses much of its properties. 
 Thus, they showed that PLA withstands two printing cycles, since in a third cycle the mechanical properties and viscosity decreased considerably. 
 The increase in crystallinity and melting enthalpy and the decrease of cold crystallization enthalpy are attributed to the 3D printing process, not to the extrusion recycling process. 
 Table 1 shows the comparison of the properties between the virgin material and the same material subjected to another printing cycle, being possible to appreciate how properties such as the tensile strength and modulus are close for the two materials. 
-Similarly, other authors such as Lanzotti et al. (2019) have proved how recycling PLA provides comparable mechanical properties as the virgin material only after a second recycling process.
+Similarly, other authors such as @Lanzotti2019 have proved how recycling PLA provides comparable mechanical properties as the virgin material only after a second recycling process.
 
 
 ```{r Table_1}
@@ -133,19 +135,19 @@ Similarly, other authors such as Lanzotti et al. (2019) have proved how recyclin
 
 The recycling of PLA has certain limitations because of reducing molecular weight with its reuse, resulting in degradation and decrease of mechanical properties. 
 For instance, the addition of polidopamine (PDA) on the surface allows improving these properties. 
-Viscosity is also reduced with each printing cycle but, it could be corrected by adding virgin plastic (Zhao et al., 2018a) (Zhao et al., 2018b). 
-When recycling, there is a decrease in the properties of the material as a result of the presence of carbonyl groups and superficial pitting due to thermomechanical degradation during the process of new melting process occurring during 3D printing (Zhao et al., 2018a).
+Viscosity is also reduced with each printing cycle but, it could be corrected by adding virgin plastic [@Zhao2018, @Zhao2018a]. 
+When recycling, there is a decrease in the properties of the material as a result of the presence of carbonyl groups and superficial pitting due to thermomechanical degradation during the process of new melting process occurring during 3D printing [@Zhao2018].
 
 
-The mechanical properties of the parts are critical for engineering parts, particularly, for 3D printed parts. Several studies evaluated the mechanical properties of 3D printed parts for various materials; Popescu et al. (2018) reviewed some of them in their study. 
+The mechanical properties of the parts are critical for engineering parts, particularly, for 3D printed parts. Several studies evaluated the mechanical properties of 3D printed parts for various materials; @Popescu2018 reviewed some of them in their study. 
 The printing conditions used to manufacture the parts have an important role on the obtained results. 
-So, it is important to identify the most important parameters among all of the available to carry out the process that may affect the response variable and their expected influence based on the scientific literature (Sheoran and Kumar, 2020). 
-For instance, Popescu et al. (2018) determined that the key parameters that influence the mechanical properties in 3D printing are porosity, layer height, filling density, printing direction and part orientation. In addition, for low values of layer height, as well as the thickness of the deposited or printed filament, the tensile strength of the material is improved. In addition, by orienting the printing direction towards the direction in which the tensile load will be applied during tensile strength, the property can be also maximized. 
-The importance of the printing orientation was also identified by Yao et al. (2019). 
-According to Alafaghani and Qattawi (2018), a higher extrusion temperature and an optimized layer thickness, a triangular filling pattern and a higher filling level maximize the strength of the parts. 
+So, it is important to identify the most important parameters among all of the available to carry out the process that may affect the response variable and their expected influence based on the scientific literature [@JaisinghSheoran2019]. 
+For instance, @Popescu2018 determined that the key parameters that influence the mechanical properties in 3D printing are porosity, layer height, filling density, printing direction and part orientation. In addition, for low values of layer height, as well as the thickness of the deposited or printed filament, the tensile strength of the material is improved. In addition, by orienting the printing direction towards the direction in which the tensile load will be applied during tensile strength, the property can be also maximized. 
+The importance of the printing orientation was also identified by @Yao2019. 
+According to @Alafaghani2018, a higher extrusion temperature and an optimized layer thickness, a triangular filling pattern and a higher filling level maximize the strength of the parts. 
 Regarding the printing speed, it is identified that higher printing speed with higher layer thickness result in lower part strength. 
 
-Among others, Altan et al. (2018) also identified the influence of the layer height on the mechanical resistance.
+Among others, @Altan2018 also identified the influence of the layer height on the mechanical resistance.
 
 
 
@@ -161,7 +163,8 @@ Both materials were commercial ones, so the recycling was not done during the re
 
 
 The 3D printer used to manufacture the specimens was a BQ’s Witbox, shown in Fig1a. 
-The software used to generate the printing code was the Ultimaker Cura 3.2.1. To perform the destructive test, the machine used was the MTS Criterion 43 universal testing machine (MTS, 2020) (Fig 1b) with a maximum load of 50 kN, being the maximum load supported by the LPS 104 cell of 10 kN. 
+The software used to generate the printing code was the Ultimaker Cura 3.2.1. 
+To perform the destructive test, the machine used was the MTS Criterion 43 universal testing machine (MTS, 2020) (Fig 1b) with a maximum load of 50 kN, being the maximum load supported by the LPS 104 cell of 10 kN. 
 The clamping system was the Instron 2716-015 system with a maximum supported load of 30 kN. The selected strain rate was 0.5 mm/min.
 
 ```{r Fig_1}
@@ -170,7 +173,7 @@ The clamping system was the Instron 2716-015 system with a maximum supported loa
 
 
 In order to save material and time to carry out the experimental plan, the geometry of the specimen was reduced in size from the one recommended by the UNE 116005:2012 standard (UNE, 2012), which define the length of the specimen at no less than 120 and 150 mm depending on the orientation. 
-However, in this study the specimens are manufactured according to the dimensions proposed by Lin et al. (2018) in which the length of the specimen was 75 mm. The dimensions of the specimen are the ones depicted in Fig. 2.
+However, in this study the specimens are manufactured according to the dimensions proposed by @Lin2018 in which the length of the specimen was 75 mm. The dimensions of the specimen are the ones depicted in Fig. 2.
 
 
 ```{r Fig_2}
@@ -186,8 +189,8 @@ Thus, based on the results, it is expected to gain a better understanding on the
 In order to do that, an experimental plan comprising three phases will be developed. 
 
 Based on the literature research, the critical parameters for the study are the (1) layer height and (2) infill pattern. 
-In addition, taking into account the goal of sustainable manufacturing (i.e., trying to optimize the consumption of material), but also productivity (i.e., trying to minimize printing times), infill density and printing speed were considered (Singh et al., 2018; Tanveer et al., 2019). 
-The response variable chosen was the maximum load attained during the testing of the specimen ((Kumar et al., 2018), (Chacon et al., 2017); (Letcher et al., 2015)).
+In addition, taking into account the goal of sustainable manufacturing (i.e., trying to optimize the consumption of material), but also productivity (i.e., trying to minimize printing times), infill density and printing speed were considered [@Singh2019, @Tanveer2019]. 
+The response variable chosen was the maximum load attained during the testing of the specimen [@Kumar2018b, @Chacon2017, @Letcher2015].
 
 The experimental plan included three different phases (Figure 2) to carry out a comprehensive study with a limited number of tests not compromising the reliability of the results. 
 
@@ -211,7 +214,7 @@ Thus, the factors and their levels used were: layer height (0.15 and 0.3 mm), in
 The printing temperature chosen was 210 °C, which was the recommended one for these materials. 
 
 
-Fractional designs are useful for reducing the number of tests reducing time and money (Montgomery, 2001), being use as screening designs. So, in order to identify and discard factors depending on their influence with a limited number of tests, phase I recurred to fractional designs. The design included only specimen printed in the horizontal orientation for each of the combinations, not evaluating the influence of the orientation, in order to save time and material. The use of random order allowed guaranteeing that the hypothesis that the errors are independently distributed random variables was fulfilled (Montgomery, 2001).
+Fractional designs are useful for reducing the number of tests reducing time and money [@Montgomery2001], being use as screening designs. So, in order to identify and discard factors depending on their influence with a limited number of tests, phase I recurred to fractional designs. The design included only specimen printed in the horizontal orientation for each of the combinations, not evaluating the influence of the orientation, in order to save time and material. The use of random order allowed guaranteeing that the hypothesis that the errors are independently distributed random variables was fulfilled [@Montgomery2001].
 
 
 
@@ -238,7 +241,7 @@ Thus, in most cases, the specimens showed a fragile behavior and the fracture, e
 However, for the recycled material, the specimens showed a ductile behavior and, properly, the fracture did not occur after the maximum load was attained, canceling the tests minutes after the maximum load was attained. 
 The breakage in these cases occurred at a 45º angle and, in the cases of the RE-2 specimen, two parallel fracture lines can be clearly seen. 
 The printing conditions did not allow seen a clear relation to the fracture of the specimens. 
-This behavior may relate to that explained by Yao et al. (2020). 
+This behavior may relate to that explained by @Yao2019. 
 The authors identified two different types of fracture: in-layer and interlayer. 
 In general, the fracture occurs at the interface of two layers when printing in vertical position, even when varying the printing orientation up to 45º from the vertical position.
 In-layer fracture is more likely when the specimen is printed using an edgewise position (or, inclined up to 45º from that position). 
@@ -255,7 +258,7 @@ knitr::include_graphics("Figures/Phase.1.jpg")
 
 
 The analysis of variance (ANOVA) performed using R software allowed identifying the influential factors on the response variables. 
-As criterion, critical factors for the response variable were those with p-values lower than 0.05 (Pérez et al., 2018). 
+As criterion, critical factors for the response variable were those with p-values lower than 0.05 [@Perez2018]. 
 Shapiro-Wilk normality tests allowed verifying the normality of the residuals.
 Table 2 lists the results of the ANOVAs carried out for both virgin and recycled PLA.
 
@@ -264,7 +267,6 @@ Table 2 lists the results of the ANOVAs carried out for both virgin and recycled
 ```{r Table.Anova}
 
 ```
-
 
 
 
@@ -293,7 +295,7 @@ In B region, the slope of the curve grows largely.
 Thus, with a small increase of infill density, the maximum load notably grows. 
 Regarding the type of material, it is clear that virgin PLA outperforms recycled PLA, but a reduced difference between them. 
 However, the difference notably increased as the infill density approached 100 %. 
-The obtained results agree well with those presented by Wang et al. (2020). 
+The obtained results agree well with those presented by @Wang2020h. 
 In their study, the authors studied infill density of 20, 40, 60, 80 and 100% and the evolution of the tensile strength is similar to the one shown in Figure 6. 
 
 
@@ -315,7 +317,7 @@ Thus, in Table S5, the mean values for the five specimens at each orientation ar
 
 it is clear that the horizontal orientation is the one that provided the higher mechanical resistance, followed by the edgewise orientation. 
 The vertical orientation provided the worse results due to the deposition of the layers was perpendicular to the tensile direction. 
-These results are in good agreement with those by Corapi et al. (2019) and Wang et al. (2020).
+These results are in good agreement with those by @Corapi2019 and @Wang2020h.
 For the recycled material, there is a slight decrease in the maximum load attained from 3 to 13 % depending on the orientation. 
 Particularly, the biggest reduction of the load happens in the vertical orientation with a 12.97 %. 
 However, the other two orientations are more adequate for substituting the virgin material for the recycled material with a limited reduction in mechanical resistance (3 to 8 %).
@@ -325,9 +327,10 @@ However, the other two orientations are more adequate for substituting the virgi
 # CONCLUSIONS
 
 The present study includes a comprehensive experimental program to analyze the FDM process, based on mechanical resistance, by using virgin PLA and recycled PLA. The paper aims at improving the sustainability of 3D printing process, assessing the technical feasibility of the substitution. The main conclusions of the study are the following:
-The printing conditions determined in a great manner the mechanical resistance of the specimens. Specifically, the most influential factor on the maximum load for both virgin and recycled PLA was the infill density. In addition, non-statistically significant factors were the layer height, infill pattern and printing speed.
-The fracture for the virgin material corresponded to that of a fragile material, while the fracture of the recycled material showed a more ductile behavior.
 
+The printing conditions determined in a great manner the mechanical resistance of the specimens. Specifically, the most influential factor on the maximum load for both virgin and recycled PLA was the infill density. 
+In addition, non-statistically significant factors were the layer height, infill pattern and printing speed.
+The fracture for the virgin material corresponded to that of a fragile material, while the fracture of the recycled material showed a more ductile behavior.
 
 The influence of the infill density on the maximum load allowed identifying two different regions: A, from 40 to 85 %, linear behavior with a slight slope and, B, from 85 to 100 %, the maximum load increases notably with a much higher slope.
 
