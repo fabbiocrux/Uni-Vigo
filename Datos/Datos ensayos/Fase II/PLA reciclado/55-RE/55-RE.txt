@@ -1,0 +1,9 @@
+FILE NOT FOUND IN THE ORIGINAL DATA   
+Test: 
+Test 
+Date: 
+
+
+Crosshead 	Load 	Time 
+mm	kN	sec
+1,93	1,93	1,93

@@ -1,0 +1,11 @@
+File Path: D:\Ensayos Víctor\Test Run 7 28-03-2019 12 56 23\DAQ- Crosshead; … - (Timed).txt   
+Test: ENSAYOS TRACCION PLA 1
+Test Run: Test Run 7
+Date: 28/03/2019 12:50:05
+
+
+Crosshead 	Load 	Time 
+mm	kN	sec
+2,1600	2,1600	2,1600
+2,1600	2,1600	2,1600
+2,1601	2,1601	2,1601

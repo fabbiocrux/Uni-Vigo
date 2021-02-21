@@ -1,9 +1,9 @@
-"File Path: D:\Ensayos Víctor\Test Run 8 28-03-2019 13 07 07\DAQ- Crosshead; … - (Timed).txt   "					
-Test: ENSAYOS TRACCION PLA 1					
-Test Run: Test Run 8					
-Date: 28/03/2019 12:58:13					
-					
-					
+D:\Ensayos V?ctor\Test Run 8 28-03-2019 13 07 07\DAQ- Crosshead; ? - (Timed).txt
+Test: ENSAYOS TRACCION PLA 1
+Test Run: Test Run 8
+Date: 28/03/2019 12:58:13
+
+
 Crosshead 	Load 	Time 		Carga Maxima	
 mm	kN	sec		2,163396729	
 0,000203451	0,004483418	0,111000001			
