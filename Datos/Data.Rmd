@@ -19,38 +19,24 @@ library(tidyverse)
 library(here)
 ## Ggplot Theme setting
 theme_set(theme_bw(base_size = 15, base_family = "Palatino")) 
-# Defining the global theme
-#theme_minimal
-
 ```
 
-```{r Load.data}
+```{r Fase.I}
 # Reading data ----
-## Loading the data from Excel
-
-#camino <- paste0 (getwd(),"/Datos/Datos ensayos")  
-#files <- list.files(path = camino, recursive=TRUE, full.names=TRUE, pattern="\\.txt$")
-
+## Loading the paths
 files <-
   here("Datos ensayos") %>% 
   dir( recursive=TRUE, full.names=TRUE, pattern="\\.txt$")
-
 # Selecting the Phase I
 Fase.1 <- files[1:16]
 
-Fase.3 <- files[28:57]
-
-
 # Reading the Data Fase I ----
-## Identifying Endommage files
+## Identifying Endommage files----
   # File "PLA virgen/VE-8/VE-8.txt"
 
+# Creating the Nested dataframe ----
 Fase.I <- Fase.1 %>%  map( ~ read.delim2(.,  skip=7))
 Fase.I <- Fase.I %>%   set_names(Fase.1) %>%   enframe("Type", "Data")
-
-
-# Reading the Data Fase I ----
-## Creating the columns for the global data
 
 Fase.I <- 
   Fase.I %>%  
@@ -60,10 +46,7 @@ Fase.I <-
   ) %>% 
   select(-A, -B, -C, -D, -E, -F, -G, -H, -I)
 
-
-
-
-# Arranging factors
+# Arranging factors ----
 Fase.I$Material <- 
   factor(Fase.I$Material,
          levels = c("PLA virgen", "PLA reciclado"),
@@ -97,18 +80,13 @@ Fase.I <-
          #Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
          )
 
-
-
-
-## Adding the other factors ----
+## Creating the experimental dataframe with the other factors ----
 ### Layer height 
 Fase.I$LH <- c(0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.3, 0.15, 0.15, 0.3) 
 Fase.I$LH <- as.factor(Fase.I$LH)
 
-
-
 ### Infill Pattern 
-Fase.I$IP <- c("Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "grid", "Tri-hex", "Tri-hex", "grid", "grid", "grid") 
+Fase.I$IP <- c("Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "Grid", "Tri-hex", "Tri-hex", "Grid", "Grid", "Grid") 
 Fase.I$IP <- as.factor(Fase.I$IP)
 
 
@@ -122,9 +100,8 @@ Fase.I$PS <- c(40, 80, 80, 80, 40, 80, 40, 40, 40, 80, 40, 80, 40, 80, 40, 80 )
 Fase.I$PS <- as.factor(Fase.I$PS)
 
 
-
-Fase.I <- Fase.I %>% select(Phase, `Type material`, Load.max, LH, IP, ID, PS, Sample, `Sample name`, Data )
-
+Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max) #, Sample, `Sample name`, Data )
+str(Fase.I)
 #write_csv2(Fase.I %>% select(Phase:PS, Sample: Tensile.max ), file = "Phase.I.csv")
 ```
 
@@ -188,21 +165,113 @@ ggplot(Fase.II, aes(x=ID, y=Load.max, col=Material)) +
   #geom_smooth(data=subset(Fase.II, ID < 90), method = "lm", formula = y ~ poly(x, 2),se=F) +
   #geom_smooth(data=subset(Fase.II, ID > 60), method = "lm", formula = y ~ poly(x, 2),se=F) +
   stat_smooth(method = "lm", formula = y ~ poly(x, 2), se=FALSE) +
- stat_regline_equation(label.y = c(4,3.5), label.x = c(30,30) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.., ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 2), inherit.aes = TRUE ) +
+ stat_regline_equation(label.y = c(3.9,3.5), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.., ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 2), inherit.aes = TRUE ) +
   #geom_vline(xintercept=80) +
   annotate("segment", x = 80, xend = 80, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
-  coord_cartesian(xlim=c(30, 120), ylim=c(1, 4)) + 
-  annotate("text", x = c(50, 100), y = 1.4, label = c("Region A", "Region B"))+
+  coord_cartesian(xlim=c(40, 100), ylim=c(1, 4)) + 
+  scale_x_continuous(breaks = c(40, 55, 70, 85, 100)) +
+  annotate("text", x = c(50, 90), y = 1.4, label = c("Region A", "Region B"))+
   labs(title="", 
        subtitle="", 
        caption="",
        y="Maximum Load (kN)",
-       x="Infill density (%)" )
-#ggsave("../Figures/Phase-2.jpg", width=7, height=5)
+       x="Infill density (%)" ) +
+theme(legend.position="top")
+ggsave("../Figures/Phase-2.jpg", width=5, height=5, dpi = "print")
+
+
+# Calculating the reductions
+#Fase.II %>% group_by(ID) %>% summarise(media = mean(Load.max),                                      sde = sd(Load.max))
+#100- (1.84 * 100)/3.16
+
 
 
 ```
 
+
+
+```{r Fase.III}
+# Selecting the Phase III----
+Fase.3 <- files[28:57]
+
+# Deleting test repetido Recycled 70-RE
+Fase.3 <- Fase.3[1:30]
+
+# Files missing:
+#
+
+# Reading the Data Fase II ----
+## Identifying missing data
+Fase.III <- Fase.3 %>%  map( ~ read.delim2(.,  skip=7))
+Fase.III <- Fase.III  %>%   set_names(Fase.3) %>%   enframe("Type", "Data")
+#Fase.III
+
+# Organising dataframE ----
+Fase.III <- 
+  Fase.III %>%  
+  separate(Type, 
+           sep = "/",
+           into = c(c(LETTERS[1:10]), c("Material", "Orientation", "Sample", "Sample name"))
+  ) %>% 
+  select(-A, -B, -C, -D, -E, -F, -G, -H, -I,-J)
+
+# Arranging factors ----
+Fase.III$Material <- 
+  factor(Fase.III$Material,
+         levels = c( "Virgen", "Reciclado"),
+         labels = c( "Virgin", "Recycled" ))
+
+Fase.III$Orientation <- tolower(Fase.III$Orientation)
+Fase.III$Orientation <- 
+  factor(Fase.III$Orientation,
+         levels = c("horizontal", "vertical", "canto"),
+         labels = c("Horizontal" , "Vertical", "Edgewise"))
+
+
+Fase.III <- Fase.III %>% arrange(Material)
+
+# Calculating max Values ----
+Fase.III <- 
+  Fase.III %>% 
+  mutate(Load.max = map_dbl(Data,  function(df) max(df$kN)),
+         )
+
+# Creating final dataframe of Phase II
+Fase.III <- 
+  Fase.III %>% 
+  select(Material, Orientation, Load.max)
+
+# Grafica -----
+
+#Fase.III <- 
+Fase.III %>% 
+  ggplot(aes(x=Orientation, y=Load.max, colour = Material, group=Material)) + 
+  geom_point(size=3) +
+  #aes(colour = Material) +
+  stat_summary(fun = mean, geom="line") +
+  stat_summary(fun = mean, geom="crossbar", width=0.5) +
+  labs(title="", 
+       subtitle="", 
+       caption="",
+       y="Maximum Load (kN)",
+       x="Build orientation of the printed sample" ) +
+  theme(legend.position="top") +
+  coord_cartesian(ylim=c(1, 2.25)) +
+  scale_y_continuous(limits = c(1, 2.25), breaks = c(1, 1.25, 1.5, 1.75, 2, 2.25))
+#ggsave("../Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
+
+## Calculating the reduction
+Reduction <- 
+  Fase.III %>% 
+  group_by(Material,Orientation) %>% 
+  summarise(media = mean(Load.max)) %>% ungroup() %>% 
+
+Reduction <- Reduction %>% pivot_wider(names_from = Material, values_from = media)
+
+Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ) )
+
+
+```
 
 ## Data
 
@@ -214,6 +283,18 @@ Fase.I %>% select(Phase:PS, Sample: Tensile.max ) %>%
 
 ```
 
+
+## Data tables
+
+```{r}
+## Write
+write_csv2(Fase.I, "Phase-1.csv")
+write_csv2(Fase.II, "Phase-2.csv")
+write_csv2(Fase.III, "Phase-3.csv")
+```
+
+
+
 ## Phase: 1
 ### Influence of the parameters
 
@@ -222,55 +303,60 @@ Fase.I %>% select(Phase:PS, Sample: Tensile.max ) %>%
 ## Comparing the Virgin et Recycling
 MT <- 
   Fase.I %>% 
-  ggplot(aes(x=`Type material`, y = Load.max )) +
-  geom_boxplot(aes(fill=`Type material`)) +
+  ggplot(aes(x=Material, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Max Load [kN]", x="Material type") +
-  coord_cartesian(ylim = c(0, 5))
+  coord_cartesian(ylim = c(1, 4))
 
 ## Comparing the Virgin et Recycling
 LH <- 
   Fase.I %>% 
   ggplot(aes(x = LH, y = Load.max )) +
-  geom_boxplot(aes(fill=`Type material`)) +
+  geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Max Load [kN]", x="Layer heigth [mm]") +
-  coord_cartesian(ylim = c(0, 5))
+  coord_cartesian(ylim = c(1, 4))
 
 ## Infill pattern
 IP <- 
   Fase.I %>% 
   ggplot(aes(x = IP, y = Load.max )) +
-  geom_boxplot(aes(fill=`Type material`)) +
+  geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Max Load [kN]", x="Infill pattern") +
-  coord_cartesian(ylim = c(0, 5))
+  coord_cartesian(ylim = c(1, 4))
 
 ## Infill density
 ID <- 
   Fase.I %>% 
   ggplot(aes(x = ID, y = Load.max )) +
-  geom_boxplot(aes(fill=`Type material`)) +
+  geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
-  labs(y="Max Load [kN]", x="Infill pattern") +
-  coord_cartesian(ylim = c(0, 5))
+  labs(y="Max Load [kN]", x="Infill density") +
+  coord_cartesian(ylim = c(1, 4))
 
 ## Infill density
 PS <- 
   Fase.I %>% 
   ggplot(aes(x = PS, y = Load.max )) +
-  geom_boxplot(aes(fill=`Type material`)) +
+  geom_boxplot(aes(fill=Material)) +
   #facet_grid( Load.max  ~ LH + IP ) +
   labs(y="Max Load [kN]", x="Printing speed [mm/s]") +
-  coord_cartesian(ylim = c(0, 5))
+  coord_cartesian(ylim = c(1, 4))
 
 ```
 
 
 ```{r, include=TRUE, layout="l-body-outset", fig.width=10, fig.height=5}
 library(ggpubr)
-Phase.1 <- ggarrange(MT, LH, IP, ID , PS,  nrow = 1 ,common.legend = TRUE)
-ggsave("Phase.1.jpg",width = 40, height = 10, units = "cm", dpi = 100)
+library(png)
+
+Probetas <- readPNG("../Figures/Probetas-Fase-1.png")
+ggarrange(LH, IP, ID , PS,  ncol = 2, nrow = 2 ,common.legend = TRUE)
+ggsave("../Figures/Phase-1-2.jpg", width=6, height=6, dpi = "print")
+
+
 
 ```
 
@@ -278,20 +364,17 @@ ggsave("Phase.1.jpg",width = 40, height = 10, units = "cm", dpi = 100)
 ```{r}
 
 ## Total
-Fase.I_anova <- Fase.I %>% select(`Type material`, LH:PS, Load.max)
-
-## Write
-#write_csv2(Fase.I_anova, "Phase-1.csv")
+Fase.I_anova <- Fase.I %>% select(Material, LH:PS, Load.max)
 
 
-Total_model <- lm(Load.max ~ LH+IP+ID+PS+`Type material` , data = Fase.I_anova)
+Total_model <- lm(Load.max ~ LH+IP+ID+PS+Material , data = Fase.I_anova)
 summary(Total_model)
 anova(Total_model)
 
 # Grafique de moyens------
 ## Looking for means
 Fase.I_anova %>% 
-  group_by(`Type material`, key) %>%
+  group_by(Material, key) %>%
   summarise(
     count = n(),
     mean = mean(value, na.rm = TRUE),
@@ -310,14 +393,14 @@ Fase.I_anova %>%
 
 ```{r}
 ## Virgin
-Virgen <- Fase.I %>% filter(`Type material` == "Virgin") %>% select(LH:PS, Load.max)
+Virgen <- Fase.I %>% filter(Material == "Virgin") %>% select(LH:PS, Load.max)
 
 Virgin_model <- lm(Load.max ~ . , data =Virgen )
 summary(Virgin_model)
 anova(Virgin_model) 
 
 ## Recycled
-Recycled <- Fase.I %>% filter(`Type material` == "Recycled") %>% select(LH:PS, Load.max)
+Recycled <- Fase.I %>% filter(Material == "Recycled") %>% select(LH:PS, Load.max)
 
 Recycled_model <- lm(Load.max ~ . , data =Recycled)
 summary(Recycled_model)
