@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  21 MAR 2021 07:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  21 MAR 2021 08:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,50 +613,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <Figures/Machine-probeta.jpg, id=278, 1372.12625pt x 686.565pt>
 File: Figures/Machine-probeta.jpg Graphic file (type jpg)
 <use Figures/Machine-probeta.jpg>
-Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 395.
+Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 401.
 (pdftex.def)             Requested size: 367.19751pt x 183.73027pt.
 [6 <./Figures/Machine-probeta.jpg>]
-<Figures/Methodology.pdf, id=309, 313.17pt x 284.02109pt>
+<Figures/Methodology.pdf, id=311, 313.17pt x 284.02109pt>
 File: Figures/Methodology.pdf Graphic file (type pdf)
 <use Figures/Methodology.pdf>
-Package pdftex.def Info: Figures/Methodology.pdf  used on input line 456.
+Package pdftex.def Info: Figures/Methodology.pdf  used on input line 462.
 (pdftex.def)             Requested size: 285.59875pt x 259.02298pt.
 [7 <./Figures/Methodology.pdf>]
-<Figures/Probetas-Fase-1.jpg, id=337, 803.0pt x 740.7675pt>
+<Figures/Probetas-Fase-1.jpg, id=339, 803.0pt x 740.7675pt>
 File: Figures/Probetas-Fase-1.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-1.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-1.jpg  used on input line 540.
+Package pdftex.def Info: Figures/Probetas-Fase-1.jpg  used on input line 546.
 (pdftex.def)             Requested size: 199.92224pt x 184.42279pt.
-<Figures/Phase-1-2.jpg, id=338, 1806.75pt x 1806.75pt>
+<Figures/Phase-1-2.jpg, id=340, 1806.75pt x 1806.75pt>
 File: Figures/Phase-1-2.jpg Graphic file (type jpg)
 <use Figures/Phase-1-2.jpg>
-Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 543.
+Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 549.
 (pdftex.def)             Requested size: 199.92224pt x 199.901pt.
 [8]
-<Figures/Probetas-Fase-2.jpg, id=355, 883.3pt x 915.42pt>
+<Figures/Probetas-Fase-2.jpg, id=357, 883.3pt x 915.42pt>
 File: Figures/Probetas-Fase-2.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-2.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 608.
+Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 614.
 (pdftex.def)             Requested size: 199.92224pt x 207.1898pt.
-<Figures/Phase-2.jpg, id=356, 1505.625pt x 1505.625pt>
+<Figures/Phase-2.jpg, id=358, 1505.625pt x 1505.625pt>
 File: Figures/Phase-2.jpg Graphic file (type jpg)
 <use Figures/Phase-2.jpg>
-Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 611.
+Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 617.
 (pdftex.def)             Requested size: 199.92224pt x 199.91937pt.
 [9 <./Figures/Probetas-Fase-1.jpg> <./Figures/Phase-1-2.jpg>] [10 <./Figures/Pr
 obetas-Fase-2.jpg> <./Figures/Phase-2.jpg>]
-<Figures/Probetas-Fase-3.jpg, id=380, 485.84874pt x 318.83824pt>
+<Figures/Probetas-Fase-3.jpg, id=383, 485.84874pt x 318.83824pt>
 File: Figures/Probetas-Fase-3.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-3.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 677.
+Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 683.
 (pdftex.def)             Requested size: 326.40125pt x 214.19945pt.
-<Figures/Phase-3.jpg, id=381, 1505.625pt x 1505.625pt>
+<Figures/Phase-3.jpg, id=384, 1505.625pt x 1505.625pt>
 File: Figures/Phase-3.jpg Graphic file (type jpg)
 <use Figures/Phase-3.jpg>
-Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 680.
+Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 686.
 (pdftex.def)             Requested size: 244.80249pt x 244.78752pt.
-[11] [12 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] (./Taylor-tem
-plate.bbl [13]
+[11] [12 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [13] (./Taylo
+r-template.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 21--25
 \OT1/cmtt/m/n/10 fr / books ? hl = en{&}lr = {&}id = lyDEACMTtUEC{&}oi = fnd{&}
 pg = PP2{&}dq = Materials +
@@ -668,7 +668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--25
 XAEpdhj6QVjJzBY{#}v =
  []
 
-
+[14]
 Underfull \hbox (badness 2205) in paragraph at lines 33--39
 []\OT1/cmr/m/n/10 Babagowda, R.S. Kadade-vara Math, R. Goutham, and K.R Srini-v
 as Prasad. 2018.
@@ -741,7 +741,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--85
 evier . com / retrieve /
  []
 
-[14]
+
 Underfull \hbox (badness 3428) in paragraph at lines 93--98
 []\OT1/cmr/m/n/10 Despeisse, M., M. Baumers, P. Brown, F. Charn-ley, S.J. Ford,
  A. Gar-mulewicz,
@@ -765,7 +765,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--98
 1https : / / linkinghub . elsevier .
  []
 
-
+[15]
 Underfull \hbox (badness 1975) in paragraph at lines 118--124
 []\OT1/cmr/m/n/10 Gonz^^Salez-Henr^^S^^Pquez, Car-men M., Mauri-cio A. Sarabia-
 Vallejos, and Juan Rodriguez-
@@ -855,7 +855,7 @@ Underfull \hbox (badness 2005) in paragraph at lines 159--165
 . 1016 / j . procir . 2019 . 02 . 030https : / / linkinghub .
  []
 
-[15]
+
 Underfull \hbox (badness 3769) in paragraph at lines 179--185
 []\OT1/cmr/m/n/10 Lin, Weiyi, Hongyao Shen, Guan-hua Xu, Linchu Zhang, Jianzhon
 g Fu, and Xi-
@@ -879,7 +879,7 @@ Underfull \hbox (badness 1072) in paragraph at lines 179--185
 s : / / doi . org / 10 . 1016 / j . compositesa . 2018 . 09 . 008https : / /
  []
 
-
+[16]
 Underfull \hbox (badness 6842) in paragraph at lines 201--204
 []\OT1/cmr/m/n/10 McCue, TJ. 2019. ``Sig-nif-i-cant 3D Print-ing Fore-cast Surg
 es To \TS1/cmr/m/n/10 $\OT1/cmr/m/n/10 35.6 Bil-lion.''
@@ -909,55 +909,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--214
 sis + of + experiments .
  []
 
-[16] [17]
-Underfull \hbox (badness 4819) in paragraph at lines 380--387
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 356--359
+\OT1/cmr/m/n/10 2021-03-10. [][]$\OT1/cmtt/m/n/10 https : / / www . une . org /
+ encuentra-[]tu-[]norma / busca-[]tu-[]norma / norma ? c =
+ []
+
+
+Underfull \hbox (badness 4819) in paragraph at lines 385--392
 []\OT1/cmr/m/n/10 Wittbrodt, B.T., A.G. Glover, J Lau-reto, G.C. An-za-lone, D 
 Oppliger, J.L. Ir-
  []
 
 
-Underfull \hbox (badness 2884) in paragraph at lines 380--387
+Underfull \hbox (badness 2884) in paragraph at lines 385--392
 \OT1/cmr/m/n/10 win, and J.M. Pearce. 2013. ``Life-cycle eco-nomic anal-y-sis o
 f dis-tributed man-u-
  []
 
 
-Underfull \hbox (badness 4072) in paragraph at lines 380--387
+Underfull \hbox (badness 4072) in paragraph at lines 385--392
 \OT1/cmr/m/n/10 fac-tur-ing with open-source 3-D print-ers.'' \OT1/cmr/m/it/10 
 Mecha-tron-ics \OT1/cmr/m/n/10 23 (6): 713--726. [][]$\OT1/cmtt/m/n/10 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--387
+Underfull \hbox (badness 10000) in paragraph at lines 385--392
 \OT1/cmtt/m/n/10 / / dx . doi . org / 10 . 1016 / j . mechatronics . 2013 . 06 
 . 002http : / / linkinghub . elsevier .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--387
+Underfull \hbox (badness 10000) in paragraph at lines 385--392
 \OT1/cmtt/m/n/10 com / retrieve / pii / S0957415813001153https : / / linkinghub
  . elsevier . com / retrieve /
  []
 
-
-Underfull \hbox (badness 2486) in paragraph at lines 389--393
+[18]
+Underfull \hbox (badness 2486) in paragraph at lines 394--398
 []\OT1/cmr/m/n/10 Wolszczak, Pi-otr, Krys-tian Ly-gas, Ma-teusz Paszko, and Ra-
 doslaw A. Wach. 2018.
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 389--393
+Underfull \hbox (badness 3058) in paragraph at lines 394--398
 \OT1/cmr/m/n/10 ``Heat dis-tri-bu-tion in ma-te-rial dur-ing fused de-po-si-tio
 n mod-elling.'' \OT1/cmr/m/it/10 Rapid Pro-to-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 389--393
+Underfull \hbox (badness 1264) in paragraph at lines 394--398
 \OT1/cmr/m/it/10 typ. J. \OT1/cmr/m/n/10 24 (3): 615--622. [][]$\OT1/cmtt/m/n/1
 0 https : / / www . emerald . com / insight / content / doi / 10 . 1108 /
  []
 
-) [18] (./Taylor-template.aux)
+) [19] (./Taylor-template.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -969,13 +975,13 @@ Package rerunfilecheck Info: File `Taylor-template.out' has not changed.
 (rerunfilecheck)             Checksum: 187E3653EC21C8E7861C1CB7A4E702C4;2476.
  ) 
 Here is how much of TeX's memory you used:
- 12778 strings out of 479023
- 183158 string characters out of 5859412
- 530065 words of memory out of 5000000
- 29877 multiletter control sequences out of 15000+600000
- 415411 words of font info for 74 fonts, out of 8000000 for 9000
+ 12788 strings out of 479023
+ 183274 string characters out of 5859412
+ 530088 words of memory out of 5000000
+ 29884 multiletter control sequences out of 15000+600000
+ 415748 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,13n,102p,372b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,13n,102p,372b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -994,12 +1000,13 @@ ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
 0/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Taylor-template.pdf (18 pages, 1554444 bytes).
+mf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Taylor-template.pdf (19 pages, 1703073 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 605 compressed objects within 7 object streams
- 126 named destinations out of 1000 (max. 500000)
+ 679 PDF objects out of 1000 (max. 8388607)
+ 619 compressed objects within 7 object streams
+ 128 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

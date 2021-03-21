@@ -331,7 +331,8 @@ theme(legend.position="top")
 #ggsave("../Figures/Phase-2.jpg", width=5, height=5, dpi = "print")
 
 # Calculating the reductions
-#Fase.II %>% group_by(ID) %>% summarise(media = mean(Load.max),                                      sde = sd(Load.max))
+Fase.II %>% group_by(ID) %>% summarise(media = mean(Load.max),                                      sde = sd(Load.max)) %>% 
+  mutate(percentage = (media/3.16)*100)
 #100- (1.84 * 100)/3.16
 ```
 
