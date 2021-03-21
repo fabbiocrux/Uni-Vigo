@@ -1,36 +1,49 @@
 ---
-title: "Data Analysis of the Mechanical data"
+title: "Feasibility study on the use of recycling materials for prototyping purposes: a comparative study based on the mechanical resistance"
 description: |
-  A new article created using the Distill format.
+  Data Analysis of the Mechanical data
 author:
   - name: Fabio Cruz
-    url: https://example.com/norajones
-    affiliation: Spacely Sprockets
+    url: https://example.com/
+    affiliation: UL
     affiliation_url: https://example.com/spacelysprokets
 date: "`r Sys.Date()`"
-output: distill::distill_article
+output: pdf_document
+#output: distill::distill_article
 editor_options: 
   chunk_output_type: console
 ---
 
-```{r setup.data, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```{r setup, include= TRUE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE, include = TRUE)
 library(tidyverse)
 library(here)
+library(kableExtra)
+library(ggpubr)
 ## Ggplot Theme setting
 theme_set(theme_bw(base_size = 15, base_family = "Palatino")) 
 ```
 
-```{r Fase.I}
+
+First, I look for the paths of all mechanical tests
+
+```{r Path}
 # Reading data ----
 ## Loading the paths
 files <-
   here("Datos ensayos") %>% 
   dir( recursive=TRUE, full.names=TRUE, pattern="\\.txt$")
+```
+
+## Phase I
+
+Then, I read the `Phase I` tests
+
+```{r Data.Fase.I}
+# Reading the Data Fase I ----
 # Selecting the Phase I
 Fase.1 <- files[1:16]
 
-# Reading the Data Fase I ----
 ## Identifying Endommage files----
   # File "PLA virgen/VE-8/VE-8.txt"
 
@@ -38,6 +51,7 @@ Fase.1 <- files[1:16]
 Fase.I <- Fase.1 %>%  map( ~ read.delim2(.,  skip=7))
 Fase.I <- Fase.I %>%   set_names(Fase.1) %>%   enframe("Type", "Data")
 
+# Organising the dataframe
 Fase.I <- 
   Fase.I %>%  
   separate(Type, 
@@ -53,6 +67,43 @@ Fase.I$Material <-
          labels = c("Virgin" , "Recycled"))
 Fase.I <- Fase.I %>% arrange(Material)
 
+
+# Identifying max Tensile ----
+Fase.I <- 
+  Fase.I %>% 
+  mutate(#Young = map_dbl(Data,  Young ),
+         Load.max = map_dbl(Data,  function(df) max(df$kN)),
+         #Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
+         )
+
+## Creating the experimental dataframe with the other factors ----
+### Layer height 
+Fase.I$LH <- c(0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.3, 0.15, 0.15, 0.3) 
+Fase.I$LH <- as.factor(Fase.I$LH)
+
+### Infill Pattern 
+Fase.I$IP <- c("Tri-hex", "Tri-hex", "Grid", "Grid", 
+               "Tri-hex", "Tri-hex", "Grid", "Grid", 
+               "Tri-hex", "Tri-hex", "Grid", "Tri-hex", 
+               "Tri-hex", "Grid", "Grid", "Grid") 
+Fase.I$IP <- as.factor(Fase.I$IP)
+
+
+### Infill density 
+Fase.I$ID <- c(60, 60, 60, 100, 100, 100, 100, 60, 60, 60, 60, 100, 100, 60, 100, 100) 
+Fase.I$ID <- as.factor(Fase.I$ID)
+
+
+### Printing speed 
+Fase.I$PS <- c(40, 80, 80, 80, 40, 80, 40, 40, 40, 80, 40, 80, 40, 80, 40, 80 )
+Fase.I$PS <- as.factor(Fase.I$PS)
+
+# Final Dataframe
+Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max , Sample, `Sample name`, Data )
+```
+
+
+```{r, include=FALSE}
 ## Adding variables to the Original data
 #Fase.I <- 
 #  Fase.I %>% 
@@ -71,42 +122,134 @@ Fase.I <- Fase.I %>% arrange(Material)
 #    E= coefficients(model)[[2]]
 #   return(E)
 # }
+```
 
-# Identifying max Tensile ----
-Fase.I <- 
+The database of `Phase I`
+
+```{r Table.PhaseIII, }
+Fase.I %>% select(Material:Load.max, Sample) %>% 
+  kbl(booktabs = T, 
+      caption = "Dataframe Phase I") %>%
+  kable_styling(latex_options = "hold_position")
+```
+
+
+### Graphic of the influence of the parameters
+
+I create each boxplot
+
+```{r}
+## Comparing the Virgin et Recycling
+MT <- 
   Fase.I %>% 
-  mutate(#Young = map_dbl(Data,  Young ),
-         Load.max = map_dbl(Data,  function(df) max(df$kN)),
-         #Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
-         )
+  ggplot(aes(x=Material, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Max Load (kN)", x="Material type") +
+  coord_cartesian(ylim = c(1, 4))
 
-## Creating the experimental dataframe with the other factors ----
-### Layer height 
-Fase.I$LH <- c(0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.15, 0.3, 0.15, 0.3, 0.3, 0.15, 0.3, 0.15, 0.15, 0.3) 
-Fase.I$LH <- as.factor(Fase.I$LH)
+## Comparing the Virgin et Recycling
+LH <- 
+  Fase.I %>% 
+  ggplot(aes(x = LH, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Max Load (kN)", x="Layer heigth (mm)") +
+  coord_cartesian(ylim = c(1, 4))
 
-### Infill Pattern 
-Fase.I$IP <- c("Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "Grid", "Grid", "Tri-hex", "Tri-hex", "Grid", "Tri-hex", "Tri-hex", "Grid", "Grid", "Grid") 
-Fase.I$IP <- as.factor(Fase.I$IP)
+## Infill pattern
+IP <- 
+  Fase.I %>% 
+  ggplot(aes(x = IP, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Max Load (kN)", x="Infill pattern") +
+  coord_cartesian(ylim = c(1, 4))
+
+## Infill density
+ID <- 
+  Fase.I %>% 
+  ggplot(aes(x = ID, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Max Load (kN)", x="Infill density (%)") +
+  coord_cartesian(ylim = c(1, 4))
+
+## Infill density
+PS <- 
+  Fase.I %>% 
+  ggplot(aes(x = PS, y = Load.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( Load.max  ~ LH + IP ) +
+  labs(y="Max Load (kN)", x="Printing speed (mm/s)") +
+  coord_cartesian(ylim = c(1, 4))
+
+```
 
 
-### Infill density 
-Fase.I$ID <- c(60, 60, 60, 100, 100, 100, 100, 60, 60, 60, 60, 100, 100, 60, 100, 100) 
-Fase.I$ID <- as.factor(Fase.I$ID)
+Plotting the Boxplots
 
-
-### Printing speed 
-Fase.I$PS <- c(40, 80, 80, 80, 40, 80, 40, 40, 40, 80, 40, 80, 40, 80, 40, 80 )
-Fase.I$PS <- as.factor(Fase.I$PS)
-
-
-Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max) #, Sample, `Sample name`, Data )
-str(Fase.I)
-#write_csv2(Fase.I %>% select(Phase:PS, Sample: Tensile.max ), file = "Phase.I.csv")
+```{r, fig.width=7, fig.height=7}
+ggarrange(LH, IP, ID , PS,  ncol = 2, nrow = 2 ,common.legend = TRUE)
+#ggsave("../Figures/Phase-1-2.jpg", width=6, height=6, dpi = "print")
 ```
 
 
 
+### Anova Phase I
+```{r Anova}
+## Creating the Linear Model without interactions
+Fase.I_anova <- Fase.I %>% select(Material:PS, Load.max)
+Total_model <- lm(Load.max ~ LH+IP+ID+PS+Material , data = Fase.I_anova)
+#summary(Total_model)
+anv.fase.1 <- anova(Total_model)
+```
+
+
+```{r }
+# Plotting Anovoa table
+anv.fase.1 %>%  set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
+  kbl(booktabs = T, digits = c(0, 1, 3, 3, 3, 5),
+      caption = "ANOVA results at 95\\% significance level",  
+      linesep = "")  %>%
+  kable_styling(latex_options = c("striped"))
+```
+
+### Anova Phase I - Virgin and Recycled
+```{r}
+## Virgin
+Virgen <- Fase.I %>% filter(Material == "Virgin") %>% select(LH:PS, Load.max)
+Virgin_model <- lm(Load.max ~ . , data =Virgen )
+Virgin_anova <- anova(Virgin_model) 
+
+## Recycled
+Recycled <- Fase.I %>% filter(Material == "Recycled") %>% select(LH:PS, Load.max)
+Recycled_model <- lm(Load.max ~ . , data =Recycled)
+Recycled_anova <- anova(Recycled_model) 
+
+```
+
+Anova for Virgin material
+```{r}
+Virgin_anova %>%  set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
+  kbl(booktabs = T, digits = c(0, 1, 3, 3, 3, 5),
+      caption = "ANOVA Virgin",  
+      linesep = "")  %>%
+  kable_styling(latex_options = c("striped"))
+```
+
+Anova for Recycled material
+```{r}
+Recycled_anova %>% set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
+  kbl(booktabs = T, digits = c(0, 1, 3, 3, 3, 5),
+      caption = "ANOVA Recycled",  
+      linesep = "")  %>%
+  kable_styling(latex_options = c("striped"))
+```
+
+
+## Phase II
+Identifying the Paths
 ```{r Fase.II}
 # Selecting the Phase II----
 Fase.2 <- files[17:27]
@@ -153,20 +296,28 @@ Fase.II <-
            into = c("ID", "Material2")) %>% 
   select(Material, ID, Load.max)
 
+# As factor the the variables ID
 Fase.II$ID <- as.numeric(Fase.II$ID)
+```
 
 
-library(ggpubr)
+The database of `Phase II`
+```{r Table.PhaseI, include=TRUE, layout="l-body-outset"}
+Fase.II %>%
+  kbl(booktabs = T,
+      caption = "Dataframe Phase II",  
+      linesep = "")  %>%
+  kable_styling()
+```
 
+
+## Ploting the Graph comparative
+
+```{r Fig.Fase.II}
 ggplot(Fase.II, aes(x=ID, y=Load.max, col=Material)) + 
-  geom_point(aes(col=Material) ,size=3) +   # Set color to vary based on state categories.
- # geom_smooth(data=subset(Fase.II, ID < 90), method='lm',formula=y~x,se=F) +
-#  geom_smooth(data=subset(Fase.II, ID > 70), method='lm',formula=y~x,se=F)
-  #geom_smooth(data=subset(Fase.II, ID < 90), method = "lm", formula = y ~ poly(x, 2),se=F) +
-  #geom_smooth(data=subset(Fase.II, ID > 60), method = "lm", formula = y ~ poly(x, 2),se=F) +
+  geom_point(aes(col=Material) ,size=3) + 
   stat_smooth(method = "lm", formula = y ~ poly(x, 2), se=FALSE) +
  stat_regline_equation(label.y = c(3.9,3.5), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.., ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 2), inherit.aes = TRUE ) +
-  #geom_vline(xintercept=80) +
   annotate("segment", x = 80, xend = 80, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
   coord_cartesian(xlim=c(40, 100), ylim=c(1, 4)) + 
   scale_x_continuous(breaks = c(40, 55, 70, 85, 100)) +
@@ -177,19 +328,17 @@ ggplot(Fase.II, aes(x=ID, y=Load.max, col=Material)) +
        y="Maximum Load (kN)",
        x="Infill density (%)" ) +
 theme(legend.position="top")
-ggsave("../Figures/Phase-2.jpg", width=5, height=5, dpi = "print")
-
+#ggsave("../Figures/Phase-2.jpg", width=5, height=5, dpi = "print")
 
 # Calculating the reductions
 #Fase.II %>% group_by(ID) %>% summarise(media = mean(Load.max),                                      sde = sd(Load.max))
 #100- (1.84 * 100)/3.16
-
-
-
 ```
 
 
+## Phase III
 
+Identifying the paths
 ```{r Fase.III}
 # Selecting the Phase III----
 Fase.3 <- files[28:57]
@@ -240,7 +389,19 @@ Fase.III <-
 Fase.III <- 
   Fase.III %>% 
   select(Material, Orientation, Load.max)
+```
 
+The database of `Phase III`
+```{r Table.PhaseII, include=TRUE, layout="l-body-outset"}
+Fase.III %>%
+  kbl(booktabs = T,
+      caption = "Dataframe Phase III",  
+      linesep = "")  %>%
+  kable_styling()
+```
+
+
+```{r Graph.Fase.III}
 # Grafica -----
 
 #Fase.III <- 
@@ -259,272 +420,38 @@ Fase.III %>%
   coord_cartesian(ylim=c(1, 2.25)) +
   scale_y_continuous(limits = c(1, 2.25), breaks = c(1, 1.25, 1.5, 1.75, 2, 2.25))
 #ggsave("../Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
+```
 
+
+
+
+Reduction of the load values
+```{r }
 ## Calculating the reduction
 Reduction <- 
   Fase.III %>% 
   group_by(Material,Orientation) %>% 
-  summarise(media = mean(Load.max)) %>% ungroup() %>% 
+  summarise(media = mean(Load.max)) 
 
 Reduction <- Reduction %>% pivot_wider(names_from = Material, values_from = media)
+Reduction <- Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ) )
 
-Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ) )
-
-
-```
-
-## Data
-
-```{r Table.Data, include=TRUE, layout="l-body-outset"}
-
-Fase.I %>% select(Phase:PS, Sample: Tensile.max ) %>% 
-  kbl() %>%
+Reduction %>% 
+  kbl(booktabs = T,
+      caption = "Reduction of properties according to orientation",  
+      linesep = "")  %>%
   kable_styling()
-
 ```
 
 
-## Data tables
+
+## Exporting Tables
 
 ```{r}
 ## Write
-write_csv2(Fase.I, "Phase-1.csv")
-write_csv2(Fase.II, "Phase-2.csv")
-write_csv2(Fase.III, "Phase-3.csv")
-```
-
-
-
-## Phase: 1
-### Influence of the parameters
-
-```{r}
-
-## Comparing the Virgin et Recycling
-MT <- 
-  Fase.I %>% 
-  ggplot(aes(x=Material, y = Load.max )) +
-  geom_boxplot(aes(fill=Material)) +
-  #facet_grid( .  ~  ) +
-  labs(y="Max Load [kN]", x="Material type") +
-  coord_cartesian(ylim = c(1, 4))
-
-## Comparing the Virgin et Recycling
-LH <- 
-  Fase.I %>% 
-  ggplot(aes(x = LH, y = Load.max )) +
-  geom_boxplot(aes(fill=Material)) +
-  #facet_grid( .  ~  ) +
-  labs(y="Max Load [kN]", x="Layer heigth [mm]") +
-  coord_cartesian(ylim = c(1, 4))
-
-## Infill pattern
-IP <- 
-  Fase.I %>% 
-  ggplot(aes(x = IP, y = Load.max )) +
-  geom_boxplot(aes(fill=Material)) +
-  #facet_grid( .  ~  ) +
-  labs(y="Max Load [kN]", x="Infill pattern") +
-  coord_cartesian(ylim = c(1, 4))
-
-## Infill density
-ID <- 
-  Fase.I %>% 
-  ggplot(aes(x = ID, y = Load.max )) +
-  geom_boxplot(aes(fill=Material)) +
-  #facet_grid( .  ~  ) +
-  labs(y="Max Load [kN]", x="Infill density") +
-  coord_cartesian(ylim = c(1, 4))
-
-## Infill density
-PS <- 
-  Fase.I %>% 
-  ggplot(aes(x = PS, y = Load.max )) +
-  geom_boxplot(aes(fill=Material)) +
-  #facet_grid( Load.max  ~ LH + IP ) +
-  labs(y="Max Load [kN]", x="Printing speed [mm/s]") +
-  coord_cartesian(ylim = c(1, 4))
-
-```
-
-
-```{r, include=TRUE, layout="l-body-outset", fig.width=10, fig.height=5}
-library(ggpubr)
-library(png)
-
-Probetas <- readPNG("../Figures/Probetas-Fase-1.png")
-ggarrange(LH, IP, ID , PS,  ncol = 2, nrow = 2 ,common.legend = TRUE)
-ggsave("../Figures/Phase-1-2.jpg", width=6, height=6, dpi = "print")
-
-
-
-```
-
-### Anova
-```{r}
-
-## Total
-Fase.I_anova <- Fase.I %>% select(Material, LH:PS, Load.max)
-
-
-Total_model <- lm(Load.max ~ LH+IP+ID+PS+Material , data = Fase.I_anova)
-summary(Total_model)
-anova(Total_model)
-
-# Grafique de moyens------
-## Looking for means
-Fase.I_anova %>% 
-  group_by(Material, key) %>%
-  summarise(
-    count = n(),
-    mean = mean(value, na.rm = TRUE),
-    sd = sd(value, na.rm = TRUE)
-  )
-
-Fase.I_anova %>% 
-  group_by(LH, IP, ID, PS) %>%
-  get_summary_stats(Load.max, type = "mean_sd")
-
-
-
-
-```
-
-
-```{r}
-## Virgin
-Virgen <- Fase.I %>% filter(Material == "Virgin") %>% select(LH:PS, Load.max)
-
-Virgin_model <- lm(Load.max ~ . , data =Virgen )
-summary(Virgin_model)
-anova(Virgin_model) 
-
-## Recycled
-Recycled <- Fase.I %>% filter(Material == "Recycled") %>% select(LH:PS, Load.max)
-
-Recycled_model <- lm(Load.max ~ . , data =Recycled)
-summary(Recycled_model)
-anova(Recycled_model) 
-
-
-library(kableExtra)
-kable(anova(Total_model), digits = 3)
-
-
-ggqqplot(Fase.I_anova, "Load.max" , ggtheme = theme_bw()) +
-  facet_grid(LH + IP ~ ID , labeller = "label_both")
-
-
-```
-
-
-```{r}
-library(FrF2)
-
-dsg <- FrF2(nfactors = 5,  nruns = 16)
-```
-
-
-```{r}
-library(tidyverse)
-library(ggpubr)
-library(rstatix)
-
-# Wide format
-set.seed(123)
-data("weightloss", package = "datarium")
-weightloss %>% sample_n_by(diet, exercises, size = 1)
-
-
-# Gather the columns t1, t2 and t3 into long format.
-# Convert id and time into factor variables
-weightloss <- weightloss %>%
-  gather(key = "time", value = "score", t1, t2, t3) %>%
-  convert_as_factor(id, time)
-# Inspect some random rows of the data by groups
-set.seed(123)
-weightloss %>% sample_n_by(diet, exercises, time, size = 1)
-
-
-weightloss %>%
-  group_by(diet, exercises, time) %>%
-  get_summary_stats(score, type = "mean_sd")
-
-```
-
-
-
-```{r}
-Test <- Fase.I  %>% select( -Data, -`Sample name`, -Young, -Load.max)  
-Test %>% pivot_longer(!Phase, names_to = "key", values_to = "value")
-
-Fase.I %>% 
-  ggplot(aes(x = IP , y = Tensile.max)) +
-    geom_boxplot() +
-  coord_cartesian(ylim = c(0, 5))
-
-
-
-Fase.I %>% 
-  ggplot(aes(x = LH , y = Tensile.max)) +
-    geom_boxplot() +
-```
-
-
-```{r PhaseII}
-
-
-## Phase II ----
-  
-Fase.II <- files[1:8] %>% 
-  map(~read.delim2( . , skip=7)) %>%  
-  set_names(files[1:8]) %>%   enframe("Type", "Data")
-
-```
-
-
-```{r}
-red.cell.folate <- ISwR::red.cell.folate
-ggplot(red.cell.folate, aes(x = ventilation, y = folate)) + 
-  geom_boxplot()
-
-# Linear model
-rcf.mod <- lm(folate~ventilation, data = red.cell.folate)
-anova(rcf.mod)
-
-
-plot(rcf.mod)
-
-
-```
-
-
-
-```{r}
-
-data <- 
-tibble(
-Shoppers = c("S1", "S2","S3","S4","S5", "S6"),
-Sidney = c(75, 70, 50, 65, 80, 65),
-Bisbane = c(75,70,55,60,65,65),
-Melbourne = c(90,70,75,85,80,65)
-)  
-
-str(data)
-data$Shoppers <- as.factor(data$Shoppers)
-
-data <- data %>% pivot_longer(!Shoppers, names_to = "Cities")
-
-data$Cities <- as.factor(data$Cities)
-
-library(ggpubr)
-
-data %>% ggline( x="Shoppers", y="value",  color = "Cities", add = c("mean_se", "dotplot"))
-
-model <- lm(value ~ Cities + Shoppers, data = data)
-summary(model)
-anova(model)
-
+#write_csv2(Fase.I, "Phase-1.csv")
+#write_csv2(Fase.II, "Phase-2.csv")
+#write_csv2(Fase.III, "Phase-3.csv")
 ```
 
 
@@ -533,88 +460,16 @@ anova(model)
 
 
 
-# Two way ANOVA
-```{r}
-
-# Store the data in the variable my_data
-my_data <- ToothGrowth
-
-# Show a random sample
-set.seed(1234)
-dplyr::sample_n(my_data, 10)
-
-str(my_data)
-
-# Convert dose as a factor and recode the levels
-# as "D0.5", "D1", "D2"
-my_data <- tibble(my_data)
-my_data$dose <- factor(my_data$dose, 
-                  levels = c(0.5, 1, 2),
-                  labels = c("D0.5", "D1", "D2"))
-
-?table(my_data$supp, my_data$dose)
-
-my_data %>% 
-  ggline(x="dose", y="len", color="supp",
-            add = c("mean_se", "dotplot"),
-            palette = c("#00AFBB", "#E7B800")) 
-
-
-
-# ANOVA
-res.aov2 <- aov(len ~ supp + dose, data = my_data)
-summary(res.aov2)
-
-my_data %>% 
-  group_by(supp, dose) %>%
-  summarise(
-    count = n(),
-    mean = mean(len, na.rm = TRUE),
-    sd = sd(len, na.rm = TRUE)
-  )
-
-```
 
 
 
 
-## EJemplo 2
-```{r}
-
-data <- 
-tibble(
-  Feeding = c(rep("Once", 8), rep("Twice", 8)),
-  AA= c(65,70,60,60,60,55,60,50,
-        50,55,80,65,70,75,75,65),
-  BB =c(70,65,60,70,65,60,60,50,
-        45,60,85,65,70,70,80,60),
-  CC =c(55,65,70,55,55,60,50,50,
-        35,40,35,55,35,40,45,40)
-)
-
-data <- data %>% pivot_longer(!Feeding, names_to = "key", values_to = "value")
-data$Feeding = as.factor(data$Feeding)
-data$key= as.factor(data$key)
-
-# Looking for means
-data %>% 
-  group_by(Feeding, key) %>%
-  summarise(
-    count = n(),
-    mean = mean(value, na.rm = TRUE),
-    sd = sd(value, na.rm = TRUE)
-  )
 
 
-# Anova
-model <- lm(value ~ Feeding*key, data = data)
-summary(model)
-anova(model)
 
-res.aov2 <- anova(value ~ Feeding*key, data = data)
-res.aov2
 
-```
+
+
 
 
 

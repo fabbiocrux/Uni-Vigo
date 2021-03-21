@@ -2,10 +2,10 @@
 title: "Feasibility study on the use of recycling materials for prototyping purposes: a comparative study based on the mechanical resistance"
 affiliation:
   ## use one only of the following
+  ## Authors cited in institution field are ignored when author field exists
   # author-columnar: true         ## one column per author
   institution-columnar: true  ## one column per institution (multiple autors eventually)
   # wide: true                  ## one column wide author/affiliation fields
-  ## Authors cited in institution field are ignored when author field exists
   #author:   ## A custom author ordering field that breaks institution grouping.
   #  - name: Eldon Tyrell
   #    mark: 4
@@ -43,9 +43,9 @@ affiliation:
       location: Ourense, Spain
       mark: 2
       author:
+          
         - name: Diego Carou
           email: diecapor@uvigo.es
-          
     - name: Université de Lorraine
       department: ERPI, F-54000
       location: Nancy, France
@@ -80,9 +80,11 @@ header-includes:
  - \usepackage{textcomp}
  - \usepackage{subcaption}
  - \usepackage{graphicx}
-
 always_allow_html: true 
 ---
+```{r}
+
+```
 
 
 ```{r setup, include=FALSE}
@@ -338,6 +340,10 @@ round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
 
 ```{r Table.Anova.fase1 }
 #names(anv.fase.1)
+
+anv.fase.1$`Pr(>F)`[3]<- paste0(anv.fase.1$`Pr(>F)`[3],
+footnote_marker_symbol(1, "latex"))
+
 anv.fase.1 %>%  set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
   kbl(booktabs = T, digits = c(0, 1, 3, 3, 3, 3),
       caption = "ANOVA results at 95\\% significance level",  
