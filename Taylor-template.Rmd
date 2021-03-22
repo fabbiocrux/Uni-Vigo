@@ -1,6 +1,10 @@
 ---
 title: "Feasibility study on the use of recycling materials for prototyping purposes: a comparative study based on the mechanical resistance"
-#type: Original 
+type: Original article 
+# author: 
+#   - name: 
+# affiliation:
+#   - num: 
 author:
   - name: Victor M. López
     affil: a
@@ -14,28 +18,19 @@ author:
 affiliation:
   - num: a
     address: |
-      Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain
+      University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain
   - num: b
     address: |
-      University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain
+     Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain 
   - num: c
     address: |
       Université de Lorraine - ERPI -  F-54000, Nancy, France
 #appendix: appendix.tex
 abstract: |
-  The development of 3D printing is seen as a disruptive technology and continues to expand the boundaries of design space for manufacturing prototypes and final products. 
-  However, nowadays the sustainability is one of the major objectives for manufacturing and the use of recycled materials becomes a suitable strategy when economic, environmental and technical feasibility are verified. 
-  3D printing is still a novel manufacturing process and the research on the topic is still limited, particularly when referring to improve resource efficiency issues. 
-  This paper attempts to evaluate the suitability of the substitution of virgin polylactic acid (PLA) by recycled PLA. 
-  To do that, it includes an experimental plan divided into three phases to evaluate the mechanical resistance. 
-  The results showed that recycled PLA may be used due to the, though slightly lower, similar mechanical resistance than that of the virgin material. 
-  This reduction is limited to 13 % in the worst configuration (vertical). 
-  Besides, it was identified how the infill density and the orientation used for printing played a major role on the mechanical resistance, when others such as the infill pattern, printing speed and layer height had non-significant influence.
-  It was found that there is a retention of the 58.1% of the mechanical resistance using an infill density of 40%.
-  This is a relevant insight for prescriptions of the 3D printing parameters guaranteeing minimal quality conditions in the prototyping phases.
+  3D printing is seen as a disruptive technology and continues to expand the design space boundaries for prototypes and final products.  However, sustainability is one of the major objectives for manufacturing and the use of recycled materials becomes a relevant strategy, particularly for improving material resource efficiency. This paper attempts to evaluate the suitability of the substitution of virgin polylactic acid (PLA) by recycled PLA. An experimental plan divided into three phases to evaluate the mechanical resistance was described.  The results showed that recycled PLA may be used thanks to the similar resistance, though slightly lower than the virgin material. Besides, the infill density and the orientation parameters played a major role. A retention of the 58.1% of the resistance using an infill density of 40% was evidenced. This is a relevant insight for prescriptions of the 3D printing parameters guaranteeing  minimal quality conditions in the prototyping phases.
     
 keywords: |
-  Prototyping;
+  Prototyping; Distributed recycling; Mechanical strength; PLA
 header-includes: |
   \usepackage{float}
   \usepackage[utf8]{inputenc}
@@ -504,4 +499,6 @@ The authors would like to thank the "Mechanical and Energy Engineering" TEP 250 
 This research has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 869952. 
 
 
+# Declaration of interest statement
 
+The authors report no declarations of interest.

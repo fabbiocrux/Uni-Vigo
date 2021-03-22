@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  21 MAR 2021 08:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  21 MAR 2021 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,360 +610,179 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 [4] [5]
-<Figures/Machine-probeta.jpg, id=278, 1372.12625pt x 686.565pt>
+<Figures/Machine-probeta.jpg, id=283, 1372.12625pt x 686.565pt>
 File: Figures/Machine-probeta.jpg Graphic file (type jpg)
 <use Figures/Machine-probeta.jpg>
-Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 401.
+Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 394.
 (pdftex.def)             Requested size: 367.19751pt x 183.73027pt.
 [6 <./Figures/Machine-probeta.jpg>]
-<Figures/Methodology.pdf, id=311, 313.17pt x 284.02109pt>
+<Figures/Methodology.pdf, id=316, 313.17pt x 284.02109pt>
 File: Figures/Methodology.pdf Graphic file (type pdf)
 <use Figures/Methodology.pdf>
-Package pdftex.def Info: Figures/Methodology.pdf  used on input line 462.
+Package pdftex.def Info: Figures/Methodology.pdf  used on input line 455.
 (pdftex.def)             Requested size: 285.59875pt x 259.02298pt.
 [7 <./Figures/Methodology.pdf>]
-<Figures/Probetas-Fase-1.jpg, id=339, 803.0pt x 740.7675pt>
+<Figures/Probetas-Fase-1.jpg, id=345, 803.0pt x 740.7675pt>
 File: Figures/Probetas-Fase-1.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-1.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-1.jpg  used on input line 546.
+Package pdftex.def Info: Figures/Probetas-Fase-1.jpg  used on input line 539.
 (pdftex.def)             Requested size: 199.92224pt x 184.42279pt.
-<Figures/Phase-1-2.jpg, id=340, 1806.75pt x 1806.75pt>
+<Figures/Phase-1-2.jpg, id=346, 1806.75pt x 1806.75pt>
 File: Figures/Phase-1-2.jpg Graphic file (type jpg)
 <use Figures/Phase-1-2.jpg>
-Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 549.
+Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 542.
 (pdftex.def)             Requested size: 199.92224pt x 199.901pt.
 [8]
-<Figures/Probetas-Fase-2.jpg, id=357, 883.3pt x 915.42pt>
+<Figures/Probetas-Fase-2.jpg, id=363, 883.3pt x 915.42pt>
 File: Figures/Probetas-Fase-2.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-2.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 614.
+Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 607.
 (pdftex.def)             Requested size: 199.92224pt x 207.1898pt.
-<Figures/Phase-2.jpg, id=358, 1505.625pt x 1505.625pt>
+<Figures/Phase-2.jpg, id=364, 1505.625pt x 1505.625pt>
 File: Figures/Phase-2.jpg Graphic file (type jpg)
 <use Figures/Phase-2.jpg>
-Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 617.
+Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 610.
 (pdftex.def)             Requested size: 199.92224pt x 199.91937pt.
 [9 <./Figures/Probetas-Fase-1.jpg> <./Figures/Phase-1-2.jpg>] [10 <./Figures/Pr
 obetas-Fase-2.jpg> <./Figures/Phase-2.jpg>]
-<Figures/Probetas-Fase-3.jpg, id=383, 485.84874pt x 318.83824pt>
+<Figures/Probetas-Fase-3.jpg, id=388, 485.84874pt x 318.83824pt>
 File: Figures/Probetas-Fase-3.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-3.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 683.
+Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 676.
 (pdftex.def)             Requested size: 326.40125pt x 214.19945pt.
-<Figures/Phase-3.jpg, id=384, 1505.625pt x 1505.625pt>
+<Figures/Phase-3.jpg, id=389, 1505.625pt x 1505.625pt>
 File: Figures/Phase-3.jpg Graphic file (type jpg)
 <use Figures/Phase-3.jpg>
-Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 686.
+Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 679.
 (pdftex.def)             Requested size: 244.80249pt x 244.78752pt.
 [11] [12 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [13] (./Taylo
-r-template.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 21--25
-\OT1/cmtt/m/n/10 fr / books ? hl = en{&}lr = {&}id = lyDEACMTtUEC{&}oi = fnd{&}
-pg = PP2{&}dq = Materials +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--25
-\OT1/cmtt/m/n/10 and + design + ashby{&}ots = MTr{_}5drMZq{&}sig = 3yd73MnNlP2J
-XAEpdhj6QVjJzBY{#}v =
- []
-
-[14]
-Underfull \hbox (badness 2205) in paragraph at lines 33--39
-[]\OT1/cmr/m/n/10 Babagowda, R.S. Kadade-vara Math, R. Goutham, and K.R Srini-v
-as Prasad. 2018.
- []
-
-
-Underfull \hbox (badness 2573) in paragraph at lines 33--39
-\OT1/cmr/m/n/10 ``Study of Ef-fects on Me-chan-i-cal Prop-er-ties of PLA Fil-a-
-ment which is blended
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--39
-[][]$\OT1/cmtt/m/n/10 https : / / iopscience . iop . org / article / 10 . 1088 
-/ 1757-[]899X / 310 / 1 / 012103https :
- []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 61--65
-[]\OT1/cmr/m/n/10 Chua, Chee Kai, Chee How Wong, and Wai Yee Yeong. 2017. ``Sta
-n-dards, qual-
- []
-
-
-Underfull \hbox (badness 2875) in paragraph at lines 61--65
-\OT1/cmr/m/n/10 ity con-trol, and mea-sure-ment sci-ences in 3D print-ing and a
-d-di-tive man-u-fac-tur-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
-\OT1/cmr/m/n/10 ing.'' [][]$\OT1/cmtt/m/n/10 https : / / books . google . fr / 
-books ? hl = en{&}lr = {&}id = PfTtDQAAQBAJ{&}oi =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
-\OT1/cmtt/m/n/10 fnd{&}pg = PP1{&}dq = Standards ,[] +Quality + Control ,[] +an
-d + Measurement + Sciences + in +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--65
-\OT1/cmtt/m/n/10 3D + Printing + and + 3D + printing . +Chapter + One-[]Introdu
-ction + to + 3D + Printing + or + 3D +
- []
-
-
-Underfull \hbox (badness 1048) in paragraph at lines 80--85
-[]\OT1/cmr/m/n/10 Cruz Sanchez, Fabio A., Hakim Boudaoud, San-drine Hoppe, and 
-Mauri-cio Ca-margo.
- []
-
-
-Underfull \hbox (badness 2460) in paragraph at lines 80--85
-\OT1/cmr/m/n/10 2017. ``Poly-mer re-cy-cling in an open-source ad-di-tive man-u
--fac-tur-ing con-text: Me-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
-\OT1/cmr/m/n/10 chan-i-cal is-sues.'' \OT1/cmr/m/it/10 Ad-dit. Manuf. \OT1/cmr/
-m/n/10 17: 87--105. [][]$\OT1/cmtt/m/n/10 http : / / linkinghub . elsevier . co
-m /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--85
-\OT1/cmtt/m/n/10 retrieve / pii / S2214860416301695https : / / linkinghub . els
-evier . com / retrieve /
- []
-
-
-Underfull \hbox (badness 3428) in paragraph at lines 93--98
+r-template.bbl [14]
+Underfull \hbox (badness 3428) in paragraph at lines 88--93
 []\OT1/cmr/m/n/10 Despeisse, M., M. Baumers, P. Brown, F. Charn-ley, S.J. Ford,
  A. Gar-mulewicz,
  []
 
 
-Underfull \hbox (badness 2932) in paragraph at lines 93--98
+Underfull \hbox (badness 2932) in paragraph at lines 88--93
 \OT1/cmr/m/n/10 S. Knowles, et al. 2017. ``Un-lock-ing value for a cir-cu-lar e
 con-omy through 3D
  []
 
 
-Underfull \hbox (badness 2359) in paragraph at lines 93--98
+Underfull \hbox (badness 2359) in paragraph at lines 88--93
 \OT1/cmr/m/n/10 print-ing: A re-search agenda.'' \OT1/cmr/m/it/10 Tech-nol. For
 e-cast. Soc. Change \OT1/cmr/m/n/10 115: 75--84. [][]$\OT1/cmtt/m/n/10 http :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--98
+Underfull \hbox (badness 10000) in paragraph at lines 88--93
 \OT1/cmtt/m/n/10 / / dx . doi . org / 10 . 1016 / j . techfore . 2016 . 09 . 02
 1https : / / linkinghub . elsevier .
  []
 
-[15]
-Underfull \hbox (badness 1975) in paragraph at lines 118--124
+
+Underfull \hbox (badness 1975) in paragraph at lines 113--119
 []\OT1/cmr/m/n/10 Gonz^^Salez-Henr^^S^^Pquez, Car-men M., Mauri-cio A. Sarabia-
 Vallejos, and Juan Rodriguez-
  []
 
 
-Underfull \hbox (badness 2837) in paragraph at lines 118--124
+Underfull \hbox (badness 2837) in paragraph at lines 113--119
 \OT1/cmr/m/n/10 Hernandez. 2019. ``Poly-mers for ad-di-tive man-u-fac-tur-ing a
 nd 4D-printing: Ma-te-ri-
  []
 
 
-Underfull \hbox (badness 3713) in paragraph at lines 118--124
+Underfull \hbox (badness 3713) in paragraph at lines 113--119
 \OT1/cmr/m/n/10 als, method-olo-gies, and biomed-i-cal ap-pli-ca-tions.'' \OT1/
 cmr/m/it/10 Prog. Polym. Sci. \OT1/cmr/m/n/10 94: 57--116.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--124
+Underfull \hbox (badness 10000) in paragraph at lines 113--119
 [][]$\OT1/cmtt/m/n/10 https : / / doi . org / 10 . 1016 / j . progpolymsci . 20
 19 . 03 . 001https : / / linkinghub .
  []
 
-
-Underfull \hbox (badness 2903) in paragraph at lines 132--137
-[]\OT1/cmr/m/n/10 Hansen, Camilla Arndt, and Ali G^^?urcan []Ozkil. 2020. ``Fro
-m Idea to Pro-duc-tion:
- []
-
-
-Underfull \hbox (badness 5667) in paragraph at lines 132--137
-\OT1/cmr/m/n/10 A Ret-ro-spec-tive and Lon-gi-tu-di-nal Case Study of Pro-to-ty
-pes and Pro-to-typ-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
-\OT1/cmr/m/n/10 Strate-gies.'' \OT1/cmr/m/it/10 J. Mech. Des. \OT1/cmr/m/n/10 1
-42 (3). [][]$\OT1/cmtt/m/n/10 http : / / asmedigitalcollection . asme . org /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
-\OT1/cmtt/m/n/10 mechanicaldesign / article-[]pdf / 142 / 3 / 031115 / 6649219 
-/ md{_}142{_}3{_}031115 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
-\OT1/cmtt/m/n/10 pdfhttps : / / asmedigitalcollection . asme . org / mechanical
-design / article / doi / 10 .
- []
-
-
-Underfull \hbox (badness 2837) in paragraph at lines 153--157
+[15]
+Underfull \hbox (badness 2837) in paragraph at lines 147--151
 []\OT1/cmr/m/n/10 Kumar, Ran-vi-jay, Rupin-der Singh, and Ile-nia Fa-rina. 2018
 . ``On the 3D print-ing
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 153--157
+Underfull \hbox (badness 1286) in paragraph at lines 147--151
 \OT1/cmr/m/n/10 of re-cy-cled ABS, PLA and HIPS ther-mo-plas-tics for struc-tur
 al ap-pli-ca-tions.'' \OT1/cmr/m/it/10 PSU
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 159--165
-[]\OT1/cmr/m/n/10 Lanzotti, An-to-nio, Mas-simo Mar-torelli, Save-rio Mai-etta,
- Sal-va-tore Gerbino, Francesco
- []
-
-
-Underfull \hbox (badness 5711) in paragraph at lines 159--165
-\OT1/cmr/m/n/10 Penta, and An-to-nio Glo-ria. 2019. ``A com-par-i-son be-tween 
-me-chan-i-cal prop-er-
- []
-
-
-Underfull \hbox (badness 4156) in paragraph at lines 159--165
-\OT1/cmr/m/n/10 ties of spec-i-mens 3D printed with vir-gin and re-cy-cled PLA.
-'' \OT1/cmr/m/it/10 Pro-ce-dia CIRP
- []
-
-
-Underfull \hbox (badness 2005) in paragraph at lines 159--165
-\OT1/cmr/m/n/10 79: 143--146. [][]$\OT1/cmtt/m/n/10 https : / / doi . org / 10 
-. 1016 / j . procir . 2019 . 02 . 030https : / / linkinghub .
- []
-
-
-Underfull \hbox (badness 3769) in paragraph at lines 179--185
+Underfull \hbox (badness 3769) in paragraph at lines 172--178
 []\OT1/cmr/m/n/10 Lin, Weiyi, Hongyao Shen, Guan-hua Xu, Linchu Zhang, Jianzhon
 g Fu, and Xi-
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 179--185
+Underfull \hbox (badness 1199) in paragraph at lines 172--178
 \OT1/cmr/m/n/10 aolei Deng. 2018. ``Single-layer temperature-adjusting tran-si-
 tion method to im-prove
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 179--185
+Underfull \hbox (badness 2521) in paragraph at lines 172--178
 \OT1/cmr/m/n/10 the bond strength of 3D-printed PCL/PLA parts.'' \OT1/cmr/m/it/
 10 Com-pos. Part A Appl. Sci.
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 179--185
+Underfull \hbox (badness 1072) in paragraph at lines 172--178
 \OT1/cmr/m/it/10 Manuf. \OT1/cmr/m/n/10 115: 22--30. [][]$\OT1/cmtt/m/n/10 http
 s : / / doi . org / 10 . 1016 / j . compositesa . 2018 . 09 . 008https : / /
  []
 
-[16]
-Underfull \hbox (badness 6842) in paragraph at lines 201--204
+
+Underfull \hbox (badness 6842) in paragraph at lines 193--196
 []\OT1/cmr/m/n/10 McCue, TJ. 2019. ``Sig-nif-i-cant 3D Print-ing Fore-cast Surg
 es To \TS1/cmr/m/n/10 $\OT1/cmr/m/n/10 35.6 Bil-lion.''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--204
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
 \OT1/cmr/m/n/10 Ac-cessed 2021-02-23. [][]$\OT1/cmtt/m/n/10 https : / / www . f
 orbes . com / sites / tjmccue / 2019 / 03 / 27 /
  []
 
 
-Overfull \hbox (42.72406pt too wide) in paragraph at lines 201--204
+Overfull \hbox (42.72406pt too wide) in paragraph at lines 193--196
 \OT1/cmtt/m/n/10 wohlers-[]report-[]2019-[]forecasts-[]35-[]6-[]billion-[]in-[]
 3d-[]printing-[]industry-[]growth-[]by-[]2024/$[][]\OT1/cmr/m/n/10 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
-\OT1/cmtt/m/n/10 google . fr / scholar ? hl = en{&}as{_}sdt = 0{%}2C5{&}q = Des
-ign + and + analysis + of +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
-\OT1/cmtt/m/n/10 experiments + montgomery{&}btnG = {&}oq = Design + and + analy
-sis + of + experiments .
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 356--359
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
 \OT1/cmr/m/n/10 2021-03-10. [][]$\OT1/cmtt/m/n/10 https : / / www . une . org /
  encuentra-[]tu-[]norma / busca-[]tu-[]norma / norma ? c =
  []
 
 
-Underfull \hbox (badness 4819) in paragraph at lines 385--392
-[]\OT1/cmr/m/n/10 Wittbrodt, B.T., A.G. Glover, J Lau-reto, G.C. An-za-lone, D 
-Oppliger, J.L. Ir-
- []
-
-
-Underfull \hbox (badness 2884) in paragraph at lines 385--392
-\OT1/cmr/m/n/10 win, and J.M. Pearce. 2013. ``Life-cycle eco-nomic anal-y-sis o
-f dis-tributed man-u-
- []
-
-
-Underfull \hbox (badness 4072) in paragraph at lines 385--392
-\OT1/cmr/m/n/10 fac-tur-ing with open-source 3-D print-ers.'' \OT1/cmr/m/it/10 
-Mecha-tron-ics \OT1/cmr/m/n/10 23 (6): 713--726. [][]$\OT1/cmtt/m/n/10 http :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--392
-\OT1/cmtt/m/n/10 / / dx . doi . org / 10 . 1016 / j . mechatronics . 2013 . 06 
-. 002http : / / linkinghub . elsevier .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 385--392
-\OT1/cmtt/m/n/10 com / retrieve / pii / S0957415813001153https : / / linkinghub
- . elsevier . com / retrieve /
- []
-
-[18]
-Underfull \hbox (badness 2486) in paragraph at lines 394--398
+Underfull \hbox (badness 2486) in paragraph at lines 381--385
 []\OT1/cmr/m/n/10 Wolszczak, Pi-otr, Krys-tian Ly-gas, Ma-teusz Paszko, and Ra-
 doslaw A. Wach. 2018.
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 394--398
+Underfull \hbox (badness 3058) in paragraph at lines 381--385
 \OT1/cmr/m/n/10 ``Heat dis-tri-bu-tion in ma-te-rial dur-ing fused de-po-si-tio
 n mod-elling.'' \OT1/cmr/m/it/10 Rapid Pro-to-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 394--398
+Underfull \hbox (badness 1264) in paragraph at lines 381--385
 \OT1/cmr/m/it/10 typ. J. \OT1/cmr/m/n/10 24 (3): 615--622. [][]$\OT1/cmtt/m/n/1
 0 https : / / www . emerald . com / insight / content / doi / 10 . 1108 /
  []
 
-) [19] (./Taylor-template.aux)
+[18]) [19] (./Taylor-template.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -972,16 +791,16 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Taylor-template.out' has not changed.
-(rerunfilecheck)             Checksum: 187E3653EC21C8E7861C1CB7A4E702C4;2476.
+(rerunfilecheck)             Checksum: B377185B25C630740AB977E7CF01D973;2694.
  ) 
 Here is how much of TeX's memory you used:
- 12788 strings out of 479023
- 183274 string characters out of 5859412
- 530088 words of memory out of 5000000
- 29884 multiletter control sequences out of 15000+600000
+ 12792 strings out of 479023
+ 183362 string characters out of 5859412
+ 530145 words of memory out of 5000000
+ 29886 multiletter control sequences out of 15000+600000
  415748 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,13n,102p,372b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 98i,13n,102p,352b,567s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -992,21 +811,22 @@ r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
 /local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
 ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
 al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-0/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf
--dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-d
-ist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on Taylor-template.pdf (19 pages, 1703073 bytes).
+/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2020/texmf
+-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-d
+ist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2020/texmf-dis
+t/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on Taylor-template.pdf (19 pages, 1704719 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 619 compressed objects within 7 object streams
- 128 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 660 PDF objects out of 1000 (max. 8388607)
+ 600 compressed objects within 6 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
