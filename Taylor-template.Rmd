@@ -33,21 +33,19 @@ keywords: |
   Prototyping; Distributed recycling; Mechanical strength; PLA
 header-includes: |
   \usepackage{float}
+  \usepackage{subfig}
   \usepackage[utf8]{inputenc}
-  \usepackage{subfigure}
   \def\tightlist{}
-  \usepackage[colorlinks=true,
-            linkcolor=blue,
-            urlcolor=blue,
-            citecolor=blue]{hyperref}
 
 bibliography: library.bib
 #bibliography: References.bib
-# cls: taylor-and-francis-chicago-f.csl
-# link-citations: yes
-# linkcolor: blue
-# output: pdf_document
-output: rticles::tf_article
+cls: taylor-and-francis-chicago-f.csl
+link-citations: yes
+linkcolor: blue
+output: bookdown::word_document2
+#output: bookdown::pdf_document2
+#output: bookdown::html_document2
+#output: rticles::tf_article
 always_allow_html: true
 ---
 
@@ -58,8 +56,8 @@ options(knitr.kable.NA = '')
 library(tidyverse)
 library(kableExtra)
 library(rmarkdown)
-#render("Taylor-template.Rmd", output_format = "pdf_document")
-library(bibtex)
+#render("Taylor-template.Rmd", output_format = "word_document")
+#library(bibtex)
 
 
 # library(bib2df)
@@ -69,7 +67,6 @@ library(bibtex)
 # df2bib(library, file = "Refs.bib", append = FALSE)
 
 ```
-
 # Introduction
 
 Additive manufacturing (also called 3D printing) is becoming a key technology for cross domain applications. 
@@ -100,11 +97,10 @@ Studies on the technical viability of recycled materials as substitutes for conv
 The present study evaluates the mechanical properties of both conventional and recycled polylactic acid (PLA) materials. 
 The objective is the assessment of the suitability of the recycled PLA as replacement in prototyping, though its use may be further extended to other applications. 
 To do that, this research is based on a comprehensive experimental study with three main phases in order to evaluate the influence of several printing parameters on the mechanical properties of the parts. 
-In section \ref{section:background}, a literature review is presented, focusing on the critical parameters in 3D printing technology and providing readers with an overview on the use of a distributed recycling approach. Then, section \ref{section:experimental} illustrates the methodology used in this study. In section \ref{section:findings}, the results of the experimental approach is presented. In section \ref{section:discussion}, we discuss the main research outcomes. Finally, section \ref{section:conclusions} summarizes the main conclusions. 
+In section \@ref(section:background), a literature review is presented, focusing on the critical parameters in 3D printing technology and providing readers with an overview on the use of a distributed recycling approach. Then, section \@ref(section:experimental) illustrates the methodology used in this study. In section \@ref(section:findings), the results of the experimental approach is presented. In section \@ref(section:discussion), we discuss the main research outcomes. Finally, section \@ref(section:conclusions) summarizes the main conclusions. 
 
 
-# Existing Theories & Previous Work
-\label{section:background}
+# Existing Theories & Previous Work {#section:background}
 
 ## Main parameters on Fused Filament Fabrication
 
@@ -125,7 +121,7 @@ Regarding the printing speed, it is identified that higher printing speed with h
 Among others, @Altan2018 also identified the influence of the layer height on the mechanical resistance.
 
 
-## Materials and distruted recycling 
+## Materials and distributed recycling 
 
 The development of new materials such as polymers, elastomers and composites in engineering plays a fundamental role in the advance of sustainable manufacturing [@Ashby2013]. 
 @Liu2019a presented a complete review on natural-derived biopolymers for 3D printing purposes, with a particular focus on biomedical, customized food fabrication and textile and apparel products. 
@@ -171,39 +167,22 @@ Thus, based on the results, it is expected to gain a better understanding on the
 In order to do that, an experimental plan comprising three phases will be developed. 
 This is a complementary approach to the well established literature on FFF.
 
-# Experimental procedure
-\label{section:experimental}
+# Experimental procedure {#section:experimental}
+
 
 ## Materials and equipment
 
-The printing materials tested in the study were virgin and recycled PLA characterized by data listed in Table \ref{tab:table1}. Both materials were commercial ones, the recycled PLA contained 10 % of virgin PLA in the blend. 
+The printing materials tested in the study were virgin and recycled PLA characterized by data listed in Table \@ref(tab:tabla1). Both materials were commercial ones, the recycled PLA contained 10 % of virgin PLA in the blend. 
 
-```{r tabla1, echo=FALSE, warning=FALSE, include=FALSE}
+```{r tabla1, echo=FALSE, warning=FALSE, include=TRUE}
 table_1 <- read_csv2("tables/table-1.csv")
 
 table_1 %>%  set_names("", "PLA", "Recycled PLA") %>% 
   kable(booktabs = T, linesep = "", digits = 3,
-      caption = "Characterization and processing conditions of the used PLA and recycled PLA. \\label{tab:table1}")  %>%
+      caption = "Characterization and processing conditions of the used PLA and recycled PLA.")  %>%
   kable_styling(latex_options = c("striped", "hold_position"))  %>% 
   column_spec(2:3, width = "4.5cm")
 ```
-
-\begin{table}[H]
-
-\caption{Characterization and processing conditions of the used PLA and recycled PLA. \label{tab:table1}}
-\centering
-\begin{tabular}[t]{l>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{4.5cm}}
-\toprule
- & PLA & Recycled PLA\\
-\midrule
-\cellcolor{gray!6}{Composition} & \cellcolor{gray!6}{PLA (Polylactic resin)- 99\% CAS: 9051-89-2} & \cellcolor{gray!6}{PLA - 10\% CAS: 9051-89-2 and recycled PLA 90\%}\\
-Density & 1.24 g/$cm^{3}$ & 1.1-1.3 $cm^{3}$\\
-\cellcolor{gray!6}{Diameter} & \cellcolor{gray!6}{1.75 ± 0.03 mm} & \cellcolor{gray!6}{1.75 mm}\\
-Printing temperature & 220 ± 20 ºC & 205 ± 15 ºC\\
-\cellcolor{gray!6}{Melting temperature} & \cellcolor{gray!6}{180 ºC} & \cellcolor{gray!6}{160 ± 10 ºC}\\
-\bottomrule
-\end{tabular}
-\end{table}
 
 
 The specimens were printed with a BQ’s Witbox, shown in Fig. 1a. 
@@ -216,19 +195,19 @@ In this study, the mechanical specimens were manufactured according to the dimen
 The dimensions of the specimen are the ones depicted in Fig 1c.
 
 
-```{r Fig.machine, out.width='0.9\\linewidth', fig.cap="Equipment used in the study: a) 3D printer, b) Universal testing machine an c) mechanical sample.", fig.align='center'}
+```{r machine, out.width='0.9\\linewidth', fig.cap="Equipment used in the study: a) 3D printer, b) Universal testing machine and c) mechanical sample.", fig.align='center'}
 knitr::include_graphics('Figures/Machine-probeta.jpg')
 ```
 
 
 ## Methodology
 
-Fractional designs are useful for minimizing the number of tests, reducing time and money [@Montgomery2001], being used as screening designs. Hence, the experimental plan included three different phases (Figure \ref{fig:methodology}) to carry out a comprehensive study with a limited number of tests that do not compromise the reliability of the results using fractional designs. 
+Fractional designs are useful for minimizing the number of tests, reducing time and money [@Montgomery2001], being used as screening designs. Hence, the experimental plan included three different phases (Figure \@ref(fig:methodology)) to carry out a comprehensive study with a limited number of tests that do not compromise the reliability of the results using fractional designs. 
 
 
 The main goal of *Phase I* is to identify and discard factors depending on their influence on the response variable. The response variable chosen was the maximum load attained during the testing of the specimen [@Kumar2018b; @Chacon2017; @Letcher2015].
 In this phase, the design included only a specimen printed in the horizontal orientation for each of the combinations, not evaluating the influence of the orientation. The use of random order allowed guaranteeing that the hypothesis that the errors are independently distributed random variables was fulfilled [@Montgomery2001].
-Based on the literature research presented in section \label{section:background},  the critical parameters for the study are the (1) layer height -LH- and (2) infill pattern -IP-. 
+Based on the literature research presented in section \@ref(section:background),  the critical parameters for the study are the (1) layer height -LH- and (2) infill pattern -IP-. 
 In addition, taking into account the goal of sustainable manufacturing (i.e., trying to optimize the consumption of material), but also productivity (i.e., trying to minimize printing times), (3) infill density -ID- and (4) printing speed -PS- were considered [@Singh2019; @Tanveer2019]. 
 These four factors were selected using two levels for each of them with large ranges. 
 In consequence, the factors and their levels were: 
@@ -247,29 +226,20 @@ Because of the anisotropy, the UNE 116005:2012 [@UNE] standard requires printing
 This phase included the printing of 15 specimens of both virgin and recycled PLA.
 
 
-```{r Fig.Methodology, out.width='0.7\\linewidth', fig.cap="Summary of the three phases of the experimental plan.\\label{fig:methodology}", fig.align='center'}
+```{r Methodology, out.width='0.7\\linewidth', fig.cap="Summary of the three phases of the experimental plan.", fig.align='center'}
 
 #download.file("https://raw.githubusercontent.com/fabbiocrux/Figures/main/Metodologies/Methodology-Univigo.svg", "Figures/Methodology.svg")
 knitr::include_graphics('Figures/Methodology.pdf')
 
 ```
 
-# Findings
-\label{section:findings}
+# Findings {#section:findings}
+
 
 ```{r table.S2, echo=FALSE, message=FALSE, include=FALSE}
 fase1 <- read_csv2("Datos/Phase-1.csv") 
 fase2 <- read_csv2("Datos/Phase-2.csv")
 fase3 <- read_csv2("Datos/Phase-3.csv") 
-names(fase1)
-table.fase1 <-  
-  fase1 %>% set_names("Material", "LH (mm)", "IP", "ID (%)", "PS (mm/s)", "Max Load (kN)") %>% 
-  kable(booktabs = T, linesep = "", digits = 2,
-      caption = "Results of the Phase 1. \\label{tab:phase1}")  %>%
-  kable_styling(latex_options = "striped", font_size = 7) %>% 
-  footnote(general = "Layer height (LH), Infill pattern (IP), Infill density (ID), Printing speed (PS)",
-threeparttable = T)
-
 
 table.fase2 <- 
   fase2 %>% kable(format = "latex", booktabs = T, linesep = "", digits = 3)
@@ -288,15 +258,23 @@ table.fase3 <-
 
 ##  Phase I: Screening phase
 
-Table \ref{tab:phase1} summarizes the experimental strategy with the results of the maximum load attained during this screening phase. A total of 16 samples were tested.
+Table \@ref(tab:phase1) summarizes the experimental strategy with the results of the maximum load attained during this screening phase. A total of 16 samples were tested.
 
-```{r table.phase1, echo=FALSE, message=FALSE}
+```{r phase1, echo=FALSE, message=FALSE}
+table.fase1 <-  
+  fase1 %>% set_names("Material", "LH (mm)", "IP", "ID (%)", "PS (mm/s)", "Max Load (kN)") %>% 
+  kable(booktabs = T, linesep = "", digits = 2,
+      caption = "Results of the Phase 1.")  %>%
+  kable_styling(latex_options = "striped", font_size = 7) %>% 
+  footnote(general = "Layer height (LH), Infill pattern (IP), Infill density (ID), Printing speed (PS)",
+threeparttable = T)
+
 table.fase1 
 ```
 
 
 In general, shortly after attaining the maximum load, the fracture of the specimen occurred. 
-However, the nature of the fracture was not homogeneous as shown in Fig \ref{Fig:Phase.1a}. 
+However, the nature of the fracture was not homogeneous as shown in Fig \@ref(fig:fase1)a. 
 Thus, in most cases, the specimens showed a fragile behavior and the fracture, either horizontally or with a lower inclination angle, was clean. 
 However, for the recycled material, the specimens presented a ductile behavior and, properly, the fracture did not occur after the maximum load was attained. In these cases, the tensile tests were cancelled after the maximum load was attained, without reaching a complete fracture of the specimen. 
 The breakage in these cases occurred at a 45º angle and, in the case of the RE-2 specimen, two parallel fracture lines can be clearly seen. 
@@ -307,23 +285,19 @@ In general, the interlayer fracture occurs at the interface of two layers when p
 In-layer fracture is more likely when the specimen is printed using an edgewise position (or, inclined up to 45º from that position). In this case, the printing direction is the same as the tensile stress direction, which also happens when the horizontal orientation is used. In these cases, the material layer is not intact after the fracture. 
 As a result, it is likely that both modes (in-layer and inter-layer fractures) coexist in this study, which may explain the heterogeneity of the different fractures.
 
-\begin{figure}[!t]
-\centering
-\subfigure[Tensile sample of the Phase 1]{\includegraphics[width=0.49\linewidth]{Figures/Probetas-Fase-1.jpg}%
-\label{Fig:Phase.1a}}
-\hfill
-\subfigure[Boxplots to identify significant factors based on DoE]{\includegraphics[width=0.49\linewidth]{Figures/Phase-1-2.jpg}%
-\label{Fig:Phase.1b}}
-\caption{Phase 1: screening tests to identify significant factors based on DoE}
-\end{figure}
+
+```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE', fig.subcap=c('Tensile sample of the Phase I', 'Boxplots to identify significant factors based on DoE'), out.width= c('49%', '49%')}
+knitr::include_graphics(c('Figures/Probetas-Fase-1.jpg',
+                          'Figures/Phase-1-2.jpg'))
+```
+
+An analysis of variance (ANOVA) was performed using R software in order to identify the influential factors on the response variable.  
+As criterion, critical factors for the response variable were those with p-values lower than 0.05 [@Perez2018].  Shapiro-Wilk normality tests allowed verifying the normality of the residuals.
+The figure \@ref(fig:fase1)b illustrates the boxplots of the results considering each of the factors. 
+Also, the Table \@ref(tab:anova-phase1) lists the results of the ANOVAs carried out for the experimental results.
 
 
-An analysis of variance (ANOVA) was performed using R software in order to identify the influential factors on the response variable.   As criterion, critical factors for the response variable were those with p-values lower than 0.05 [@Perez2018].  Shapiro-Wilk normality tests allowed verifying the normality of the residuals.
-The figure \ref{Fig:Phase.1b} illustrates the boxplots of the results considering each of the factors. 
-Also, the Table \ref{tab:anova.phase1} lists the results of the ANOVAs carried out for the experimental results.
-
-
-```{r Anova.fase1, include=FALSE}
+```{r, include=FALSE}
 Total_model <- lm(Load.max ~ LH + IP + ID + PS + Material , data = fase1)
 #summary(Total_model)
 anv.fase.1 <- anova(Total_model)
@@ -340,7 +314,7 @@ round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
 ```
 
 
-```{r Table.Anova.fase1, include=TRUE}
+```{r anova-phase1, include=TRUE}
 #names(anv.fase.1)
 
 #anv.fase.1$`Pr(>F)`[3]<- paste0(anv.fase.1$`Pr(>F)`[3],footnote_marker_symbol(1, "latex"))
@@ -354,17 +328,15 @@ test[5,5] <- paste0(test[5,5],"**")
 
 test %>%   
    kbl(booktabs = T, 
-       caption = "ANOVA results at 95\\% significance level \\label{tab:anova.phase1}",  
+       caption = "ANOVA results at 95\\% significance level.",  
        linesep = "")  %>%    
-  kable_styling(latex_options = c("striped", font_size = 7)) %>% 
+  kable_styling(latex_options = c("striped", font_size = 7, "hold_position")) %>% 
   footnote(general = "Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1")
-
-
 
 ```
 
 
-From the results of the Table \ref{tab:anova.phase1} and figure \ref{Fig:Phase.1b}, it can be clearly identified how the infill density was a statistically significant factor for the maximum load with the lowest p-value, lower than 0.001, among the studied factors. Likewise, the type of material is also a statistically significant factor for the response variable but with a higher p-value, being non-significant the rest of the factors. 
+From the results of the Table \@ref(tab:anova-phase1) and figure \@ref(fig:fase1)b, it can be clearly identified how the infill density was a statistically significant factor for the maximum load with the lowest p-value, lower than 0.001, among the studied factors. Likewise, the type of material is also a statistically significant factor for the response variable but with a higher p-value, being non-significant the rest of the factors. 
 When evaluating the contribution of each of the factors to the variability explained by the model, there were calculated values of 97.3% and 1.3% for infill density and  type of material, respectively. 
 Thus, when manufacturing new parts or specimens, infill density is a key factor for guaranteeing adequate mechanical properties of the specimens. 
 
@@ -377,40 +349,26 @@ The specific levels selected were 40, 55, 70, 85 and 100 %.
 Regarding the selection of the other factors of the printing process, the main criteria was the reduction of the printing time as stated in the methodology section. Therefore, the experimental conditions were layer height of 0.3 mm, tri-hexagonal infill pattern and printing speed of 80 mm/s with an estimated printing time of 20 min. 
 A total of 10 samples were manufactured.
 
+```{r phase2, fig.cap='Phase II: Tests to evaluate the evolution of significant the factor identified in Phase I.', fig.subcap=c('Specimens after tensile test in  phase II', 'Maximum load versus infill density for both virgin and recycled PLA.'), out.width= c('49%', '49%')}
+knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
+                          'Figures/Phase-2.jpg'))
 
-\begin{figure}[!t]
-\centering
-\subfigure[Specimens after tensile test in  phase II]{\includegraphics[width=0.49\linewidth]{Figures/Probetas-Fase-2.jpg}%
-\label{fig:probetas.phase2}}
-\hfill
-\subfigure[Maximum load versus infill density for both virgin and recycled PLA.]{\includegraphics[width=0.49\linewidth]{Figures/Phase-2.jpg}%
-\label{fig:phase2}}
-\caption{Phase II: Tests to evaluate the evolution of significant the factor identified in Phase I.}
-\end{figure}
-
-
-```{r Fig.Probetas.Fase.2, include=FALSE, out.width='0.8\\textwidth', fig.cap="Specimens after tensile test in  phase II. \\label{fig:probetas.phase2}", fig.align='center'}
-knitr::include_graphics('Figures/Probetas-Fase-2.jpg')
 ```
 
-Figure \ref{fig:probetas.phase2} shows the fracture of the specimens tested in *Phase II*.
+
+Figure \@ref(fig:phase2)a shows the fracture of the specimens tested in *Phase II*.
 Regarding the fracture, the results were similar to those of the *Phase I* (i.e., more ductile behavior for the recycled PLA specimens). 
-The interesting element in this phase is presented in Figure \ref{fig:phase2} where the maximum load versus infill density for both virgin and recycled PLA is illustrated.
+The interesting element in this phase is presented in Figure \@ref(fig:phase2)b where the maximum load versus infill density for both virgin and recycled PLA is illustrated.
 
-
-
-```{r Fig.Phase.2, include=FALSE, out.width='\\linewidth', fig.cap="Maximum load versus infill density for both virgin and recycled PLA. \\label{fig:phase2}", fig.align='center', }
-knitr::include_graphics('Figures/Phase-2.jpg')
-```
-
-From the analysis of the Figure \ref{fig:phase2}, it is possible to appreciate that there are two different regions. In the A region, which is between infill densities from 40 to 80 %, the slope of the curve grows slowly with an approximately linear trend meaning that an increase of the infill density provides a proportional increase in the mechanical properties.
+From the analysis of the Figure \@ref(fig:phase2), it is possible to appreciate that there are two different regions. 
+In the A region, which is between infill densities from 40 to 80 %, the slope of the curve grows slowly with an approximately linear trend meaning that an increase of the infill density provides a proportional increase in the mechanical properties.
 On the other hand,  as from 80% of infill density, the increase of the mechanical resistance becomes more pronounced, as illustrated in the B region.
 Consequently, with a small increase of infill density, the maximum load notably grows. 
 Regarding the type of material, it is clear that virgin PLA outperforms recycled PLA, but the difference between them is limited.
 These results are in agreement with studies on the comparison of the performance of recycled and virgin PLA [@CruzSanchez2017] in which there was found a difference of about 10% of the mechanical properties in the first recycling cycles.
 However, the difference notably increased as the infill density approached 100%. 
 The obtained results agree well with those presented by @Wang2020h. 
-In their study, the authors studied infill densities of 20, 40, 60, 80 and 100% and the evolution of the tensile strength is similar to the one shown in Figure \ref{fig:phase2}. 
+In their study, the authors studied infill densities of 20, 40, 60, 80 and 100% and the evolution of the tensile strength is similar to the one shown in Figure \@ref(fig:phase2). 
 
 
 Based on the results, it appears that a reduction from 100% to 40% of the infill density implies a relatively limited reduction, in average 41.7%, of the maximum load supported for both types of materials. 
@@ -421,7 +379,6 @@ Based on the developed models, it is possible to highlight that recycled PLA is 
 Moreover, by developing models for the mechanical properties, it is possible to minimize the material consumption for both virgin and recycled materials satisfying the mechanical resistance requirements. 
 Thus, by accurately knowing the influence of the printing conditions on the mechanical resistance, it is possible to advance towards sustainable manufacturing.
 
-
 ## Phase III: Study on the printing orientation
 
 In this final phase, the main goal is to test the influence of the building orientation according to the UNE 116005:2012 [@Garcia-Dominguez2020] standard. 
@@ -430,24 +387,18 @@ The selected printing conditions were infill density of 50%, printing speed of 8
 
 
 
-```{r Fig.Phase.3, include=FALSE, out.width='0.8\\linewidth', fig.cap="Average of the load obtain for each build orientation. \\label{fig:phase3}", fig.align='center', }
-knitr::include_graphics('Figures/Phase-3.jpg')
+```{r phase3, fig.cap='Phase III: Evaluation of the anisotropy.', fig.subcap=c('Specimens after tensile test in  Phase III', 'Average of the load obtain for each build orientation.'), out.width= c('49%', '49%')}
+knitr::include_graphics(c('Figures/Probetas-Fase-3.jpg',
+                          'Figures/Phase-3.jpg'))
+
 ```
 
-\begin{figure}[H]
-\centering
-\subfigure[Average of the load obtain for each build orientation.]{\includegraphics[width=0.8\linewidth]{Figures/Probetas-Fase-3.jpg}%
-\label{fig:phase3a}}
 
-\subfigure[Average of the load obtain for each build orientation.]{\includegraphics[width=0.6\linewidth]{Figures/Phase-3.jpg}%
-\label{fig:phase3b}}
-\caption{Phase III: Evaluation of the anisotropy.}
-\end{figure}
 
-Figure \ref{fig:phase3a} shows the images of the tested specimens observing the same type of fracture as in the first two phases.
+Figure \@ref(fig:phase3)a  shows the images of the tested specimens observing the same type of fracture as in the first two phases.
 It is interesting to evaluate the reduction in the maximum load depending on the type of material and orientation in which the specimens were printed. 
 
-The Figure \ref{fig:phase3b} details the maximum load and the mean values for the five specimens at each orientation.
+The Figure \@ref(fig:phase3)b details the maximum load and the mean values for the five specimens at each orientation.
 From the results, it is clear that the horizontal orientation is the one that provided the higher mechanical resistance, followed by the edgewise orientation. 
 Likewise, the virgin samples performed better than the recycled samples. 
 
@@ -457,8 +408,8 @@ For the recycled material, there is a slight decrease in the maximum load obtain
 Particularly, the biggest reduction of the load takes place in the vertical orientation with the maximum decrease of 13 %. 
 However, the other two orientations are more adequate for substituting the virgin material with the recycled material with a limited reduction in mechanical resistance (6.71 to 7.93 %).
 
-# Discussion and limits of the results
-\label{section:discussion}
+# Discussion and limits of the results {#section:discussion}
+
 
 One of the systemic problems of plastic waste relies on dependency of the indiscriminate disposal of plastics, which carries multiple risks because many plastic products contain additives that modify their physico-mechanical properties, making it difficult the recycling/reuse [@Wagner2020]. 
 The use of 3D printing technology for prototyping activities are not excepted of this societal issue. 
@@ -477,8 +428,7 @@ Definitely, the use of other materials is needed to evaluate if the influence of
 Moreover, other  factors are needed in order to consider the quality of a prototype. Clearly, other key variables such as the aesthetic design, surface finishing [@Jin2017], dimensional accuracy are also key variables to include for the printed objects in addition to the mechanical resistance in the prototypes where the main goal is the user acceptability [@Sauer2009;@Sauer2010]. 
 Nevertheless, this is an ongoing research in which the main purpose is the statistical validation of the minimal conditions to promote the use of recycled materials in prototyping phases.
 
-# Conclusions
-\label{section:conclusions}
+# Conclusions {#section:conclusions}
 
 The present study includes a comprehensive experimental program to analyze the Fused Filament Fabrication process based on mechanical resistance using virgin PLA and recycled PLA. The paper aims at improving the sustainability of the 3D printing process, assessing the technical feasibility of the substitution of virgin with recycled filaments. 
 
@@ -494,7 +444,7 @@ Particularly, when using the edgewise and horizontal orientations, it is possibl
 
 
 
-# Ackowledgements
+# Acknowledgements
 The authors would like to thank the "Mechanical and Energy Engineering" TEP 250 research group and to the Lorraine Fab Living Lab\textsuperscript{\textregistered}.
 This research has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 869952. 
 
@@ -502,3 +452,8 @@ This research has received funding from the European Union’s Horizon 2020 rese
 # Declaration of interest statement
 
 The authors report no declarations of interest.
+
+
+
+\newpage
+# References
