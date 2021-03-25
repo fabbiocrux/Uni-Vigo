@@ -4,27 +4,31 @@ type: Original article
 # author: 
 #   - name: 
 # affiliation:
-#   - num: 
+#   - num:
 author:
-  - name: Victor M. López
-    affil: a
-    #email:
-  - name: Diego Carou
-    affil: b
-    email: diecapor@uvigo.es
-  - name: Fabio A. Cruz S.
-    affil: c, \dagger
-    email: cruzsanc1@univ-lorraine.fr
-affiliation:
-  - num: a
-    address: |
-      University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain
-  - num: b
-    address: |
-     Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain 
-  - num: c
-    address: |
-      Université de Lorraine - ERPI -  F-54000, Nancy, France
+  - Victor M. López^[University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain]
+  - Diego Carou^[Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain , diecapor@uvigo.es]
+  - Fabio A. Cruz S.^[Université de Lorraine - ERPI -  F-54000, Nancy, France, cruzsanc1@univ-lorraine.fr]
+# author:
+#   - name: Victor M. López
+#     affil: a
+#     #email:
+#   - name: Diego Carou
+#     affil: b
+#     email: diecapor@uvigo.es
+#   - name: Fabio A. Cruz S.
+#     affil: c, \dagger
+#     email: cruzsanc1@univ-lorraine.fr
+# affiliation:
+#   - num: a
+#     address: |
+#       University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain
+#   - num: b
+#     address: |
+#      Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain
+#   - num: c
+#     address: |
+#       Université de Lorraine - ERPI -  F-54000, Nancy, France
 #appendix: appendix.tex
 abstract: |
   3D printing is seen as a disruptive technology and continues to expand the design space boundaries for prototypes and final products.  However, sustainability is one of the major objectives for manufacturing and the use of recycled materials becomes a relevant strategy, particularly for improving material resource efficiency. This paper attempts to evaluate the suitability of the substitution of virgin polylactic acid (PLA) by recycled PLA. An experimental plan divided into three phases to evaluate the mechanical resistance was described.  The results showed that recycled PLA may be used thanks to the similar resistance, though slightly lower than the virgin material. Besides, the infill density and the orientation parameters played a major role. A retention of the 58.1% of the resistance using an infill density of 40% was evidenced. This is a relevant insight for prescriptions of the 3D printing parameters guaranteeing  minimal quality conditions in the prototyping phases.
@@ -39,12 +43,14 @@ header-includes: |
 
 bibliography: library.bib
 #bibliography: References.bib
-cls: taylor-and-francis-chicago-f.csl
+cls: journal-of-cleaner-production.csl
 link-citations: yes
 linkcolor: blue
-output: bookdown::word_document2
-#output: bookdown::pdf_document2
-#output: bookdown::html_document2
+output: 
+  bookdown::pdf_document2:
+    toc: false
+  # bookdown::html_document2:
+  # bookdown::word_document2:
 #output: rticles::tf_article
 always_allow_html: true
 ---
