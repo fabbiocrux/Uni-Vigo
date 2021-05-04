@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  25 MAR 2021 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  4 MAY 2021 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,42 +529,113 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen263
 \c@nlinenum=\count314
 \TeXr@lab=\toks35
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count315
+\mult@box=\box68
+\multicol@leftmargin=\dimen264
+\c@unbalance=\count316
+\c@collectmore=\count317
+\doublecol@number=\count318
+\multicoltolerance=\count319
+\multicolpretolerance=\count320
+\full@width=\dimen265
+\page@free=\dimen266
+\premulticols=\dimen267
+\postmulticols=\dimen268
+\multicolsep=\skip74
+\multicolbaselineskip=\skip75
+\partial@page=\box69
+\last@line=\box70
+\maxbalancingoverflow=\dimen269
+\mult@rightbox=\box71
+\mult@grightbox=\box72
+\mult@gfirstbox=\box73
+\mult@firstbox=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\c@minrows=\count321
+\c@columnbadness=\count322
+\c@finalcolumnbadness=\count323
+\last@try=\dimen270
+\multicolovershoot=\dimen271
+\multicolundershoot=\dimen272
+\mult@nat@firstbox=\box112
+\colbreak@box=\box113
+\mc@col@check@num=\count324
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 )
-\cslhangindent=\skip74
-\csllabelwidth=\skip75
+\cslhangindent=\skip76
+\csllabelwidth=\skip77
 (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count315
-\l__pdf_internal_box=\box68
+\l__color_backend_stack_int=\count325
+\l__pdf_internal_box=\box114
 ) (./Taylor-template.aux)
 \openout1 = `Taylor-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Info: Redefining \microtypecontext on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Info: Redefining \microtypecontext on input line 129.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 126.
+LaTeX Info: Redefining \showhyphens on input line 129.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -573,16 +644,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
-\scratchdimen=\dimen264
-\scratchbox=\box69
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\scratchcounter=\count326
+\scratchdimen=\dimen273
+\scratchbox=\box115
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks36
-\MPscratchCnt=\count319
-\MPscratchDim=\dimen265
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen274
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks37
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -592,7 +663,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 126.
+Package hyperref Info: Link coloring ON on input line 129.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -602,11 +673,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -647,39 +718,39 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-28.
+31.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-28.
+31.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-128.
+131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-128.
+131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 128.
+(Font)              <12> on input line 131.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 128.
+(Font)              <8> on input line 131.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 128.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 128
+(Font)              <6> on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 131
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 128
+LaTeX Font Info:    Trying to load font information for U+msb on input line 131
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -687,81 +758,87 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-28.
+31.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 128.
+(Font)              <5> on input line 131.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 244.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 244.
 [4]
-<Figures/Machine-probeta.jpg, id=183, 1372.12625pt x 686.565pt>
+<Figures/Machine-probeta.jpg, id=181, 1372.12625pt x 686.565pt>
 File: Figures/Machine-probeta.jpg Graphic file (type jpg)
 <use Figures/Machine-probeta.jpg>
-Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 268.
+Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 310.
 (pdftex.def)             Requested size: 422.77951pt x 211.54439pt.
-
-LaTeX Warning: Reference `fig:methodology' on page 5 undefined on input line 27
-8.
-
 [5 <./Figures/Machine-probeta.jpg>]
-<Figures/Methodology.pdf, id=213, 313.17pt x 284.02109pt>
+<Figures/Methodology.pdf, id=211, 313.17pt x 284.02109pt>
 File: Figures/Methodology.pdf Graphic file (type pdf)
 <use Figures/Methodology.pdf>
-Package pdftex.def Info: Figures/Methodology.pdf  used on input line 301.
+Package pdftex.def Info: Figures/Methodology.pdf  used on input line 343.
 (pdftex.def)             Requested size: 313.18832pt x 284.03772pt.
-<Figures/Probetas-Fase-1.png, id=218, 803.0pt x 740.7675pt>
+
+LaTeX Warning: Reference `tab:phase1' on page 6 undefined on input line 356.
+
+[6 <./Figures/Methodology.pdf>]
+<Figures/Probetas-Fase-1.png, id=240, 803.0pt x 740.7675pt>
 File: Figures/Probetas-Fase-1.png Graphic file (type png)
 <use Figures/Probetas-Fase-1.png>
-Package pdftex.def Info: Figures/Probetas-Fase-1.png  used on input line 364.
+Package pdftex.def Info: Figures/Probetas-Fase-1.png  used on input line 371.
 (pdftex.def)             Requested size: 230.18068pt x 212.34167pt.
-<Figures/Phase-1-2.jpg, id=219, 1806.75pt x 1806.75pt>
+<Figures/Phase-1-2.jpg, id=241, 1806.75pt x 1806.75pt>
 File: Figures/Phase-1-2.jpg Graphic file (type jpg)
 <use Figures/Phase-1-2.jpg>
-Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 364.
+Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 371.
 (pdftex.def)             Requested size: 230.1715pt x 230.1715pt.
-[6 <./Figures/Methodology.pdf>] [7 <./Figures/Probetas-Fase-1.png> <./Figures/P
-hase-1-2.jpg>]
-<Figures/Probetas-Fase-2.jpg, id=261, 883.3pt x 915.42pt>
+
+LaTeX Warning: Reference `tab:anova-phase1' on page 7 undefined on input line 3
+77.
+
+
+LaTeX Warning: Reference `tab:anova-phase1' on page 7 undefined on input line 3
+79.
+
+<Figures/Probetas-Fase-2.jpg, id=245, 883.3pt x 915.42pt>
 File: Figures/Probetas-Fase-2.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-2.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 406.
+Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 393.
 (pdftex.def)             Requested size: 230.17822pt x 238.54834pt.
-<Figures/Phase-2.jpg, id=262, 1505.625pt x 1505.625pt>
+<Figures/Phase-2.jpg, id=246, 1505.625pt x 1505.625pt>
 File: Figures/Phase-2.jpg Graphic file (type jpg)
 <use Figures/Phase-2.jpg>
-Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 406.
+Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 393.
 (pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
-[8]
-<Figures/Probetas-Fase-3.jpg, id=282, 485.84874pt x 318.83824pt>
+[7 <./Figures/Probetas-Fase-1.png> <./Figures/Phase-1-2.jpg>] [8 <./Figures/Pro
+betas-Fase-2.jpg> <./Figures/Phase-2.jpg>]
+<Figures/Probetas-Fase-3.jpg, id=274, 485.84874pt x 318.83824pt>
 File: Figures/Probetas-Fase-3.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-3.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 439.
+Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 426.
 (pdftex.def)             Requested size: 230.18005pt x 151.05565pt.
-<Figures/Phase-3.jpg, id=283, 1505.625pt x 1505.625pt>
+<Figures/Phase-3.jpg, id=275, 1505.625pt x 1505.625pt>
 File: Figures/Phase-3.jpg Graphic file (type jpg)
 <use Figures/Phase-3.jpg>
-Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 439.
+Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 426.
 (pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
-[9 <./Figures/Probetas-Fase-2.jpg> <./Figures/Phase-2.jpg>] [10 <./Figures/Prob
-etas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [11] [12] [13] [14] [15] [16] (./Tayl
-or-template.aux)
+[9 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [10]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 480.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 480.
+[11] [12] [13] [14] [15] [16] (./Taylor-template.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16045 strings out of 479023
- 244623 string characters out of 5859412
- 634684 words of memory out of 5000000
- 32830 multiletter control sequences out of 15000+600000
- 487531 words of font info for 194 fonts, out of 8000000 for 9000
+ 16175 strings out of 479023
+ 246712 string characters out of 5859412
+ 640115 words of memory out of 5000000
+ 32955 multiletter control sequences out of 15000+600000
+ 486774 words of font info for 197 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,88p,1009b,432s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
@@ -775,11 +852,11 @@ l/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/20
 20/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dis
 t/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type
 1/public/lm/lmr9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/
-lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri7.pfb>
-Output written on Taylor-template.pdf (16 pages, 2448076 bytes).
+lmri10.pfb>
+Output written on Taylor-template.pdf (16 pages, 2426714 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 514 compressed objects within 6 object streams
- 130 named destinations out of 1000 (max. 500000)
- 51369 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 549 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 127 named destinations out of 1000 (max. 500000)
+ 53417 words of extra memory for PDF output out of 61914 (max. 10000000)
 
