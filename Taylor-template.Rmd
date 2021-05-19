@@ -48,10 +48,10 @@ bibliography: library.bib
 link-citations: yes
 linkcolor: blue
 output: 
-  bookdown::pdf_document2:
-    toc: false
+  # bookdown::pdf_document2:
+  #   toc: false
   #bookdown::html_document2: default
-  #bookdown::word_document2: default
+  bookdown::word_document2: default
 #output: rticles::tf_article
 always_allow_html: true
 ---
