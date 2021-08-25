@@ -67,13 +67,34 @@ Fase.I$Material <-
          labels = c("Virgin" , "Recycled"))
 Fase.I <- Fase.I %>% arrange(Material)
 
+## Adding variables to the Original data
+Fase.I <-
+ Fase.I %>%
+ mutate(Data = map(Data, ~ .x %>%
+                     mutate (Tensile = (kN / (5 * 13))*(1000),
+                                          Strain = mm / 28 )
+                   ))
 
+### Function to identify Young Modulus
+Young_mod <- function(df) {
+  # Filtering the Dataframe
+  df <- df %>% filter(Strain >= 0.0005 & Strain <= 0.0025 )
+  # Doing the linear model
+   model= lm(Tensile ~ Strain, data = df)
+   E= coefficients(model)[[2]]
+  return(E)
+}
+```
+
+
+```{r Data.Fase.I}
 # Identifying max Tensile ----
+
 Fase.I <- 
   Fase.I %>% 
-  mutate(#Young = map_dbl(Data,  Young ),
+  mutate(Young = map_dbl(Data,  Young_mod ),
          Load.max = map_dbl(Data,  function(df) max(df$kN)),
-         #Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
+         Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
          )
 
 ## Creating the experimental dataframe with the other factors ----
@@ -99,30 +120,10 @@ Fase.I$PS <- c(40, 80, 80, 80, 40, 80, 40, 40, 40, 80, 40, 80, 40, 80, 40, 80 )
 Fase.I$PS <- as.factor(Fase.I$PS)
 
 # Final Dataframe
-Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max , Sample, `Sample name`, Data )
+Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max, Young, Tensile.max, Sample, `Sample name`, Data )
 ```
 
 
-```{r, include=FALSE}
-## Adding variables to the Original data
-#Fase.I <- 
-#  Fase.I %>% 
-#  mutate(Data = map(Data, ~ .x %>% 
-#                      mutate (Tensile = (kN / (5 * 13))*(1000), 
-#                                           Strain = mm / 28 )
-#                    ))
-
-
-### Function to identify Young Modulus
-# Young <- function(df) {
-#   # Filtering the Dataframe
-#   df <- df %>% filter(Strain >= 0.0005 & Strain <= 0.0025 ) 
-#   # Doing the linear model
-#    model= lm(Tensile ~ Strain, data = df)
-#    E= coefficients(model)[[2]]
-#   return(E)
-# }
-```
 
 The database of `Phase I`
 
