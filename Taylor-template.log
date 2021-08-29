@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  20 MAY 2021 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  26 AUG 2021 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1177,607 +1177,560 @@ Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 484.
 (pdftex.def)             Requested size: 225.45723pt x 225.45723pt.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 9.60007pt on input line 499.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 6.72005pt on input line 499.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 513.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 513.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.28003pt on input line 513.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.39201pt on input line 513.
 [6 <./Figures/Probetas-Fase-1.png> <./Figures/Phase-1-2.jpg>]
 <Figures/Probetas-Fase-2.jpg, id=189, 883.3pt x 915.42pt>
 File: Figures/Probetas-Fase-2.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-2.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 574.
+Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 568.
 (pdftex.def)             Requested size: 230.17822pt x 238.54834pt.
 <Figures/Phase-2.jpg, id=190, 1505.625pt x 1505.625pt>
 File: Figures/Phase-2.jpg Graphic file (type jpg)
 <use Figures/Phase-2.jpg>
-Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 574.
+Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 568.
 (pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
 <Figures/Probetas-Fase-3.jpg, id=198, 485.84874pt x 318.83824pt>
 File: Figures/Probetas-Fase-3.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-3.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 603.
+Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 597.
 (pdftex.def)             Requested size: 230.18005pt x 151.05565pt.
 <Figures/Phase-3.jpg, id=199, 1505.625pt x 1505.625pt>
 File: Figures/Phase-3.jpg Graphic file (type jpg)
 <use Figures/Phase-3.jpg>
-Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 603.
+Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 597.
 (pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
 [7] [8 <./Figures/Probetas-Fase-2.jpg> <./Figures/Phase-2.jpg> <./Figures/Probe
 tas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [9]
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 658.
+(Font)              scaled to size 6.72005pt on input line 652.
 [10]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 674--677
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 668--671
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--677
+Underfull \hbox (badness 10000) in paragraph at lines 668--671
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 678--681
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 672--675
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 678--681
+Underfull \hbox (badness 10000) in paragraph at lines 672--675
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 682--685
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 676--679
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 686--689
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 680--683
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--689
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 690--693
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 684--687
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 690--693
+Underfull \hbox (badness 10000) in paragraph at lines 684--687
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 694--697
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 688--691
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--697
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 698--701
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 692--695
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--701
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 702--705
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 696--699
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--705
+Underfull \hbox (badness 10000) in paragraph at lines 696--699
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 706--709
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 700--703
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 706--709
+Underfull \hbox (badness 10000) in paragraph at lines 700--703
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 710--713
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 704--707
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 710--713
+Underfull \hbox (badness 10000) in paragraph at lines 704--707
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 714--717
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 708--711
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 714--717
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 718--721
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 712--715
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 718--721
+Underfull \hbox (badness 10000) in paragraph at lines 712--715
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 722--725
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 716--719
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--725
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 726--729
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 720--723
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 726--729
+Underfull \hbox (badness 10000) in paragraph at lines 720--723
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 730--733
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 724--727
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 730--733
+Underfull \hbox (badness 10000) in paragraph at lines 724--727
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 734--737
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 728--731
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--737
+Underfull \hbox (badness 10000) in paragraph at lines 728--731
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 738--741
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 732--735
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--741
+Underfull \hbox (badness 10000) in paragraph at lines 732--735
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 742--745
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 736--739
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 742--745
+Underfull \hbox (badness 10000) in paragraph at lines 736--739
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 746--749
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 740--743
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 746--749
+Underfull \hbox (badness 10000) in paragraph at lines 740--743
 
  []
 
 [11]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 750--753
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 744--747
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 750--753
+Underfull \hbox (badness 10000) in paragraph at lines 744--747
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 754--757
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 748--751
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--757
+Underfull \hbox (badness 10000) in paragraph at lines 748--751
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 758--761
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 752--755
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 758--761
+Underfull \hbox (badness 10000) in paragraph at lines 752--755
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 762--765
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 756--759
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--765
+Underfull \hbox (badness 10000) in paragraph at lines 756--759
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 766--769
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 760--763
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 766--769
+Underfull \hbox (badness 10000) in paragraph at lines 760--763
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 770--773
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 764--767
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 770--773
+Underfull \hbox (badness 10000) in paragraph at lines 764--767
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 774--777
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 768--771
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 774--777
+Underfull \hbox (badness 10000) in paragraph at lines 768--771
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 778--781
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 772--775
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--781
+Underfull \hbox (badness 10000) in paragraph at lines 772--775
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 782--785
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 776--779
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--785
+Underfull \hbox (badness 10000) in paragraph at lines 776--779
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 786--789
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 780--783
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 786--789
+Underfull \hbox (badness 10000) in paragraph at lines 780--783
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 790--793
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 784--787
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 790--793
+Underfull \hbox (badness 10000) in paragraph at lines 784--787
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 794--797
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 788--791
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 794--797
+Underfull \hbox (badness 10000) in paragraph at lines 788--791
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 798--801
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 792--795
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 798--801
+Underfull \hbox (badness 10000) in paragraph at lines 792--795
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 802--805
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 796--799
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 802--805
+Underfull \hbox (badness 10000) in paragraph at lines 796--799
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 806--809
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 800--803
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 806--809
+Underfull \hbox (badness 10000) in paragraph at lines 800--803
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 810--813
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 804--807
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 810--813
+Underfull \hbox (badness 10000) in paragraph at lines 804--807
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 814--817
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 808--811
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--817
+Underfull \hbox (badness 10000) in paragraph at lines 808--811
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 818--821
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 812--815
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--821
+Underfull \hbox (badness 10000) in paragraph at lines 812--815
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 822--825
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 816--819
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 822--825
+Underfull \hbox (badness 10000) in paragraph at lines 816--819
 
  []
 
 [12]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 826--829
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 820--823
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 826--829
+Underfull \hbox (badness 10000) in paragraph at lines 820--823
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 830--833
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 824--827
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+Underfull \hbox (badness 10000) in paragraph at lines 824--827
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 834--837
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 828--831
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--837
+Underfull \hbox (badness 10000) in paragraph at lines 828--831
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 838--841
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 832--835
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 838--841
+Underfull \hbox (badness 10000) in paragraph at lines 832--835
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 842--845
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 836--839
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 842--845
+Underfull \hbox (badness 10000) in paragraph at lines 836--839
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 846--849
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 840--843
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 846--849
+Underfull \hbox (badness 10000) in paragraph at lines 840--843
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 850--853
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 844--847
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 850--853
+Underfull \hbox (badness 10000) in paragraph at lines 844--847
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 854--857
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 848--851
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 854--857
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 858--861
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 852--855
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 858--861
+Underfull \hbox (badness 10000) in paragraph at lines 852--855
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 862--865
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 856--859
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--865
+Underfull \hbox (badness 10000) in paragraph at lines 856--859
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 866--869
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 860--863
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--869
+Underfull \hbox (badness 10000) in paragraph at lines 860--863
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 870--873
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 864--867
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--873
+Underfull \hbox (badness 10000) in paragraph at lines 864--867
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 874--877
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 868--871
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--877
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 878--881
+Overfull \hbox (1.79523pt too wide) in paragraph at lines 872--875
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--881
+Underfull \hbox (badness 10000) in paragraph at lines 872--875
 
  []
 
 [13] (./Taylor-template.aux) ) 
 Here is how much of TeX's memory you used:
- 17737 strings out of 479023
- 269412 string characters out of 5859412
+ 17638 strings out of 479023
+ 267721 string characters out of 5859412
  653175 words of memory out of 5000000
- 34205 multiletter control sequences out of 15000+600000
- 513600 words of font info for 481 fonts, out of 8000000 for 9000
+ 34146 multiletter control sequences out of 15000+600000
+ 496225 words of font info for 430 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,12n,88p,1442b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,12n,88p,1451b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvi
 ps/ly1/texnansi.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/bitstrea/ch
 arter/bchb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/bitstrea/chart
@@ -1786,10 +1739,10 @@ bchri8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/m
 dbch/md-chb8t.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathde
 sign/mdbch/md-chr8c.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 mathdesign/mdbch/md-chr8t.pfb>
-Output written on Taylor-template.pdf (13 pages, 2176784 bytes).
+Output written on Taylor-template.pdf (13 pages, 2176299 bytes).
 PDF statistics:
  373 PDF objects out of 1000 (max. 8388607)
  336 compressed objects within 4 object streams
  114 named destinations out of 1000 (max. 500000)
- 143529 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 125097 words of extra memory for PDF output out of 128383 (max. 10000000)
 
