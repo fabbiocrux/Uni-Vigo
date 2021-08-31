@@ -78,7 +78,7 @@ set_flextable_defaults(fonts_ignore=TRUE)
 ```
 # Introduction
 
-Fused filament fabrication (FFF) is a major additive manufacturing (also called 3D printing) technology which have found considerable number of applications in different types of manufacturing sectors [@Singh2020d].
+Fused filament fabrication (FFF) is a major additive manufacturing technology, which has found considerable number of applications in different types of manufacturing sectors. [@Singh2020d].
 The layer-by-layer principle of manufacturing objects enables a higher flexibility degree in the product design phase.
 <!-- The FFF process is based on material extrusion, so the material is heated above its melting point and then deposited onto a platform [@Wolszczak2018].  -->
 The set of several available printing technologies provides advantages such as the customization of objects with complex geometries with a great deal of detail, combination of different materials [@Askari2020], reduction of the need for assembly and high utilization rate of raw materials [@Wang2020f]. 
