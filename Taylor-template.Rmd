@@ -48,10 +48,10 @@ bibliography: library.bib
 link-citations: yes
 linkcolor: blue
 output: 
-  bookdown::pdf_document2:
-    toc: false
+  # bookdown::pdf_document2:
+  #   toc: false
   #bookdown::html_document2: default
-  #bookdown::word_document2: default
+  bookdown::word_document2: default
 #output: rticles::tf_article
 always_allow_html: true
 ---
@@ -78,39 +78,66 @@ set_flextable_defaults(fonts_ignore=TRUE)
 ```
 # Introduction
 
-Fused filament fabrication (FFF) is a major additive manufacturing technology, which has found considerable number of applications in different types of manufacturing sectors. [@Singh2020d].
-The layer-by-layer principle of manufacturing objects enables a higher flexibility degree in the product design phase.
+Fused filament fabrication (FFF) is a major additive manufacturing technology, which has found considerable number of applications in different types of manufacturing sectors [@Singh2020d; @Sartal2018].
+The layer-by-layer principle of manufacturing objects enables a higher degree of flexibility in the product design phase [@Akhoundi2019].
 <!-- The FFF process is based on material extrusion, so the material is heated above its melting point and then deposited onto a platform [@Wolszczak2018].  -->
-The set of several available printing technologies provides advantages such as the customization of objects with complex geometries with a great deal of detail, combination of different materials [@Askari2020], reduction of the need for assembly and high utilization rate of raw materials [@Wang2020f]. 
+The set of several available printing technologies [@Nam2019] is pushing forward advantages such as the customization of objects with complex geometries that involve a great deal of detail, a combination of different materials [@Askari2020], a reduction in the need for assembly and a high utilization rate of raw materials. [@Wang2020f]
 
 <!-- 3D printing has developed significantly over time.  -->
 <!-- A great development is expected in sectors such as product consumption, medical products and aerospace components [@Peng2018]. -->
 <!-- The rapid prototyping market reached $11.86 billion US dollars according to Wohlers 2019 report [@Singh2021], which also forecasts the market to reach 35.6 billion dollars by 2024 [@Forbes2020].  -->
 
 
-Nowadays, there is a need to find paths to reduce the ecological impact of manufacturing processes [@Niaki2019;@Peng2018]. 
-Researchers are making efforts to identify opportunities of 3D printing on the circular economy paradigm [@Despeisse2016]. 
-Moreover, due to the fact that plastic is one of the most used materials in the 3D printing industry [@GonzalezHenriquez2019], and given their non-biodegradable nature, plastic is one the most abundant type of waste produced and their impact is well document in the different ecosystems [@Ryberg2019]. 
-Thus, reducing the consumption of plastics is of great importance. 
+Nowadays, there is a need to find ways to reduce the ecological impact of manufacturing processes, pursuing sustainable and clean manufacturing processes [@Niaki2019;@Peng2018]. 
+Researchers are making efforts to identify opportunities for 3D printing on the circular economy paradigm [@Despeisse2016]. 
+Moreover, due to the fact that plastic is one of the most highly used materials in the 3D printing industry [@GonzalezHenriquez2019] and given its non-biodegradable nature, plastic is one the most abundant types of waste produced and its impact is well document in the various ecosystems [@Ryberg2019]. 
+Thus, reducing the consumption of plastics is of great importance.
 
-The major literature coming from engineering, human computer interaction, design thinking or software development [@Elverum2016] validates the rationale for the prototyping phase in the early design phases of product development.
-According the prototyping theory, different kind of prototypes are needed during the new product development phases (eg. prototype for desirability, feasibility, and viability) [@Menold2017] with the purpose of reducing uncertainties, exploring new ideas, increasing feasibility and/or engaging with users [@Hansen2020]. 
-Thus, a prototype is accomplished in terms of certain aims: (1) Model to Link, (2) Model to Test, (3) Model to Communicate, (4) Model to Decide, and (5) Model to Interact [@Menold2017]. 
-Moreover, digital tools allows designers to create highly flexible prototypes that enable short learning cycles at an affordable cost. 
-Indeed, the use of 3D printing technology enables the materialization aspect. 
-Regardless of whether the printed part is functional or not, it is found to be valuable in design decisions [@Elverum2016].
+A major body of literature arising from the fields of engineering, human–computer interaction, design thinking and software development [@Elverum2016] validates the rationale for the prototyping phase in the early design phases of product development.
+According to the prototyping theory, different kinds of prototypes are needed during the new product development phases (e.g. prototypes for desirability, for feasibility, and for viability) [@Menold2017] with the purpose of reducing uncertainties, exploring new ideas, increasing feasibility and/or engaging with users [@Hansen2020]. 
+On that basis, a prototype is achieved in terms of certain modelling aims: Model to Link, Model to Test, Model to Communicate, Model to Decide, and Model to Interact [@Menold2017]. 
+The use of digital tools allows designers to create highly flexible prototypes that enable short learning cycles at an affordable cost. 
+Moreover, the use of 3D printing technology enables the materialization aspect. Regardless of whether the printed object is functional or not, it is found to be valuable in design decisions. [@Elverum2016].
 However, there is a gap in the literature in terms of sustainable manufacturing using 3D printing in the early design phases [@Peng2018]. 
-Although the technology offers high efficiency in the material usage, the democratization of this technology could cause a rebound impact due to the increasing generation and disposal of huge amounts of waste or polluting emissions to fabricate the virgin feedstock required, particularly, in  prototyping. 
-Without a doubt, the roots of FFF are linked to the rapid prototyping concept [@Campbell2012] and in the last years it has been widely adopted to create final objects.
-Therefore, one question that remains is how to define the most favorable printing conditions to create prototypes in the early phases without compromising the mechanical properties, even for recycled feedstocks. 
+Although the technology offers high efficiency in the use of materials, the democratization of this technology could cause a rebound impact due to the increasing generation and disposal of huge amounts of waste or polluting emissions to fabricate the virgin feedstock required, particularly, in prototyping. 
+Without a doubt, the roots of FFF are linked to the rapid prototyping concept [@Campbell2012] and in recent years it has been widely adopted to create functional objects for their designs. Therefore, one question that remains is how to define the most favorable printing conditions to create prototypes in the early phases without compromising the mechanical properties, even for recycled feedstocks. 
 
-Studies on the technical viability of recycled materials as substitutes for conventional virgin materials are still limited for particular applications [@CruzSanchez2020]. 
-It is important to note that in most cases, prototypes do not require excellent mechanical resistance but the minimum to be handled to allow inspection and measurement. 
+Studies on the technical viability of recycled materials as substitutes for conventional virgin materials are still limited to particular applications [@CruzSanchez2020]. 
+It is important to note that, in most cases, prototypes do not require excellent mechanical properties but the minimum to be handled to allow inspection and measurement. 
 Thus, the type of material used and its amount can be further optimized when it comes to prototyping.
+  <!-- Mechanical properties in 3DP -->
+The mechanical properties are critical for engineering parts, particularly, for 3D printed parts because of the anisotropy [@Lovo2018], which can influence the ultimate tensile strength (UTS) up to about 47 % as it pertains to the manufacturing parameters [@Laureto2018].
+Using a systematic literature review, Popescu et al. @Popescu2018 identified key parameters that influence the printed parts, including the raster-to-raster air gap, raster angle, layer thickness, infill density, and build orientation.  
+In general terms, it is found that for low values of layer height, the tensile strength of the material is improved [@Tymrak2014a; @Altan2018]. 
+Similarly, Yao et al. @Yao2019 identified the importance of the printing orientation in the UTS. Thus, the alignment of the tensile load with the longitudinal axis of the printed fiber will maximize the UTS.
+According to Alafaghani et al. @Alafaghani2018 a higher extrusion temperature, an optimized layer thickness, a triangular filling pattern and a higher filling level maximize the strength of the parts. Regarding the printing speed, it has been determined that a higher printing speed with a higher layer thickness leads to lower part strength.
 
-The present study evaluates the mechanical properties of both conventional and recycled polylactic acid (PLA) materials. 
-The objective is the  assessment of the suitability of the recycled PLA as replacement in prototyping, though its use may be further extended to other applications. 
-This research is based on a comprehensive experimental study with three main phases in order to evaluate the influence of several printing parameters on the mechanical properties. 
+<!-- DRAM -->
+In the literature, distributed recycling via additive manufacturing (DRAM) approach emphasizes the technical steps required to reuse plastic waste through the recycling chains for material-extrusion-based 3D printing [@CruzSanchez2020; @Little2020]. 
+The use of recycled material, either in the form of raw material or blended with virgin material, is a method of special interest to contribute to sustainable manufacturing [@Zhao2018].
+In the DRAM methodology, consumers have an economic incentive to recycle. 
+This is because they can use their waste as feedstock for a wide range of consumer products that can be produced for a fraction of the conventional cost of the equivalent products. 
+Moreover, 3D printing is especially well suited because it enables the production of parts with (almost) no waste, and could reduce the waste related to the material by more than 40 %, reusing 95 % of the unused material [@Petrovic2011]. 
+Currently, most of the cost of 3D printing is associated with filament [@Wittbrodt2013]. 
+Moreover, by recycling raw materials such as Polylactic acid (PLA), one of the most frequently used materials in 3D printing, it is possible to reduce the carbon dioxide emissions that are incurred by transport to landfills or shipping to customers, offering environmental benefits [@Santander2020]. 
+
+<!-- Mechanical properties in DRAM -->
+It is important to evaluate the properties of the recycled materials before substituting virgin for recycled materials. The use of recycled materials is still uncertain because of the potential changes in the material properties when recycling [@Suarez2020].
+Several authors have studied the printing cycles that PLA can withstand until it loses much of its properties [@CruzSanchez2017; @Zhao2018; @Lanzotti2019].
+There is an agreement that PLA adequately withstands two printing cycles since after a third cycle or more the mechanical properties and viscosity decreased considerably. The increase in crystallinity and melting enthalpy and the decrease in cold crystallization enthalpy are attributed to the 3D printing process.
+Similarly, Kumar et al. @Kumar2018b compared the elongation at break, load at break, flow index, Young’s modulus and breaking stress of recycled Acrylonitrile butadiene styrene (ABS), high impact polystyrene (HIPS) and PLA. 
+The PLA showed the highest elongation at break along with the ABS. In addition, the PLA had a higher breaking load and breaking stress, although a smaller Young’s modulus.  The recycling of PLA has certain limitations due to the reduction in the molecular weight with its reuse, resulting in degradation and a decrease in mechanical properties [@Pinho2020].
+Viscosity is also reduced with each printing cycle, but it could be corrected by adding virgin plastic [@Zhao2018; @Zhao2018a].
+Babagowda et al. @Babagowda2018 studied the influence of the percentage of recycled PLA used in the filament (i.e., 10 to 50 %) showing that the smaller the percentage the higher the ultimate tensile strength.  
+<!-- When recycling, there is a decrease in the properties of the material as a result of the presence of carbonyl groups and superficial pitting due to thermomechanical degradation during the new melting process that takes place during 3D printing [@Zhao2018]. -->
+
+Nevertheless, it is highlighted that it might be uncertain whether a set of optimal parameters for a machine/material/application combination can be transferred to other 3D printers due to the issue of intra-3D printer variability and the variations of the quality of the recycled material. 
+Robust methods are needed to develop standards to qualify the process setting minimal requirements for the resistance, dimensional accuracy, replicability, and minimum feature size among the 3D printing technologies [@Rebaioli2017].
+Likewise, considering the open-source nature of FFF technology, standardized experimental protocols are relevant to enable benchmarking and to serve as a guide for machine selection [@CruzSanchez2014; @Roberson2013].
+Therefore, it is crucial to identify the most important parameters that may affect the process quality[@JaisinghSheoran2019].
+The present study propose a methodology in three phases to evaluate the tensile strength of both conventional and recycled polylactic acid (PLA) materials. The objective is the assessment of the suitability of the recycled PLA as a replacement in prototyping, though its use may be further extended to other applications. To do so, this research is based on a comprehensive experimental study with three main phases in order to evaluate the influence of several printing parameters on the tensile strength. 
+
+
 <!-- In section \@ref(section:background), a literature review is presented, focusing on the critical parameters in 3D printing technology and providing readers with an overview on the use of a distributed recycling approach. Then, section \@ref(section:experimental) illustrates the methodology used in this study. In section \@ref(section:findings), the results of the experimental approach is presented. In section \@ref(section:discussion), we discuss the main research outcomes. Finally, section \@ref(section:conclusions) summarizes the main conclusions.  -->
 
 
@@ -138,7 +165,7 @@ By contrary, it is identified that higher printing speed with higher layer thick
 
 ## Materials and distributed recycling 
 
-<!-- Biopolymers for 3DP -->
+<!-- Biopolymers for 3DP --> 
 The development of new materials such as polymers, elastomers and composites in engineering plays a fundamental role in the advance of sustainable manufacturing [@Ashby2013; @Suarez2020]. 
 Liu et al. @Liu2019a presented a complete review on natural-derived biopolymers for 3D printing purposes, with a particular focus on biomedical, customized food fabrication and textile and apparel products. 
 They suggested the use of biopolymers of natural and renewable origin, replacing synthetic polymers. 
