@@ -1,5 +1,6 @@
 ---
-title: "Feasibility study on the use of recycled materials for prototyping purposes: a comparative study based on the mechanical resistance"
+title: 'Feasibility study on the use of recycled materials for prototyping purposes: a comparative study based on the tensile strength'
+classoption: 12pt
 type: Original article 
 # author: 
 #   - name: 
@@ -7,7 +8,7 @@ type: Original article
 #   - num:
 author:
   - Victor M. López^[University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain]
-  - Diego Carou^[Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain , diecapor@uvigo.es]
+  - Diego Carou^[Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain, diecapor@uvigo.es]
   - Fabio A. Cruz S.^[Université de Lorraine - ERPI -  F-54000, Nancy, France, cruzsanc1@univ-lorraine.fr]
 # author:
 #   - name: Victor M. López
@@ -30,11 +31,12 @@ author:
 #     address: |
 #       Université de Lorraine - ERPI -  F-54000, Nancy, France
 #appendix: appendix.tex
+
 abstract: |
-  3D printing is seen as a disruptive technology, which continues to expand the design space boundaries for prototypes and final products. Sustainability is one of the major objectives for manufacturing and the use of recycled materials becomes a relevant strategy, particularly for improving material resource efficiency. This paper attempts to evaluate the suitability of the substitution of virgin polylactic acid (PLA) by recycled PLA. An experimental plan divided into three phases to evaluate the mechanical resistance was described. The results showed that recycled PLA may be used thanks to the similar resistance, though slightly lower than the virgin material. Besides, the infill density and the orientation parameters played a major role on the response. A retention of the 58.1% of the resistance using an infill density of 40% was evidenced. This is a relevant insight for prescriptions of the 3D printing parameters guaranteeing minimal quality conditions in prototyping.
-    
-keywords: |
-  Prototyping; Distributed recycling; Mechanical strength; PLA
+  3D printing is seen as a disruptive technology and continues to expand the design space boundaries for prototypes and final products. Sustainability is one of the major objectives for manufacturing and the use of recycled materials is becoming a relevant strategy, particularly for improving material resource efficiency. This paper attempts to evaluate the suitability of the substitution of recycled polylactic acid (PLA) for virgin PLA. An experimental plan divided into three phases to evaluate the tensile strength of the specimens was described. The results showed that recycled PLA may be used thanks to the similar resistance, even though this is slightly lower than the virgin material. In addition, the infill density and the orientation parameters played a major role on the response. A retention of 58.1 % of the resistance using an infill density of 40 % was evidenced. This is a relevant insight for prescriptions of the 3D printing parameters guaranteeing minimum quality conditions in prototyping.
+   
+  **Keywords:** *Prototyping; Distributed recycling; Mechanical strength; PLA*
+# keywords: "Prototyping; Distributed recycling; Mechanical strength; PLA"
 header-includes: |
   \usepackage{float}
   \usepackage{subfig}
@@ -48,18 +50,27 @@ bibliography: library.bib
 #bibliography: References.bib
 link-citations: yes
 linkcolor: blue
-output: 
-  bookdown::pdf_document2:
-    toc: false
+# output: 
+#   bookdown::pdf_book:
+#     keep_tex: true
+#     number_sections: yes
+#     toc: false
+#     base_format: rticles::elsevier_article
+output:
+  # bookdown::pdf_document2:
+  #   toc: false
+  #   keep_tex: true
   #bookdown::html_document2: default
-  #bookdown::word_document2: default
+  bookdown::word_document2: default
 #output: rticles::tf_article
+
 always_allow_html: true
 ---
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.retina = 3, message = FALSE, warning = FALSE)
 options(knitr.kable.NA = '')
+
 
 library(tidyverse)
 library(kableExtra)
@@ -77,12 +88,19 @@ library(flextable)
 # df2bib(library, file = "Refs.bib", append = FALSE)
 set_flextable_defaults(fonts_ignore=TRUE)
 ```
-# Introduction
 
+\section*{Highlights}
+- Technical viability of recycled materials as substitutes for conventional virgin materials are still limited to particular applications such as prototyping activities
+-	The infill density and the orientation are key factors for the tensile strength
+-	Recycled materials provide tensile strength close to that of the virgin ones
+-	An infill density of 40 %, there is a retention of 58.1 % of the tensile strength
+
+
+# Introduction
 Fused filament fabrication (FFF) is a major additive manufacturing technology, which has found considerable number of applications in different types of manufacturing sectors [@Singh2020d; @Sartal2018].
 The layer-by-layer principle of manufacturing objects enables a higher degree of flexibility in the product design phase [@Akhoundi2019].
 <!-- The FFF process is based on material extrusion, so the material is heated above its melting point and then deposited onto a platform [@Wolszczak2018].  -->
-The set of several available printing technologies [@Nam2019] is pushing forward advantages such as the customization of objects with complex geometries that involve a great deal of detail, a combination of different materials [@Askari2020], a reduction in the need for assembly and a high utilization rate of raw materials. [@Wang2020f]
+The set of several available printing technologies [@Nam2019] is pushing forward advantages such as the customization of objects with complex geometries that involve a great deal of detail, a combination of different materials [@Askari2020], a reduction in the need for assembly and a high utilization rate of raw materials [@Wang2020f].
 
 <!-- 3D printing has developed significantly over time.  -->
 <!-- A great development is expected in sectors such as product consumption, medical products and aerospace components [@Peng2018]. -->
@@ -103,7 +121,7 @@ However, there is a gap in the literature in terms of sustainable manufacturing 
 Although the technology offers high efficiency in the use of materials, the democratization of this technology could cause a rebound impact due to the increasing generation and disposal of huge amounts of waste or polluting emissions to fabricate the virgin feedstock required, particularly, in prototyping. 
 Without a doubt, the roots of FFF are linked to the rapid prototyping concept [@Campbell2012] and in recent years it has been widely adopted to create functional objects for their designs. Therefore, one question that remains is how to define the most favorable printing conditions to create prototypes in the early phases without compromising the mechanical properties, even for recycled feedstocks. 
 
-Studies on the technical viability of recycled materials as substitutes for conventional virgin materials are still limited to particular applications [@CruzSanchez2020]. 
+Studies on the technical viability of recycled materials as substitutes for conventional virgin materials are still limited to particular applications [@CruzSanchez2020; @Mikula2020]. 
 It is important to note that, in most cases, prototypes do not require excellent mechanical properties but the minimum to be handled to allow inspection and measurement. 
 Thus, the type of material used and its amount can be further optimized when it comes to prototyping.
   <!-- Mechanical properties in 3DP -->
@@ -124,7 +142,7 @@ Moreover, by recycling raw materials such as Polylactic acid (PLA), one of the m
 
 <!-- Mechanical properties in DRAM -->
 It is important to evaluate the properties of the recycled materials before substituting virgin for recycled materials. The use of recycled materials is still uncertain because of the potential changes in the material properties when recycling [@Suarez2020].
-Several authors have studied the printing cycles that PLA can withstand until it loses much of its properties [@CruzSanchez2017; @Zhao2018; @Lanzotti2019].
+Several authors have studied the printing cycles that PLA can withstand until it loses much of its properties [@CruzSanchez2017; @Zhao2018; @Lanzotti2019; @Anderson2017].
 There is an agreement that PLA adequately withstands two printing cycles since after a third cycle or more the mechanical properties and viscosity decreased considerably. The increase in crystallinity and melting enthalpy and the decrease in cold crystallization enthalpy are attributed to the 3D printing process.
 Similarly, Kumar et al. @Kumar2018b compared the elongation at break, load at break, flow index, Young’s modulus and breaking stress of recycled Acrylonitrile butadiene styrene (ABS), high impact polystyrene (HIPS) and PLA. 
 The PLA showed the highest elongation at break along with the ABS. In addition, the PLA had a higher breaking load and breaking stress, although a smaller Young’s modulus.  The recycling of PLA has certain limitations due to the reduction in the molecular weight with its reuse, resulting in degradation and a decrease in mechanical properties [@Pinho2020].
@@ -186,7 +204,7 @@ knitr::include_graphics('Figures/Machine-probeta.jpg')
 
 ## Methodology
 
-<!-- Intro on Franctional design -->
+<!-- Intro on Fractional design -->
 The experimental plan included three different phases (Figure \@ref(fig:Methodology)) to carry out a comprehensive study with a limited number of tests that do not compromise the reliability of the results. 
 
 
@@ -199,7 +217,7 @@ The use of random order made it possible to guarantee that the hypothesis statin
 <!-- Based on the literature research presented in section \@ref(section:background),  -->
 The critical parameters for the study are the *layer height* (0.15 and 0.3 mm) and *infill pattern* (tri-hexagonal and grid).
 In addition, taking into account the goal of sustainable manufacturing (i.e. trying to optimize the consumption of material), but also productivity (i.e. trying to minimize printing times), *infill density* (60 and 100 %) and *printing speed* (40 and 80 mm/s) were considered [@Singh2019; @Tanveer2019]. 
-These four factors were selected using two levels for each, with wide ranges. 
+<!-- These four factors were selected using two levels for each, with wide ranges.  -->
 The printing temperature was 210 °C, which was the recommended temperature for PLA material. 
 This phase ends with an analysis of variance (ANOVA) to identify the factors influencing the response variable.
 
@@ -251,14 +269,17 @@ table.fase3 <-
 Table \@ref(tab:phase1) summarizes the experimental strategy with the results of the maximum load attained during this screening phase. A total of 16 samples were tested.
 
 ```{r phase1, echo=FALSE, message=FALSE, include=TRUE}
-table.fase1 <-
-  fase1 %>% set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)")
+# Reading the datos
 
-table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+fase1 <- read_csv2("tables/Phase-1.csv") 
 
-table.fase1 %>% flextable() %>%
+# table.fase1 <-
+#   fase1 %>% set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)")
+# table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+
+fase1 %>% flextable() %>%
   set_caption("Results of the Phase I") %>%
-  fontsize(size=8, part = "all") %>% 
+  fontsize(size=10, part = "all") %>% 
 #  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
   theme_zebra() 
   # footnote( i = 1, j = 2:5,
@@ -299,61 +320,101 @@ In these cases, the material layer is not intact after the fracture.
 As a result, it is likely that both modes (in-layer and interlayer fractures) coexist in this study, which may explain the heterogeneity of the different fractures.
 
 
-```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE', out.width= c('48%', '48%')}
+```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE', fig.subcap=c(' ', ' '), out.width= c('65%', '100%'), fig.ncol=1, fig.align='center'}
 knitr::include_graphics(c('Figures/Probetas-Fase-1.jpg',
-                          'Figures/Phase-1-2.jpg'))
+                          'Figures/Phase-1-2-correction.jpg'))
 ```
 
 
 
-```{r, include=FALSE}
-Total_model <- lm(Load.max ~ LH + IP + ID + PS + Material , data = fase1)
-#summary(Total_model)
-anv.fase.1 <- anova(Total_model)
-summary(anv.fase.1)
+```{r ANOVAS, include=FALSE}
+# Reading data
+fase1 <- read_csv2("tables/Phase-1.csv")
+names(fase1) <- c("Material", "LH", "IP", "ID", "PS", "ML", "Young")
 
-total= anv.fase.1$`Sum Sq` %>% sum()
+# Model witht the Load
+Load_model <- lm(ML ~ LH + ID + IP + PS + Material, data = fase1)
 
-# Percentage of ID
-round(anv.fase.1$`Sum Sq`[3]/ total,3)*100
-# Percentage of Material
-round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
+# Model witht the Young
+Young_model <- lm(Young ~ LH + ID + IP + PS  + Material, data = fase1)
 
-#anv.fase.1  <-  round(anv.fase.1, 3) 
+ # HAciendo los Anovas
+Load_model.anv <-  anova(Load_model) %>% round(3)
+Young_model.anv <- anova(Young_model) %>% round(3)
+
+Anovas <-
+  data.frame(rbind(c(
+                  "Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)", 
+                  "Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)"),
+                    cbind(Load_model.anv, 
+                          Young_model.anv))
+                ) 
+
+# Anovas <- Anovas %>% mutate(across(is.numeric, ~ round(., 3)))
+
+
+#colnames(Anovas) <- c("", "", "", "","", "", "", "", "","")
+colnames(Anovas) <- LETTERS[1:10]
+row.names(Anovas) <- c("", "Layer Height (mm)", "Infill Density (%)","Infill Pattern",  "Printing Speed (mm/s)", "Material", "Residuals")
+
 ```
 
 
 ```{r anova-phase1, include=TRUE}
-#names(anv.fase.1)
-#anv.fase.1$`Pr(>F)`[3]<- paste0(anv.fase.1$`Pr(>F)`[3],footnote_marker_symbol(1, "latex"))
+Anovas[3,5] <- paste0("<2e-16","***")
+Anovas[5,5] <- paste0("0.007","**")
+Anovas[3,10] <- paste0("1.8e-09","***")
 
-test <- 
-  anv.fase.1 %>% set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
-  dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
-  
-test[3,5] <- paste0(test[3,5],"***")
-test[5,5] <- paste0(test[5,5],"**")
 
-# 
-# test %>%
-#    kbl(booktabs = T,
-#        caption = "ANOVA results at 95\\% significance level.",
-#        linesep = "")  %>%
-#   kable_styling(latex_options = c("striped", font_size = 7, "hold_position")) #%>%
-#   #?footnote(test, general = c("Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1"))
-
-test %>% flextable() %>%
-  set_caption("ANOVA results at 95\\% significance level.") %>%
-  fontsize(size=10, part = "all") %>% 
-#  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
-  theme_zebra() #%>% 
-  # footnote( i = 1, j = 5,
-  #           value = as_paragraph(
-  #             c("Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1")
+Anovas %>% rownames_to_column(var = "Variable") %>% flextable() %>%
+   set_caption("ANOVA results at 95\\% significance level for Maximal load and Young modulus variables") %>%
+  delete_part( part = "header") %>% 
+   add_header( Variable = "Variable",
+               A = "Maximal load",
+               B = "Maximal load",
+               C = "Maximal load",
+               D = "Maximal load",
+               F = "Young",
+               G = "Young",
+               H = "Young",
+               I = "Young",
+               J = "Young",
+               top = TRUE ) %>% 
+  merge_h( part = "header") %>% 
+   fontsize(size=10, part = "all") %>% 
+  #fit_to_width(max_width = 5) %>% 
+  width(j=1:11, width = c(1, 0.2,0.4, 0.4, 0.4, 0.7, 
+                             0.2,0.7, 0.7, 0.6, 0.7)) %>% 
+   theme_zebra() %>% 
+  vline( j = c(1,6), part = "all") %>% 
+  footnote( i = 1, j = c(6,11),
+            value = as_paragraph(
+              c("Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1"))
+  )  
   #           ),
   #           ref_symbols = c("*"),
   #           part = "header", inline = TRUE)
+# 
+# 
+# Anovas %>% 
+#    kbl(booktabs = T,
+#        caption = "ANOVA results at 95\\% significance level.",
+#        linesep = "")  %>%
+#   kable_styling(latex_options = c("striped", font_size = 5, "hold_position", full_width = F)) %>% 
+#   column_spec (c(1,6), border_right = T) %>% 
+#   add_header_above(c("", "Maximal load" = 5, "Young modulus" = 5))
+# 
+#   
+
+
+
+# Percentage of ID
+#round(anv.fase.1$`Sum Sq`[3]/ total,3)*100
+# Percentage of Material
+#round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
+
 ```
+
 
 
 An ANOVA was performed using R software in order to identify the influential factors on the response variable.
@@ -364,20 +425,21 @@ Table \@ref(tab:anova-phase1) lists the ANOVA.
 Thus, it can be clearly identified how only the infill density (lowest p-value) and the type of material were statistically significant factors for the maximum load. 
 When evaluating the contribution of each of the factors to the variability explained by the model, there were calculated values of 97.3 % and 1.3 % for infill density and type of material, respectively. Thus, when manufacturing new parts, infill density is a key factor for guaranteeing adequate tensile strength.
 
+
 ## Phase II: Focusing
+
+
+```{r phase2, fig.cap="Phase II: Evaluation of the infill density in the mechanical load.", fig.subcap=c(" ", " "), out.width= c('45%', '50%'), fig.pos="!h", fig.align='center', fig.nrow=1}
+
+knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
+                        'Correciones/Phase-2-corrected.jpg'))
+```
+
 
 The main goal of *Phase II* is to evaluate in more detail the influence of infill density on the tensile strength based on Phase I. 
 Therefore, five levels of the infill density were chosen: 40, 55, 70, 85 and 100 %. Regarding the selection of the other printing parameters, the main criterion was the reduction of the printing time. 
 Therefore, the experimental conditions were layer height of 0.3 mm, tri-hexagonal infill pattern and printing speed of $80~mm/s$ with an estimated printing time of 20 min. 
 A total of 10 samples were manufactured.
-
-
-```{r phase2, fig.cap='Phase II: Evaluation of the infill density in the mechanical load.', fig.subcap=c('a)', 'b)'), out.width= c('49%', '49%')}
-knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
-                          'Figures/Phase-2.jpg'))
-
-```
-
 
 Figure \@ref(fig:phase2)a shows the fracture of the specimens tested in *Phase II*. Regarding the fracture, the results were similar to those of the *Phase I* (i.e., more ductile behavior for the recycled PLA specimens). 
 The interesting element in this phase is presented in \@ref(fig:phase2)b where the maximum load versus infill density for both materials is illustrated.
@@ -401,19 +463,21 @@ Based on the models developed, it is possible to highlight that recycled PLA is 
 <!-- Moreover, by developing models for the mechanical properties, it is possible to minimize the material consumption for both virgin and recycled materials satisfying the mechanical resistance requirements.  -->
 <!-- Thus, by accurately knowing the influence of the printing conditions on the mechanical resistance, it is possible to advance towards sustainable manufacturing. -->
 
+\newpage
 ## Phase III: Study on the printing orientation
 
 In this final phase, the main goal is to test the influence of the building orientation according to the UNE 116005:2012 [@Garcia-Dominguez2020] standard. 
+
+
+```{r phase3, fig.cap='Phase III: Evaluation of the anisotropy. a) Specimens after tensile test in  Phase III. b) Average of the load obtain for each build orientation.', fig.subcap=c(' ', ' '), out.width= c('49%', '49%'), fig.ncol=2, fig.align='center', fig.pos='!h', include=TRUE}
+knitr::include_graphics(c('Figures/Probetas-Fase-3.jpg',
+                          'Figures/Phase-3.jpg'))
+```
+
+
 Five specimens for each of the orientations (edgewise, horizontal and vertical) for both materials were manufactured. 
 The selected printing conditions were infill density of 50 %, printing speed of 80 mm/s, tri-hexagonal infill pattern and layer height of 0.3 mm, with the objective of limiting the use of material and the time required for printing. 
 A total of 30 samples were tested.
-
-
-```{r phase3, fig.cap='Phase III: Evaluation of the anisotropy.', fig.subcap=c('Specimens after tensile test in  Phase III', 'Average of the load obtain for each build orientation.'), out.width= c('49%', '49%')}
-knitr::include_graphics(c('Figures/Probetas-Fase-3.jpg',
-                          'Figures/Phase-3.jpg'))
-
-```
 
 
 
@@ -430,8 +494,10 @@ For the recycled material, there is a slight decrease in the maximum load obtain
 However, the other two orientations are more adequate for substituting the recycled material for the virgin material, with a limited reduction in the tensile strength (6.71 to 7.93 %).
 
 
-# Discussion and limits of the results {#section:discussion}
 
+
+
+# Discussion and limits of the results {#section:discussion}
 
 One of the systemic problems of plastic waste involves dependency of the indiscriminate disposal of plastics, which carries multiple risks because many plastic products contain additives that modify their physico-mechanical properties, making recycling/reuse difficult [@Wagner2020].
 The use of 3D printing technology for prototyping is not exempt from this societal issue. The main purpose of this article is to assess the extent to which the influence of printing parameters affects the tensile strength. 
@@ -452,17 +518,21 @@ Nevertheless, this is an ongoing study in which the main purpose is the statisti
 
 # Conclusions {#section:conclusions}
 
-The present study includes a comprehensive experimental program to analyze the Fused Filament Fabrication process based on the tensile strength using virgin PLA and recycled PLA. The paper aims to improve the sustainability of the 3D printing process, assessing the technical feasibility of the substitution of recycled filaments for virgin ones by means of a better knowledge on the influence of the printing conditions.
+The present study proposes a comprehensive experimental program to analyze the Fused Filament Fabrication process based on the tensile strength using virgin PLA and recycled PLA. The paper aims to improve the sustainability of the 3D printing process, proposing a methodology based on Design of Experiments approach in order to assess the technical feasibility of the substitution of recycled filaments for virgin ones by means of a better knowledge on the influence of the printing conditions. The final purpose in the long term is to recognize the technology affordance of prototyping side of additive manufacturing  as a design tool to better ensure consumer acceptance and less waste [@Kohtala2015a].
 
 To a great extent, the printing conditions determined the tensile strength of the specimens. Specifically, the factor that most influenced the maximum load was the infill density.
 The influence of the infill density on the maximum load made it possible to identify two different regions: from 40 to 80 %, linear behavior with a slight slope, and from 80 to 100 % where the maximum load notably increases to a greater extent. In general, the fracture of the virgin material corresponded to that of a fragile material, while the fracture of the recycled material showed more ductile behavior.
 
 The selected orientation for printing is of great importance because of the anisotropy. The horizontal orientation allowed to attain a higher maximum load, while the vertical orientation provided a lower value due to the fact that no layers were deposited in the tensile direction. 
 Our results support the main argument for the substitution of recycled PLA for virgin PLA, advancing towards sustainable manufacturing. It was found that, when using an infill density of 40 %, there is a retention of 58.1 % of the tensile strength. Despite the fact that recycled PLA offers slightly lower tensile strength, by properly selecting the printing conditions, it could be close to that of the virgin PLA. Particularly, when using the edgewise and horizontal orientations, (ie., from 3 to 8 %).
+Future research needs to evaluate the quality of a (recycled) prototype including quality aspects other than tensile aspects such as aesthetics, accuracy. 
+Moreover, the acceptability of recycled products that can be technical printable is a major milestone. 
 
 
 
 
+
+\newpage
 # Acknowledgements
 The authors would like to thank the “Mechanical and Energy Engineering” TEP 250 research group and the Lorraine Fab Living Lab
 

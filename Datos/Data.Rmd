@@ -24,7 +24,6 @@ library(ggpubr)
 theme_set(theme_bw(base_size = 15, base_family = "Palatino")) 
 ```
 
-
 First, I look for the paths of all mechanical tests
 
 ```{r Path}
@@ -78,7 +77,7 @@ Fase.I <-
 ### Function to identify Young Modulus
 Young_mod <- function(df) {
   # Filtering the Dataframe
-  df <- df %>% filter(Strain >= 0.0005 & Strain <= 0.0025 )
+  df <- df %>% filter(Strain >= 0.0005 & Strain <= 0.035 )
   # Doing the linear model
    model= lm(Tensile ~ Strain, data = df)
    E= coefficients(model)[[2]]
@@ -88,8 +87,19 @@ Young_mod <- function(df) {
 
 
 ```{r Data.Fase.I}
-# Identifying max Tensile ----
 
+# Exploratory Graphics for Young Modulus  ----
+
+test <-   Fase.I %>% select(Sample,Material, Data)  %>% unnest(cols = c(Data))
+test %>% 
+  ggplot(aes(x=Strain, y=Tensile, color= Sample)) +
+  geom_point() +
+ facet_grid( .  ~  Material ) +
+  labs(y="Tensiles strength (MPa)", x="Strain (mm/mm)") 
+  
+  
+
+# Identifying max Tensile ----
 Fase.I <- 
   Fase.I %>% 
   mutate(Young = map_dbl(Data,  Young_mod ),
@@ -127,7 +137,7 @@ Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max, Young, Tensile.m
 
 The database of `Phase I`
 
-```{r Table.PhaseIII, }
+```{r Table.PhaseI, }
 # Fase.I %>% select(Material:Load.max,Young, Sample) %>% 
 #   kbl(booktabs = T, 
 #       caption = "Dataframe Phase I") %>%
@@ -135,13 +145,14 @@ The database of `Phase I`
 
 table.fase1 <- 
 Fase.I %>% select(Material:Load.max,Young ) %>% 
-   set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)", "Young Modulus (kN)" )
+   set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)", "Young Modulus (MPa)" )
 
 table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
-table.fase1$`Young Modulus (kN)` <- table.fase1$`Young Modulus (kN)` %>% round( digits=2)
+table.fase1$`Young Modulus (MPa)` <- table.fase1$`Young Modulus (MPa)` %>% round( digits=2)
+
+#write_csv2(table.fase1, "../tables/Phase-1.csv")
 
 library(flextable)
-
 table.fase1 %>% flextable() %>%
   set_caption("Results of the Phase I") %>%
   fontsize(size=8, part = "all") %>% 
@@ -197,7 +208,18 @@ MT <-
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Max Load (kN)", x="Material type") +
-  coord_cartesian(ylim = c(1, 4))
+  coord_cartesian(ylim = c(1, 4)) +
+  theme(legend.position = "none") 
+
+MT_Y <- 
+Fase.I %>% 
+  ggplot(aes(x=Material, y = Young )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Young modulus (MPa)", x="Material type") +
+  coord_cartesian(ylim = c(500, 1500))+
+  theme(legend.position = "none") 
+
 
 ## Comparing the Virgin et Recycling
 LH <- 
@@ -206,7 +228,17 @@ LH <-
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Max Load (kN)", x="Layer heigth (mm)") +
-  coord_cartesian(ylim = c(1, 4))
+  coord_cartesian(ylim = c(1, 4)) +
+  theme(legend.position = "none") 
+
+LH_Y <- 
+  Fase.I %>% 
+  ggplot(aes(x = LH, y = Young )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Young modulus (MPa)", x="Layer heigth (mm)") +
+  coord_cartesian(ylim = c(500, 1500))+
+  theme(legend.position = "none") 
 
 ## Infill pattern
 IP <- 
@@ -217,6 +249,16 @@ IP <-
   labs(y="Max Load (kN)", x="Infill pattern") +
   coord_cartesian(ylim = c(1, 4))
 
+IP_Y <- 
+  Fase.I %>% 
+  ggplot(aes(x = IP, y = Young )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Young modulus (MPa)", x="Infill pattern") +
+  coord_cartesian(ylim = c(500, 1500))+
+  theme(legend.position = "none") 
+
+
 ## Infill density
 ID <- 
   Fase.I %>% 
@@ -225,6 +267,15 @@ ID <-
   #facet_grid( .  ~  ) +
   labs(y="Max Load (kN)", x="Infill density (%)") +
   coord_cartesian(ylim = c(1, 4))
+
+ID_Y <- 
+  Fase.I %>% 
+  ggplot(aes(x = ID, y = Young )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Young modulus (MPa)", x="Infill density (%)") +
+  coord_cartesian(ylim = c(500, 1500))
+
 
 ## Infill density
 PS <- 
@@ -235,14 +286,26 @@ PS <-
   labs(y="Max Load (kN)", x="Printing speed (mm/s)") +
   coord_cartesian(ylim = c(1, 4))
 
+PS_Y <- 
+  Fase.I %>% 
+  ggplot(aes(x = PS, y = Young )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( Load.max  ~ LH + IP ) +
+  labs(y="Young modulus (MPa)", x="Printing speed (mm/s)") +
+  coord_cartesian(ylim = c(500, 1500))
+  #theme(legend.position = "none")
+
+
 ```
 
 
 Plotting the Boxplots
 
 ```{r, fig.width=7, fig.height=7}
-ggarrange(LH, IP, ID , PS,  ncol = 2, nrow = 2 ,common.legend = TRUE)
-#ggsave("../Figures/Phase-1-2.jpg", width=6, height=6, dpi = "print")
+ggarrange(LH, IP, ID , PS,
+          LH_Y, IP_Y, ID_Y , PS_Y,
+          ncol = 4, nrow = 2 ,common.legend = TRUE)
+#ggsave("../Figures/Phase-1-2-correction.jpg", width=12, height=6, dpi = "print")
 ```
 
 

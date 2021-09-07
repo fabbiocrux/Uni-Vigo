@@ -1,0 +1,17 @@
+Material;Layer Height (mm);Infill Pattern;Infill Density (%);Printing Speed (mm/s);Max Load (kN);Young Modulus (MPa)
+Virgin;0.15;Tri-hex;60;40;2,21;808,50
+Virgin;0.3;Tri-hex;60;80;2,16;826,31
+Virgin;0.15;Grid;60;80;2,24;788,51
+Virgin;0.3;Grid;100;80;3,60;1143,72
+Virgin;0.3;Tri-hex;100;40;3,62;1160,47
+Virgin;0.15;Tri-hex;100;80;3,81;1127,84
+Virgin;0.15;Grid;100;40;3,79;1132,18
+Virgin;0.3;Grid;60;40;2,16;834,48
+Recycled;0.15;Tri-hex;60;40;2,16;834,48
+Recycled;0.3;Tri-hex;60;80;2,16;875,78
+Recycled;0.3;Grid;60;40;2,15;852,18
+Recycled;0.15;Tri-hex;100;80;3,38;1058,60
+Recycled;0.3;Tri-hex;100;40;3,37;1106,42
+Recycled;0.15;Grid;60;80;2,05;845,71
+Recycled;0.15;Grid;100;40;3,53;1126,03
+Recycled;0.3;Grid;100;80;3,49;1152,35

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  3 SEP 2021 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.20)  7 SEP 2021 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2020/texmf-dist/tex/latex
 /base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@section=\count180
@@ -309,7 +309,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
 \BKM@id=\count278
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `colorlinks' set `true' on input line 47.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
@@ -612,7 +612,7 @@ LaTeX Font Info:    Trying to load font information for T1+mdbch on input line
 File: t1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for T1/mdbch.
 )
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 186.
+(Font)              scaled to size 11.52008pt on input line 186.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 449.
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 450.
 Now handling font encoding MDA ...
@@ -966,46 +966,46 @@ File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 ) (./Taylor-template.aux)
 \openout1 = `Taylor-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 129.
 LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 1
-30.
+29.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 129.
 LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 1
-30.
+29.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Info: Redefining \microtypecontext on input line 130.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Info: Redefining \microtypecontext on input line 129.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 130.
+LaTeX Info: Redefining \showhyphens on input line 129.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1033,7 +1033,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 130.
+Package hyperref Info: Link coloring ON on input line 129.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1045,9 +1045,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count342
 )
-LaTeX Info: Redefining \ref on input line 130.
-LaTeX Info: Redefining \pageref on input line 130.
-LaTeX Info: Redefining \nameref on input line 130.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1067,12 +1067,12 @@ LaTeX Info: Redefining \nameref on input line 130.
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1089,88 +1089,88 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 Package mathdesign/mdbch Warning: Package 'amssymb' shouldn't be used in conjon
-ction with package mdbch, on input line 130.
+ction with package mdbch, on input line 129.
 
 
 Package mathdesign/mdbch Warning: Package 'amsfonts' shouldn't be used in conjo
-nction with package mdbch, on input line 130.
+nction with package mdbch, on input line 129.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 16.58891pt on input line 132.
+(Font)              scaled to size 19.91054pt on input line 131.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/it/12'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OML/mdbch/m/it/14.4'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/it/8'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OML/mdbch/m/it/10'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/mdbch/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OMS/mdbch/m/n/14.4'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/mdbch/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OMS/mdbch/m/n/10'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 132
+(Font)              scaled to size 6.72005pt on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 131
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 132
+LaTeX Font Info:    Trying to load font information for U+msb on input line 131
 .
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1178,773 +1178,883 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OML/mdbch/m/n/14.4'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/n/8'. Switching off
-(microtype)                protrusion for this font on input line 132.
+(microtype)                `OML/mdbch/m/n/10'. Switching off
+(microtype)                protrusion for this font on input line 131.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 132.
+(Font)              scaled to size 13.82408pt on input line 131.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 132.
+ 131.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 132.
+(Font)              scaled to size 9.60007pt on input line 131.
 Missing character: There is no * in font mdbchr8c!
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 132.
+(Font)              scaled to size 4.80003pt on input line 131.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 132.
+(Font)              scaled to size 6.72005pt on input line 131.
 Missing character: There is no * in font mdbchr8c!
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 132.
+(Font)              scaled to size 10.51207pt on input line 131.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 8.64006pt on input line 132.
+(Font)              scaled to size 10.51207pt on input line 131.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 134.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 137.
+(Font)              scaled to size 16.58891pt on input line 137.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 137.
+(Font)              scaled to size 16.58891pt on input line 137.
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 142.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/it/10'. Switching off
-(microtype)                protrusion for this font on input line 139.
+(microtype)                `OML/mdbch/m/it/12'. Switching off
+(microtype)                protrusion for this font on input line 154.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OMS/mdbch/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 139.
+(microtype)                `OMS/mdbch/m/n/12'. Switching off
+(microtype)                protrusion for this font on input line 154.
 
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `OML/mdbch/m/n/10'. Switching off
-(microtype)                protrusion for this font on input line 139.
+(microtype)                `OML/mdbch/m/n/12'. Switching off
+(microtype)                protrusion for this font on input line 154.
 
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 139.
+(Font)              scaled to size 11.52008pt on input line 154.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 154.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 139.
+(Font)              scaled to size 7.68005pt on input line 154.
 [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 174--181
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 189--196
 
  []
 
-[2]
+[3]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 192.
+(Font)              scaled to size 13.82408pt on input line 207.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 209.
+(Font)              scaled to size 10.56007pt on input line 224.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.56007pt on input line 209.
+(Font)              scaled to size 10.56007pt on input line 224.
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.56007pt on input line 235.
-<Figures/Machine-probeta.jpg, id=111, 1372.12625pt x 686.565pt>
+(Font)              scaled to size 10.56007pt on input line 250.
+<Figures/Machine-probeta.jpg, id=115, 1372.12625pt x 686.565pt>
 File: Figures/Machine-probeta.jpg Graphic file (type jpg)
 <use Figures/Machine-probeta.jpg>
-Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 259.
+Package pdftex.def Info: Figures/Machine-probeta.jpg  used on input line 274.
 (pdftex.def)             Requested size: 422.77951pt x 211.54439pt.
-[3 <./Figures/Machine-probeta.jpg>]
+[4]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 271.
-LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 279.
-<Figures/Methodology.pdf, id=133, 313.17pt x 284.02109pt>
+(Font)              scaled to size 11.52008pt on input line 286.
+[5 <./Figures/Machine-probeta.jpg>]
+<Figures/Methodology.pdf, id=151, 313.17pt x 284.02109pt>
 File: Figures/Methodology.pdf Graphic file (type pdf)
 <use Figures/Methodology.pdf>
-Package pdftex.def Info: Figures/Methodology.pdf  used on input line 293.
+Package pdftex.def Info: Figures/Methodology.pdf  used on input line 307.
 (pdftex.def)             Requested size: 313.18832pt x 284.03772pt.
-[4 <./Figures/Methodology.pdf>]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 320.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 430.
-
-LaTeX Warning: Reference `fig:fase1' on page 5 undefined on input line 430.
-
-<Figures/Probetas-Fase-1.png, id=162, 803.0pt x 740.7675pt>
+(Font)              scaled to size 9.60007pt on input line 334.
+[6 <./Figures/Methodology.pdf>]
+<Figures/Probetas-Fase-1.png, id=180, 803.0pt x 740.7675pt>
 File: Figures/Probetas-Fase-1.png Graphic file (type png)
 <use Figures/Probetas-Fase-1.png>
-Package pdftex.def Info: Figures/Probetas-Fase-1.png  used on input line 445.
-(pdftex.def)             Requested size: 225.47562pt x 208.00125pt.
-<Figures/Phase-1-2.jpg, id=163, 1806.75pt x 1806.75pt>
-File: Figures/Phase-1-2.jpg Graphic file (type jpg)
-<use Figures/Phase-1-2.jpg>
-Package pdftex.def Info: Figures/Phase-1-2.jpg  used on input line 448.
-(pdftex.def)             Requested size: 225.45723pt x 225.45723pt.
-[5] [6 <./Figures/Probetas-Fase-1.png> <./Figures/Phase-1-2.jpg>]
+Package pdftex.def Info: Figures/Probetas-Fase-1.png  used on input line 460.
+(pdftex.def)             Requested size: 305.33922pt x 281.67542pt.
+<Figures/Phase-1-2-correction.jpg, id=181, 3613.5pt x 1806.75pt>
+File: Figures/Phase-1-2-correction.jpg Graphic file (type jpg)
+<use Figures/Phase-1-2-correction.jpg>
+Package pdftex.def Info: Figures/Phase-1-2-correction.jpg  used on input line 4
+60.
+(pdftex.def)             Requested size: 469.71635pt x 234.85817pt.
 
-LaTeX Warning: Reference `fig:fase1' on page 7 undefined on input line 516.
+Overfull \hbox (3.17543pt too wide) in paragraph at lines 460--461
+ [][] 
+ []
 
-<Figures/Probetas-Fase-2.jpg, id=182, 883.3pt x 915.42pt>
+
+Overfull \hbox (14.14977pt too wide) in alignment at lines 473--483
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.14977pt too wide) in alignment at lines 483--489
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 493.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 10.56007pt on input line 493.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.28003pt on input line 493.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.39201pt on input line 493.
+
+Overfull \hbox (14.14977pt too wide) in alignment at lines 489--495
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (14.14977pt too wide) in alignment at lines 495--539
+ [] [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[7] [8 <./Figures/Probetas-Fase-1.png> <./Figures/Phase-1-2-correction.jpg>]
+<Figures/Probetas-Fase-2.jpg, id=197, 883.3pt x 915.42pt>
 File: Figures/Probetas-Fase-2.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-2.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 530.
-(pdftex.def)             Requested size: 230.17822pt x 238.54834pt.
-<Figures/Phase-2.jpg, id=183, 1505.625pt x 1505.625pt>
-File: Figures/Phase-2.jpg Graphic file (type jpg)
-<use Figures/Phase-2.jpg>
-Package pdftex.def Info: Figures/Phase-2.jpg  used on input line 530.
-(pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
-[7 <./Figures/Probetas-Fase-2.jpg> <./Figures/Phase-2.jpg>]
-<Figures/Probetas-Fase-3.jpg, id=201, 485.84874pt x 318.83824pt>
+Package pdftex.def Info: Figures/Probetas-Fase-2.jpg  used on input line 554.
+(pdftex.def)             Requested size: 211.37634pt x 219.06274pt.
+<Correciones/Phase-2-corrected.jpg, id=198, 1505.625pt x 1505.625pt>
+File: Correciones/Phase-2-corrected.jpg Graphic file (type jpg)
+<use Correciones/Phase-2-corrected.jpg>
+Package pdftex.def Info: Correciones/Phase-2-corrected.jpg  used on input line 
+554.
+(pdftex.def)             Requested size: 234.86276pt x 234.86276pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9] [10 <./Figures/Probetas-Fase-2.jpg> <./Correciones/Phase-2-corrected.jpg>]
+<Figures/Probetas-Fase-3.jpg, id=220, 485.84874pt x 318.83824pt>
 File: Figures/Probetas-Fase-3.jpg Graphic file (type jpg)
 <use Figures/Probetas-Fase-3.jpg>
-Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 558.
+Package pdftex.def Info: Figures/Probetas-Fase-3.jpg  used on input line 591.
 (pdftex.def)             Requested size: 230.18005pt x 151.05565pt.
-<Figures/Phase-3.jpg, id=202, 1505.625pt x 1505.625pt>
+<Figures/Phase-3.jpg, id=221, 1505.625pt x 1505.625pt>
 File: Figures/Phase-3.jpg Graphic file (type jpg)
 <use Figures/Phase-3.jpg>
-Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 558.
+Package pdftex.def Info: Figures/Phase-3.jpg  used on input line 591.
 (pdftex.def)             Requested size: 230.17609pt x 230.17609pt.
-[8 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [9]
+[11 <./Figures/Probetas-Fase-3.jpg> <./Figures/Phase-3.jpg>] [12] [13]
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 613.
-[10]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 629--632
+(Font)              scaled to size 7.68005pt on input line 652.
+[14]
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 668--671
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 629--632
+Underfull \hbox (badness 10000) in paragraph at lines 668--671
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 633--636
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 672--675
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 633--636
+Underfull \hbox (badness 10000) in paragraph at lines 672--675
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 637--640
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 676--679
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 637--640
+Underfull \hbox (badness 10000) in paragraph at lines 676--679
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 641--644
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 680--683
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--644
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 645--648
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 684--687
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 645--648
+Underfull \hbox (badness 10000) in paragraph at lines 684--687
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 649--652
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 688--691
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--652
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 653--656
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 692--695
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--656
+Underfull \hbox (badness 10000) in paragraph at lines 692--695
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 657--660
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 696--699
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--660
+Underfull \hbox (badness 10000) in paragraph at lines 696--699
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 661--664
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 700--703
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 661--664
+Underfull \hbox (badness 10000) in paragraph at lines 700--703
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 665--668
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 704--707
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--668
+Underfull \hbox (badness 10000) in paragraph at lines 704--707
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 669--672
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 708--711
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--672
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 673--676
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 712--715
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--676
+Underfull \hbox (badness 10000) in paragraph at lines 712--715
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 677--680
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 716--719
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 677--680
+Underfull \hbox (badness 10000) in paragraph at lines 716--719
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 681--684
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 720--723
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--684
+Underfull \hbox (badness 10000) in paragraph at lines 720--723
 
  []
 
-
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 685--688
+[15]
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 724--727
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 685--688
+Underfull \hbox (badness 10000) in paragraph at lines 724--727
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 689--692
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 728--731
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--692
+Underfull \hbox (badness 10000) in paragraph at lines 728--731
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 693--696
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 732--735
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 693--696
+Underfull \hbox (badness 10000) in paragraph at lines 732--735
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 697--700
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 736--739
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--700
+Underfull \hbox (badness 10000) in paragraph at lines 736--739
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 701--704
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 740--743
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 701--704
+Underfull \hbox (badness 10000) in paragraph at lines 740--743
 
  []
 
-[11]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 705--708
+
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 744--747
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 705--708
+Underfull \hbox (badness 10000) in paragraph at lines 744--747
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 709--712
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 748--751
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--712
+Underfull \hbox (badness 10000) in paragraph at lines 748--751
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 713--716
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 752--755
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 713--716
+Underfull \hbox (badness 10000) in paragraph at lines 752--755
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 717--720
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 756--759
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--720
+Underfull \hbox (badness 10000) in paragraph at lines 756--759
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 721--724
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 760--763
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 721--724
+Underfull \hbox (badness 10000) in paragraph at lines 760--763
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 725--728
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 764--767
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+Underfull \hbox (badness 10000) in paragraph at lines 764--767
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 729--732
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 768--771
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 729--732
+Underfull \hbox (badness 10000) in paragraph at lines 768--771
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 733--736
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 772--775
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 733--736
+Underfull \hbox (badness 10000) in paragraph at lines 772--775
 
  []
 
-
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 737--740
+[16]
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 776--779
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 737--740
+Underfull \hbox (badness 10000) in paragraph at lines 776--779
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 741--744
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 780--783
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--744
+Underfull \hbox (badness 10000) in paragraph at lines 780--783
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 745--748
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 784--787
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--748
+Underfull \hbox (badness 10000) in paragraph at lines 784--787
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 749--752
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 788--791
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 749--752
+Underfull \hbox (badness 10000) in paragraph at lines 788--791
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 753--756
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 792--795
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 753--756
+Underfull \hbox (badness 10000) in paragraph at lines 792--795
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 757--760
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 796--799
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--760
+Underfull \hbox (badness 10000) in paragraph at lines 796--799
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 761--764
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 800--803
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 761--764
+Underfull \hbox (badness 10000) in paragraph at lines 800--803
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 765--768
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 804--807
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 765--768
+Underfull \hbox (badness 10000) in paragraph at lines 804--807
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 769--772
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 808--811
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 769--772
+Underfull \hbox (badness 10000) in paragraph at lines 808--811
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 773--776
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 812--815
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--776
+Underfull \hbox (badness 10000) in paragraph at lines 812--815
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 777--780
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 816--819
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--780
+Underfull \hbox (badness 10000) in paragraph at lines 816--819
 
  []
 
-[12]
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 781--784
+
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 820--823
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 781--784
+Underfull \hbox (badness 10000) in paragraph at lines 820--823
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 785--788
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 824--827
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 785--788
+Underfull \hbox (badness 10000) in paragraph at lines 824--827
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 789--792
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 828--831
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 789--792
+Underfull \hbox (badness 10000) in paragraph at lines 828--831
 
  []
 
-
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 793--796
+[17]
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 832--835
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 793--796
+Underfull \hbox (badness 10000) in paragraph at lines 832--835
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 797--800
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 836--839
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--800
+Underfull \hbox (badness 10000) in paragraph at lines 836--839
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 801--804
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 840--843
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 801--804
+Underfull \hbox (badness 10000) in paragraph at lines 840--843
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 805--808
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 844--847
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 805--808
+Underfull \hbox (badness 10000) in paragraph at lines 844--847
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 809--812
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 848--851
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 809--812
+Underfull \hbox (badness 10000) in paragraph at lines 848--851
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 813--816
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 852--855
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 813--816
+Underfull \hbox (badness 10000) in paragraph at lines 852--855
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 817--820
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 856--859
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 817--820
+Underfull \hbox (badness 10000) in paragraph at lines 856--859
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 821--824
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 860--863
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 821--824
+Underfull \hbox (badness 10000) in paragraph at lines 860--863
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 825--828
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 864--867
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--828
+Underfull \hbox (badness 10000) in paragraph at lines 864--867
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 829--832
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 868--871
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 829--832
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 833--836
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 872--875
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 833--836
+Underfull \hbox (badness 10000) in paragraph at lines 872--875
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 837--840
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 876--879
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 837--840
+Underfull \hbox (badness 10000) in paragraph at lines 876--879
 
  []
 
 
-Overfull \hbox (1.79523pt too wide) in paragraph at lines 841--844
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 880--883
 [][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--844
+Underfull \hbox (badness 10000) in paragraph at lines 880--883
 
  []
 
-[13]
+[18]
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 884--887
+[][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--887
+
+ []
+
+
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 888--891
+[][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 888--891
+
+ []
+
+
+Overfull \hbox (2.15425pt too wide) in paragraph at lines 892--895
+[][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 892--895
+
+ []
+
+[19]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     847.
+(LaTeX3)     898.
 
-(./Taylor-template.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(./Taylor-template.aux) ) 
 Here is how much of TeX's memory you used:
- 19528 strings out of 479023
- 310809 string characters out of 5859412
- 732567 words of memory out of 5000000
- 35962 multiletter control sequences out of 15000+600000
- 496724 words of font info for 433 fonts, out of 8000000 for 9000
+ 19678 strings out of 479023
+ 313500 string characters out of 5859412
+ 736509 words of memory out of 5000000
+ 36040 multiletter control sequences out of 15000+600000
+ 516410 words of font info for 508 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 97i,12n,102p,1451b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
-/texlive/2020/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8c.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pf
-b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-ch
-ri7m.pfb>
-Output written on Taylor-template.pdf (13 pages, 2177451 bytes).
+ 97i,12n,102p,2520b,540s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/ly
+1/texnansi.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/bitstrea/charter
+/bchb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/bitstrea/charter/bc
+hr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/bitstrea/charter/bchri
+8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/mdbch/
+md-chb8t.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathdesign/
+mdbch/md-chr8c.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/mathd
+esign/mdbch/md-chr8t.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public
+/mathdesign/mdbch/md-chri7m.pfb>
+Output written on Taylor-template.pdf (19 pages, 2474009 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 320 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 127133 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 143517 words of extra memory for PDF output out of 154059 (max. 10000000)
 
