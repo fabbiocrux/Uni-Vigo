@@ -57,13 +57,12 @@ linkcolor: blue
 #     toc: false
 #     base_format: rticles::elsevier_article
 output:
-  # bookdown::pdf_document2:
-  #   toc: false
-  #   keep_tex: true
+  bookdown::pdf_document2:
+    toc: false
+    keep_tex: true
   #bookdown::html_document2: default
-  bookdown::word_document2: default
+  # bookdown::word_document2: default
 #output: rticles::tf_article
-
 always_allow_html: true
 ---
 
@@ -202,7 +201,7 @@ For tensile testing, a MTS Criterion 43 universal testing machine (Figure \@ref(
 The mechanical specimens were manufactured according to the dimensions depicted in Figure \@ref(fig:machine)c.
 
 
-```{r machine, out.width='0.9\\linewidth', fig.cap="Equipment used in the study: a) 3D printer, b) Universal testing machine and c) Mechanical sample.", fig.align='center'}
+```{r machine, out.width='90%', fig.cap="Equipment used in the study: a) 3D printer, b) Universal testing machine and c) Mechanical sample.", fig.align='center'}
 knitr::include_graphics('Figures/Machine-probeta.jpg')
 ```
 
@@ -245,8 +244,8 @@ knitr::include_graphics('Figures/Methodology.pdf')
 
 ```
 
+\newpage
 # Findings {#section:findings}
-
 
 ```{r table.S2, echo=FALSE, message=FALSE, include=FALSE}
 fase1 <- read_csv2("Datos/Phase-1.csv") 
@@ -352,7 +351,7 @@ Residuals <- c()
  Residuals$Load <- residuals(object = aov(Load_model) )
  Residuals$Young <- residuals(object = aov(Young_model))
 # Run Shapiro-Wilk test
-shapiro.test(x = Residuals$Load )
+shapiro.test(x = Residuals$Load)
 shapiro.test(x = Residuals$Young)
 
 
@@ -374,11 +373,23 @@ row.names(Anovas) <- c("", "Layer Height (mm)", "Infill Density (%)","Infill Pat
 ```
 
 
+
+Table \@ref(tab:anova-phase1) lists the ANOVA using R software in order to identify the influential factors on the maximal load and Young's modulus.
+As a criterion, critical factors for the response variable were those with p-values lower than 0.05.
+Shapiro-Wilk normality tests were made to verify the normality of the residuals for both models. 
+Figure \@ref(fig:fase1)b illustrates the boxplots of the results considering each of the factors.
+  <!-- Results -->
+Thus, it can be clearly identified how only the infill density (lowest p-value) and the type of material were statistically significant factors for the maximum load and for the Young's modulus.
+The contribution to the total variance in the maximal load model was 97.3 % and 1.3 % for the infill density and material type, respectively. 
+  <!-- Young modulus -->
+In the case of the Young' modulus, the infill presented a contribution of 96.6 %.
+Thus, when manufacturing new parts, infill density is a key factor for guaranteeing adequate tensile strength.
+
+
 ```{r anova-phase1, include=TRUE}
 Anovas[3,5] <- paste0("5.2e-11","***")
 Anovas[5,5] <- paste0("0.007","**")
 Anovas[3,10] <- paste0("1.8e-09","***")
-
 
 Anovas %>% rownames_to_column(var = "Variable") %>% flextable() %>%
    set_caption("ANOVA results at 95\\% significance level for Maximal load and Young modulus variables") %>%
@@ -422,36 +433,24 @@ Anovas %>% rownames_to_column(var = "Variable") %>% flextable() %>%
 
 
 
-# Percentage of ID
-#round(anv.fase.1$`Sum Sq`[3]/ total,3)*100
+# Percentage of Variabion
+# Load
+#total= Load_model.anv$`Sum Sq` %>% sum()
+#round(Load_model.anv$`Sum Sq`[2]/ total,3)*100
 # Percentage of Material
-#round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
+#round(Load_model.anv$`Sum Sq`[5]/ total,3)*100
+
+# Young
+#total= Young_model.anv$`Sum Sq` %>% sum()
+#round(Young_model.anv$`Sum Sq`[2]/ total,3)*100
+# Percentage of Material
+#round(Load_model.anv$`Sum Sq`[5]/ total,3)*100
+
 ```
 
-
-
-Table \@ref(tab:anova-phase1) lists the ANOVA using R software in order to identify the influential factors on the maximal load and Young's modulus.
-As a criterion, critical factors for the response variable were those with p-values lower than 0.05.
-Shapiro-Wilk normality tests were made to verify the normality of the residuals for both models. 
-Figure \@ref(fig:fase1)b illustrates the boxplots of the results considering each of the factors.
-  <!-- Results -->
-Thus, it can be clearly identified how only the infill density (lowest p-value) and the type of material were statistically significant factors for the maximum load and for the Young's modulus.
-The contribution to the total variance of the maximal load model was 97.3 % and 1.3 % for the infill density and material type, respectively. 
-  <!-- Young modulus -->
-In the case of the Young' modulus, 
-
-
-Thus, when manufacturing new parts, infill density is a key factor for guaranteeing adequate tensile strength.
 
 
 ## Phase II: Focusing
-
-
-```{r phase2, fig.cap="Phase II: Evaluation of the infill density in the mechanical load.", fig.subcap=c(" ", " "), out.width= c('45%', '50%'), fig.pos="!h", fig.align='center', fig.nrow=1}
-
-knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
-                        'Correciones/Phase-2-corrected.jpg'))
-```
 
 
 The main goal of *Phase II* is to evaluate in more detail the influence of infill density on the tensile strength based on Phase I. 
@@ -459,13 +458,22 @@ Therefore, five levels of the infill density were chosen: 40, 55, 70, 85 and 100
 Therefore, the experimental conditions were layer height of 0.3 mm, tri-hexagonal infill pattern and printing speed of $80~mm/s$ with an estimated printing time of 20 min. 
 A total of 10 samples were manufactured.
 
+
+```{r phase2, fig.cap="Phase II: Evaluation of the infill density in the mechanical load. a) Mechanical samples used in Phase II. b) Adjustment of the data to two models.", fig.subcap=c(" ", " "), out.width= c('45%', '50%'), fig.pos="!h", fig.align='center', fig.nrow=1}
+
+knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
+                        'Correciones/Phase-2-corrected.jpg'))
+```
+
+
 Figure \@ref(fig:phase2)a shows the fracture of the specimens tested in *Phase II*. Regarding the fracture, the results were similar to those of the *Phase I* (i.e., more ductile behavior for the recycled PLA specimens). 
 The interesting element in this phase is presented in \@ref(fig:phase2)b where the maximum load versus infill density for both materials is illustrated.
 
 
-From Figure \@ref(fig:phase2), it is possible to appreciate that there are two different regions. 
-In the A region, which comprises infill densities ranging from 40 to 80 %, the slope of the curve grows slowly with an approximately linear trend. 
-Moreover, in the B region, from 80 to 100 %, the increase of the tensile strength becomes more pronounced. 
+From Figure \@ref(fig:phase2), the experimental data was used to create two models.
+<!-- it is possible to appreciate that there are two different regions with an intermediate between 70%-85%. -->
+In the A region, which comprises infill densities ranging from 40 to 85 %, the slope of the curve grows slowly with an approximately linear trend. 
+In the B region, from 70 to 100 %, the increase of the tensile strength becomes more pronounced using a quadratic function. 
 Regarding the type of material, it is clear that virgin PLA moderately outperforms recycled PLA. 
 These results are in agreement with studies on the comparison of the performance of recycled and virgin PLA [@CruzSanchez2017] in which there was found to be a difference of about 10 % in the tensile strength in the first recycling cycles. 
 However, the difference notably increased as the infill density approached 100 %. The results obtained closely match those presented by Wang et al @Wang2020h.
@@ -481,7 +489,7 @@ Based on the models developed, it is possible to highlight that recycled PLA is 
 <!-- Moreover, by developing models for the mechanical properties, it is possible to minimize the material consumption for both virgin and recycled materials satisfying the mechanical resistance requirements.  -->
 <!-- Thus, by accurately knowing the influence of the printing conditions on the mechanical resistance, it is possible to advance towards sustainable manufacturing. -->
 
-\newpage
+
 ## Phase III: Study on the printing orientation
 
 In this final phase, the main goal is to test the influence of the building orientation according to the UNE 116005:2012 [@Garcia-Dominguez2020] standard. 
@@ -510,8 +518,6 @@ The vertical orientation provided the worst results due to the deposition of the
 These results correspond to those by Corapi et al @Corapi2019 and Wang et al @Wang2020h. 
 For the recycled material, there is a slight decrease in the maximum load obtained from 6.71 to 13 % depending on the orientation with respect to the virgin values. Specifically, the biggest reduction in the load takes place in the vertical orientation, which demonstrates the highest decrease at 13 %. 
 However, the other two orientations are more adequate for substituting the recycled material for the virgin material, with a limited reduction in the tensile strength (6.71 to 7.93 %).
-
-
 
 
 

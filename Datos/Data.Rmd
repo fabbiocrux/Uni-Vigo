@@ -21,7 +21,7 @@ library(here)
 library(kableExtra)
 library(ggpubr)
 ## Ggplot Theme setting
-theme_set(theme_bw(base_size = 15, base_family = "Palatino")) 
+theme_set(theme_bw(base_size = 16, base_family = "Palatino")) 
 ```
 
 First, I look for the paths of all mechanical tests
@@ -98,7 +98,6 @@ test %>%
   labs(y="Tensiles strength (MPa)", x="Strain (mm/mm)") 
   
   
-
 # Identifying max Tensile ----
 Fase.I <- 
   Fase.I %>% 
@@ -305,7 +304,7 @@ Plotting the Boxplots
 ggarrange(LH, IP, ID , PS,
           LH_Y, IP_Y, ID_Y , PS_Y,
           ncol = 4, nrow = 2 ,common.legend = TRUE)
-#ggsave("../Figures/Phase-1-2-correction.jpg", width=12, height=6, dpi = "print")
+#ggsave("../Figures/Phase-1-2-correction.jpg", width=10, height=6, dpi = "print")
 ```
 
 
@@ -439,10 +438,14 @@ ggplot(Fase.II, aes(x=ID, y=Load.max, col=Material)) +
 #  stat_smooth(data = Fase.II %>% filter(ID > 65) , method = "lm", formula = y ~ x, se=FALSE) +
   #stat_smooth(method = "lm", formula = y ~ poly(x, 2), se=FALSE) +
  #stat_regline_equation(label.y = c(3.9,3.5), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.., ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 2), inherit.aes = TRUE ) +
-  annotate("segment", x = 80, xend = 80, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
+  
+  # annotate("segment", x = 85, xend = 85, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
   coord_cartesian(xlim=c(40, 100), ylim=c(1, 4)) + 
   scale_x_continuous(breaks = c(40, 55, 70, 85, 100)) +
-  annotate("text", x = c(50, 90), y = 3.3, label = c("Region A", "Region B"))+
+  annotate("segment", x = 40, xend = 85, y = 3.4, yend = 3.4, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
+  annotate("segment", x = 70, xend = 100, y = 3.5, yend = 3.5, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
+  # geom_vline(xintercept = 80) +
+  annotate("text", x = c(50, 90), y = 3.6, label = c("Region A", "Region B"))+
   labs(title="", 
        subtitle="", 
        caption="",
@@ -542,7 +545,7 @@ Fase.III %>%
   theme(legend.position="top") +
   coord_cartesian(ylim=c(1, 2.25)) +
   scale_y_continuous(limits = c(1, 2.25), breaks = c(1, 1.25, 1.5, 1.75, 2, 2.25))
-#ggsave("../Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
+ggsave("../Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
 ```
 
 

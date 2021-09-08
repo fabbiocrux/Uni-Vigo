@@ -301,6 +301,8 @@ This phase included the printing of 15 specimens of both materials.
 \caption{Summary of the three phases of the experimental plan.}\label{fig:Methodology}
 \end{figure}
 
+\newpage
+
 \hypertarget{section:findings}{%
 \section{Findings}\label{section:findings}}
 
@@ -455,6 +457,15 @@ As a result, it is likely that both modes (in-layer and interlayer fractures) co
 \caption{Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE}\label{fig:fase1}
 \end{figure}
 
+Table \ref{tab:anova-phase1} lists the ANOVA using R software in order to identify the influential factors on the maximal load and Young's modulus.
+As a criterion, critical factors for the response variable were those with p-values lower than 0.05.
+Shapiro-Wilk normality tests were made to verify the normality of the residuals for both models.
+Figure \ref{fig:fase1}b illustrates the boxplots of the results considering each of the factors.
+Thus, it can be clearly identified how only the infill density (lowest p-value) and the type of material were statistically significant factors for the maximum load and for the Young's modulus.
+The contribution to the total variance in the maximal load model was 97.3 \% and 1.3 \% for the infill density and material type, respectively.
+In the case of the Young' modulus, the infill presented a contribution of 96.6 \%.
+Thus, when manufacturing new parts, infill density is a key factor for guaranteeing adequate tensile strength.
+
 \providecommand{\docline}[3]{\noalign{\global\setlength{\arrayrulewidth}{#1}}\arrayrulecolor[HTML]{#2}\cline{#3}}
 
 \setlength{\tabcolsep}{2pt}
@@ -499,7 +510,7 @@ As a result, it is likely that both modes (in-layer and interlayer fractures) co
 
 
 
-\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 1in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{Infill\ Density\ (\%)}}} & \multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.2in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{7.981}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{7.981}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{851.04}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{<2e-16***}}} & \multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.2in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{342710.722}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{342710.722}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.6in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{410.611}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1.8e-09***}}} \\
+\multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 1in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{Infill\ Density\ (\%)}}} & \multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.2in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{7.981}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{7.981}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.4in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{851.04}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{5.2e-11***}}} & \multicolumn{1}{!{\color[HTML]{666666}\vrule width 1pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.2in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{342710.722}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{342710.722}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.6in+0\tabcolsep+0\arrayrulewidth}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{410.611}}} & \multicolumn{1}{!{\color[HTML]{000000}\vrule width 0pt}>{\cellcolor[HTML]{EFEFEF}\raggedright}p{\dimexpr 0.7in+0\tabcolsep+0\arrayrulewidth}!{\color[HTML]{000000}\vrule width 0pt}}{\fontsize{9}{9}\selectfont{\textcolor[HTML]{000000}{1.8e-09***}}} \\
 
 
 
@@ -529,17 +540,13 @@ As a result, it is likely that both modes (in-layer and interlayer fractures) co
 
 \end{longtable}
 
-An ANOVA was performed using R software in order to identify the influential factors on the maximal load and Young's modulus.
-As a criterion, critical factors for the response variable were those with p-values lower than 0.05.
-Shapiro-Wilk normality tests were made to verify the normality of the residuals.
-Figure \ref{fig:fase1}b illustrates the boxplots of the results considering each of the factors and the twomechanical variable.
-Table \ref{tab:anova-phase1} lists the ANOVA.
-Thus, it can be clearly identified how only the infill density (lowest p-value) and the type of material were statistically significant factors for the maximum load and for the Young's modulus.
-When evaluating the contribution of each of the factors to the variability explained by the model, there were calculated values of 97.3 \% and 1.3 \% for infill density and type of material, respectively.
-Thus, when manufacturing new parts, infill density is a key factor for guaranteeing adequate tensile strength.
-
 \hypertarget{phase-ii-focusing}{%
 \subsection{Phase II: Focusing}\label{phase-ii-focusing}}
+
+The main goal of \emph{Phase II} is to evaluate in more detail the influence of infill density on the tensile strength based on Phase I.
+Therefore, five levels of the infill density were chosen: 40, 55, 70, 85 and 100 \%. Regarding the selection of the other printing parameters, the main criterion was the reduction of the printing time.
+Therefore, the experimental conditions were layer height of 0.3 mm, tri-hexagonal infill pattern and printing speed of \(80~mm/s\) with an estimated printing time of 20 min.
+A total of 10 samples were manufactured.
 
 \begin{figure}[!h]
 
@@ -547,31 +554,24 @@ Thus, when manufacturing new parts, infill density is a key factor for guarantee
 
 }
 
-\caption{Phase II: Evaluation of the infill density in the mechanical load.}\label{fig:phase2}
+\caption{Phase II: Evaluation of the infill density in the mechanical load. a) Mechanical samples used in Phase II. b) Adjustment of the data to two models.}\label{fig:phase2}
 \end{figure}
-
-The main goal of \emph{Phase II} is to evaluate in more detail the influence of infill density on the tensile strength based on Phase I.
-Therefore, five levels of the infill density were chosen: 40, 55, 70, 85 and 100 \%. Regarding the selection of the other printing parameters, the main criterion was the reduction of the printing time.
-Therefore, the experimental conditions were layer height of 0.3 mm, tri-hexagonal infill pattern and printing speed of \(80~mm/s\) with an estimated printing time of 20 min.
-A total of 10 samples were manufactured.
 
 Figure \ref{fig:phase2}a shows the fracture of the specimens tested in \emph{Phase II}. Regarding the fracture, the results were similar to those of the \emph{Phase I} (i.e., more ductile behavior for the recycled PLA specimens).
 The interesting element in this phase is presented in \ref{fig:phase2}b where the maximum load versus infill density for both materials is illustrated.
 
-From Figure \ref{fig:phase2}, it is possible to appreciate that there are two different regions.
-In the A region, which comprises infill densities ranging from 40 to 80 \%, the slope of the curve grows slowly with an approximately linear trend.
-Moreover, in the B region, from 80 to 100 \%, the increase of the tensile strength becomes more pronounced.
+From Figure \ref{fig:phase2}, the experimental data was used to create two models.
+In the A region, which comprises infill densities ranging from 40 to 85 \%, the slope of the curve grows slowly with an approximately linear trend.
+In the B region, from 70 to 100 \%, the increase of the tensile strength becomes more pronounced using a quadratic function.
 Regarding the type of material, it is clear that virgin PLA moderately outperforms recycled PLA.
 These results are in agreement with studies on the comparison of the performance of recycled and virgin PLA\textsuperscript{\protect\hyperlink{ref-CruzSanchez2017}{32}} in which there was found to be a difference of about 10 \% in the tensile strength in the first recycling cycles.
-However, the difference notably increased as the infill density approached 100 \%. The results obtained closely match those presented by Wang et al..\textsuperscript{\protect\hyperlink{ref-Wang2020h}{48}}
+However, the difference notably increased as the infill density approached 100 \%. The results obtained closely match those presented by Wang et al.\textsuperscript{\protect\hyperlink{ref-Wang2020h}{48}}
 In their study, the authors studied infill densities of 20, 40, 60, 80 and 100 \% and the evolution of the tensile strength is similar to that shown in Figure \ref{fig:phase2}.
 
 Based on the results, it appears that a reduction from 100 to 40 \% of the infill density implies a relatively limited reduction, on average 41.7 \%, of the maximum load supported for both types of materials.
 Although the number of measured points is reduced, it is possible to model the relation between the maximum load and the infill density for the two tested materials by means of polynomial regressions that are plotted in the figure.
 The models may help to anticipate the tensile strength of a part based on the infill density.
 Based on the models developed, it is possible to highlight that recycled PLA is a suitable substitute for virgin PLA guaranteeing similar tensile strength.
-
-\newpage
 
 \hypertarget{phase-iii-study-on-the-printing-orientation}{%
 \subsection{Phase III: Study on the printing orientation}\label{phase-iii-study-on-the-printing-orientation}}
@@ -599,7 +599,7 @@ From the results, it is clear that the horizontal orientation is the one that pr
 Likewise, the virgin samples performed better than the recycled samples.
 
 The vertical orientation provided the worst results due to the deposition of the layers perpendicular to the tensile direction.
-These results correspond to those by Corapi et al.\textsuperscript{\protect\hyperlink{ref-Corapi2019}{50}} and Wang et al..\textsuperscript{\protect\hyperlink{ref-Wang2020h}{48}}
+These results correspond to those by Corapi et al\textsuperscript{\protect\hyperlink{ref-Corapi2019}{50}} and Wang et al.\textsuperscript{\protect\hyperlink{ref-Wang2020h}{48}}
 For the recycled material, there is a slight decrease in the maximum load obtained from 6.71 to 13 \% depending on the orientation with respect to the virgin values. Specifically, the biggest reduction in the load takes place in the vertical orientation, which demonstrates the highest decrease at 13 \%.
 However, the other two orientations are more adequate for substituting the recycled material for the virgin material, with a limited reduction in the tensile strength (6.71 to 7.93 \%).
 
@@ -614,7 +614,8 @@ This type of approach enables designers and users to utilize printing setups tha
 One of the main results of this study demonstrates that there is a reduction about 41.7\% (on average) in the maximum load supported for PLA (virgin and recycled) when the infill density changes from 100 to 40 \%.
 Moreover, it could be inferred from the results that an infill density of 40 \% retained 58.1 \% of the tensile strength.
 This is a relevant insight for prescriptions of minimal conditions for 3D printing. Moreover, the use of recycled assets in the printing process may be a relevant method, considering the current priorities of the European Union in regard to circular economy and carbon-neutral strategy ambitions.\textsuperscript{\protect\hyperlink{ref-Schwarz2021}{52}}
-Also, there is great development in applications using distributed recycling approaches. For instance, Nur-A-Tomal et al.\textsuperscript{\protect\hyperlink{ref-Nur-A-Tomal2020}{53}} presented a valuable example of waste-to-wealth to use waste plastic toys retaining the original color of waste plastic to fabricate new products. Certainly more research is required for the development of complete closed-loop case studies for prototyping purposes based on material type, validating technical, ecological and economic feasibility.\textsuperscript{\protect\hyperlink{ref-CruzSanchez2020}{17},\protect\hyperlink{ref-Sauerwein2019}{54}}
+Also, there is great development in applications using distributed recycling approaches.
+For instance, Nur-A-Tomal et al.\textsuperscript{\protect\hyperlink{ref-Nur-A-Tomal2020}{53}} presented a valuable example of waste-to-wealth to use waste plastic toys retaining the original color of waste plastic to fabricate new products. Certainly more research is required for the development of complete closed-loop case studies for prototyping purposes based on material type, validating technical, ecological and economic feasibility.\textsuperscript{\protect\hyperlink{ref-CruzSanchez2020}{17},\protect\hyperlink{ref-Sauerwein2019}{54}}
 
 There are certain limitations to this work in the perspective of materials and parameters tested.
 Certainly, the use of other materials is needed to confirm the main findings.
