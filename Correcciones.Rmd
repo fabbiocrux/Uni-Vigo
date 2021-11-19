@@ -1,0 +1,191 @@
+---
+title: 'Graficas'
+classoption: 12pt
+type: Original article 
+author:
+  - Victor M. López^[University of Jaén, Department of Mechanical and Mining Engineering, 23071 Jaén, Spain]
+  - Diego Carou^[Universidade de Vigo, Departamento de Deseño na Enxeñaría, Ourense, Spain, diecapor@uvigo.es]
+  - Fabio A. Cruz S.^[Université de Lorraine - ERPI -  F-54000, Nancy, France, cruzsanc1@univ-lorraine.fr]
+
+output:
+  # bookdown::pdf_document2:
+  #   toc: false
+  #   keep_tex: true
+  #bookdown::html_document2: default
+  bookdown::word_document2: default
+#output: rticles::tf_article
+always_allow_html: true
+---
+
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.retina = 3, message = FALSE, warning = FALSE)
+options(knitr.kable.NA = '')
+
+
+library(tidyverse)
+library(kableExtra)
+library(rmarkdown)
+library(knitr)
+library(flextable)
+#render("Correcciones.Rmd", output_format = "word_document")
+
+set_flextable_defaults(fonts_ignore=TRUE)
+```
+
+##  Phase I: Screening phase
+
+```{r phase1, echo=FALSE, message=FALSE, include=TRUE}
+# Reading the datos
+
+fase1 <- read_csv2("tables/Phase-1.csv") 
+
+# table.fase1 <-
+#   fase1 %>% set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)")
+# table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+
+fase1 %>% select(-`Max Load (kN)`) %>% flextable() %>%
+  set_caption("Results of the Phase I") %>%
+  fontsize(size=10, part = "all") %>% 
+#  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
+  theme_zebra() 
+  # footnote( i = 1, j = 2:5,
+  #           value = as_paragraph(
+  #             c("Layer height (LH)",
+  #               "Infill pattern (IP)",
+  #               "Infill density (ID)",
+  #               "Printing speed (PS)")
+  #           ),
+  #           ref_symbols = c("a", "b", "c", "d"),
+  #           part = "header", inline = FALSE)
+
+
+#   
+#   kable(booktabs = T, linesep = "", digits = 2,
+#       caption = "Results of the Phase 1.")  %>%
+#   kable_styling(latex_options = "striped", font_size = 7) %>%
+#   footnote(general = "Layer height (LH), Infill pattern (IP), Infill density (ID), Printing speed (PS)",
+# threeparttable = T)
+
+```
+
+
+```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE', fig.subcap=c(' ', ' '), out.width= c('65%', '100%'), fig.ncol=1, fig.align='center'}
+knitr::include_graphics(c('Figures/Probetas-Fase-1.jpg',
+                          'Figures/Figure-3b.jpg'))
+```
+
+
+
+
+# Anovas Phase I
+
+
+```{r ANOVAS, include=FALSE}
+# Reading data
+fase1 <- read_csv2("tables/Phase-1.csv")
+names(fase1) <- c("Material", "LH", "IP", "ID", "PS", "ML", "Tensile",  "Young")
+
+# Model witht the Load
+Load_model <- lm(ML ~ LH + ID + IP + PS + Material, data = fase1)
+
+# Model witht the Young
+Tensile_model <- lm(Tensile ~ LH + ID + IP + PS  + Material, data = fase1)
+
+# Model witht the Young
+Young_model <- lm(Young ~ LH + ID + IP + PS  + Material, data = fase1)
+
+ # HAciendo los Anovas
+Load_model.anv <-  anova(Load_model) %>% round(3)
+Tensile_model.anv <- anova(Tensile_model) %>% round(3)
+Young_model.anv <- anova(Young_model) %>% round(3)
+
+
+# Extract the residuals from the models
+Residuals <- c()
+ Residuals$Load <- residuals(object = aov(Load_model) )
+ Residuals$Tensile <- residuals(object = aov(Young_model))
+ Residuals$Young <- residuals(object = aov(Young_model))
+# Run Shapiro-Wilk test
+shapiro.test(x = Residuals$Load)
+shapiro.test(x = Residuals$Tensile)
+shapiro.test(x = Residuals$Young)
+
+
+Anovas <-
+  data.frame(rbind(c(
+#                  "Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)", 
+                  "Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)", 
+                  "Df", "Sum Sq", "Mean Sq", "F value", "Pr(>F)"),
+                    cbind(#Load_model.anv,
+                          Tensile_model.anv,
+                          Young_model.anv))
+                ) 
+
+# Anovas <- Anovas %>% mutate(across(is.numeric, ~ round(., 3)))
+
+
+# Changing the colnames
+colnames(Anovas) <- LETTERS[1:10]
+row.names(Anovas) <- c("", "Layer Height (mm)", "Infill Density (%)","Infill Pattern",  "Printing Speed (mm/s)", "Material", "Residuals")
+```
+
+
+```{r}
+# Percentage of Variabion
+# Load
+#total= Tensile_model.anv$`Sum Sq` %>% sum()
+#round(Tensile_model.anv$`Sum Sq`[2]/ total,3)*100
+# Percentage of Material
+#round(Tensile_model.anv$`Sum Sq`[5]/ total,3)*100
+
+# Young
+#total= Young_model.anv$`Sum Sq` %>% sum()
+#round(Young_model.anv$`Sum Sq`[2]/ total,3)*100
+# Percentage of Material
+#round(Tensile_model.anv$`Sum Sq`[5]/ total,3)*100
+
+
+```
+
+
+```{r }
+
+Anovas[3,5] <- paste0("<2e-16","***")
+Anovas[6,5] <- paste0("0.006","**")
+Anovas[3,10] <- paste0("0.001","***")
+
+Anovas %>% rownames_to_column(var = "Variable") %>% flextable() %>%
+   set_caption("ANOVA results at 95\\% significance level for Maximal load and Young modulus variables") %>% 
+   delete_part( part = "header") %>% 
+   add_header( Variable = "Variable",
+               A = "Tensile",
+               B = "Tensile",
+               C = "Tensile",
+               D = "Tensile",
+               F = "Young",
+               G = "Young",
+               H = "Young",
+               I = "Young",
+               J = "Young",
+               #K = 
+               #L = 
+               #M = 
+               #N = 
+               #O = 
+               top = TRUE ) %>% 
+   merge_h( part = "header") %>% 
+   fontsize(size=9, part = "all") %>% 
+   width(j=1:11, width = c(1, 0.2,0.4, 0.4, 0.4, 0.7, 
+                              #0.2,0.4, 0.4, 0.4, 0.7, 
+                              0.2,0.7, 0.7, 0.6, 0.7
+                           )) %>% 
+      theme_zebra() %>% 
+  vline( j = c(1,6), part = "all") %>% 
+     footnote( i = 1, j = c(6,11),
+            value = as_paragraph(
+              c("Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1"))
+  )  
+```
+
+

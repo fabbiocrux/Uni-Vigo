@@ -57,11 +57,11 @@ linkcolor: blue
 #     toc: false
 #     base_format: rticles::elsevier_article
 output:
-  bookdown::pdf_document2:
-    toc: false
-    keep_tex: true
+  # bookdown::pdf_document2:
+  #   toc: false
+  #   keep_tex: true
   #bookdown::html_document2: default
-  # bookdown::word_document2: default
+  bookdown::word_document2: default
 #output: rticles::tf_article
 always_allow_html: true
 ---
@@ -326,7 +326,7 @@ As a result, it is likely that both modes (in-layer and interlayer fractures) co
 
 ```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE', fig.subcap=c(' ', ' '), out.width= c('65%', '100%'), fig.ncol=1, fig.align='center'}
 knitr::include_graphics(c('Figures/Probetas-Fase-1.jpg',
-                          'Figures/Phase-1-2-correction.jpg'))
+                          'Figures/Figure-3b.jpg'))
 ```
 
 

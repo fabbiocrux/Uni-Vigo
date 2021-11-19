@@ -1,27 +1,35 @@
 ---
-title: "Feasibility study on the use of recycling materials for prototyping purposes: a comparative study based on the mechanical resistance"
+title: "Data Analisis"
 description: |
   Data Analysis of the Mechanical data
 author:
   - name: Fabio Cruz
     url: https://example.com/
     affiliation: UL
-    affiliation_url: https://example.com/spacelysprokets
+    #affiliation_url: https://example.com/spacelysprokets
 date: "`r Sys.Date()`"
-output: pdf_document
+output:
+  bookdown::html_document2: default
+  bookdown::pdf_document2:
+    keep_tex: true
+  bookdown::word_document2:
+    toc: true
+    
 #output: distill::distill_article
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r setup, include= TRUE, echo=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = TRUE, include = TRUE)
+
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
 library(tidyverse)
 library(here)
 library(kableExtra)
 library(ggpubr)
 ## Ggplot Theme setting
 theme_set(theme_bw(base_size = 16, base_family = "Palatino")) 
+
 ```
 
 First, I look for the paths of all mechanical tests
@@ -29,8 +37,9 @@ First, I look for the paths of all mechanical tests
 ```{r Path}
 # Reading data ----
 ## Loading the paths
+
 files <-
-  here("Datos ensayos") %>% 
+  here("Datos", "Datos ensayos") %>% 
   dir( recursive=TRUE, full.names=TRUE, pattern="\\.txt$")
 ```
 
@@ -42,7 +51,6 @@ Then, I read the `Phase I` tests
 # Reading the Data Fase I ----
 # Selecting the Phase I
 Fase.1 <- files[1:16]
-
 ## Identifying Endommage files----
   # File "PLA virgen/VE-8/VE-8.txt"
 
@@ -66,11 +74,35 @@ Fase.I$Material <-
          labels = c("Virgin" , "Recycled"))
 Fase.I <- Fase.I %>% arrange(Material)
 
+
+# Correcting the Tensile Strength Nov 17/2021
+Fase.I$area <- c(60, 60, 60, 100, 100, 100, 100, 60, 60, 60, 60, 100, 100, 60, 100, 100) 
+Fase.I$area <- Fase.I$area/100
+
+
+# Adding the factor correction for each data
+Fase.I <-
+ Fase.I %>%
+ mutate(Data = 
+           map2(Data, Fase.I$area , ~ .x %>%
+               mutate ( section = 32 +  ( .y * 33))
+                   )
+        )
+ 
+Fase.I <-
+ Fase.I %>%
+ mutate(Data = 
+           map(Data, ~ .x %>%
+               mutate ( Tensile = (1000 * kN ) / section ,
+                        Strain = mm / 28 )
+                   ))
+
+
 ## Adding variables to the Original data
 Fase.I <-
  Fase.I %>%
  mutate(Data = map(Data, ~ .x %>%
-                     mutate (Tensile = (kN / (5 * 13))*(1000),
+                     mutate (Tensile_old = (kN / (5 * 13))*(1000),
                                           Strain = mm / 28 )
                    ))
 
@@ -86,24 +118,29 @@ Young_mod <- function(df) {
 ```
 
 
-```{r Data.Fase.I}
+```{r }
 
 # Exploratory Graphics for Young Modulus  ----
 
-test <-   Fase.I %>% select(Sample,Material, Data)  %>% unnest(cols = c(Data))
-test %>% 
-  ggplot(aes(x=Strain, y=Tensile, color= Sample)) +
-  geom_point() +
- facet_grid( .  ~  Material ) +
-  labs(y="Tensiles strength (MPa)", x="Strain (mm/mm)") 
-  
+# test <-   
+#    Fase.I %>% select(Sample,Material, Data)  %>% 
+#    unnest(cols = c(Data))
+# 
+# test %>% 
+#    ggplot(aes(x=Strain, y=Tensile, color= Sample)) +
+#    geom_point() +
+#    facet_grid( .  ~  Material ) +
+#    labs(y="Tensiles strength (MPa)", x="Strain (mm/mm)") 
+
   
 # Identifying max Tensile ----
 Fase.I <- 
   Fase.I %>% 
-  mutate(Young = map_dbl(Data,  Young_mod ),
+  mutate(
+         Young = map_dbl(Data,  Young_mod ),
          Load.max = map_dbl(Data,  function(df) max(df$kN)),
-         Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
+         Tensile.max = map_dbl(Data,  function(df) max(df$Tensile)),
+         Tensile.max_old = map_dbl(Data,  function(df) max(df$Tensile_old))
          )
 
 ## Creating the experimental dataframe with the other factors ----
@@ -136,20 +173,16 @@ Fase.I <- Fase.I %>% select(Material, LH, IP, ID, PS, Load.max, Young, Tensile.m
 
 The database of `Phase I`
 
-```{r Table.PhaseI, }
-# Fase.I %>% select(Material:Load.max,Young, Sample) %>% 
-#   kbl(booktabs = T, 
-#       caption = "Dataframe Phase I") %>%
-#   kable_styling(latex_options = "hold_position")
-
+```{r Table.PhaseI, include=TRUE}
 table.fase1 <- 
-Fase.I %>% select(Material:Load.max,Young ) %>% 
-   set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)", "Young Modulus (MPa)" )
+   Fase.I %>% select(Material:Load.max,Tensile.max, Young ) %>% 
+   set_names("Material", "Layer Height (mm)", "Infill Pattern", "Infill Density (%)", "Printing Speed (mm/s)", "Max Load (kN)", "Tensile Strength (MPa)" ,"Young Modulus (MPa)" )
 
 table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+table.fase1$`Tensile Strength (MPa)` <- table.fase1$`Tensile Strength (MPa)` %>% round( digits=2)
 table.fase1$`Young Modulus (MPa)` <- table.fase1$`Young Modulus (MPa)` %>% round( digits=2)
 
-#write_csv2(table.fase1, "../tables/Phase-1.csv")
+#write_csv2(table.fase1, "tables/Phase-1.csv")
 
 library(flextable)
 table.fase1 %>% flextable() %>%
@@ -159,41 +192,7 @@ table.fase1 %>% flextable() %>%
   theme_zebra() 
 ```
 
-```{r Anova_Young}
 
-Anv_Young <- lm(Young ~ LH + IP + ID + PS + Material , data = Fase.I %>% select(Young, Material:PS))
-#summary(Total_model)
-anv.fase.1 <- anova(Anv_Young)
-summary(anv.fase.1)
-
-total= anv.fase.1$`Sum Sq` %>% sum()
-
-# Percentage of ID
-round(anv.fase.1$`Sum Sq`[3]/ total,3)*100
-# Percentage of Material
-round(anv.fase.1$`Sum Sq`[5]/ total,3)*100
-
-
-test <- tibble(anv.fase.1) %>% mutate(rownames(anv.fase.1)) %>% set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)", "Var" ) %>% select(Var, Df:`Pr(F)` ) %>% 
-  mutate(`Pr(F)`= round(`Pr(F)`, digits=3),
-         `F value` = round(`F value`, digits=3))
-  
-  #dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
-
-  anv.fase.1 %>% mutate(variable =  rownames(anv.fase.1)) %>%  set_names("Var", "Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>% 
-  dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
-
-test[3,5] <- paste0(test[3,5],"*")
-test[5,5] <- paste0(test[5,5],"*")
-
-
-test %>% flextable() %>%
-  set_caption("ANOVA results at 95\\% significance level.") %>%
-  fontsize(size=10, part = "all") %>% 
-#  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
-  theme_zebra() #%>%   
-
-```
 
 ### Graphic of the influence of the parameters
 
@@ -216,7 +215,16 @@ Fase.I %>%
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Young modulus (MPa)", x="Material type") +
-  coord_cartesian(ylim = c(500, 1500))+
+  coord_cartesian(ylim = c(900, 1250))+
+  theme(legend.position = "none") 
+
+MT_Tensile <- 
+Fase.I %>% 
+  ggplot(aes(x=Material, y = Tensile.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Tensile Strength (MPa)", x="Material type") +
+  coord_cartesian(ylim = c(40, 60))+
   theme(legend.position = "none") 
 
 
@@ -236,7 +244,16 @@ LH_Y <-
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Young modulus (MPa)", x="Layer heigth (mm)") +
-  coord_cartesian(ylim = c(500, 1500))+
+  coord_cartesian(ylim = c(900, 1250))+
+  theme(legend.position = "none") 
+
+LH_Tensile <- 
+  Fase.I %>% 
+  ggplot(aes(x = LH, y = Tensile.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Tensile Strength (MPa)", x="Layer heigth (mm)") +
+  coord_cartesian(ylim = c(40, 60))+
   theme(legend.position = "none") 
 
 ## Infill pattern
@@ -254,7 +271,16 @@ IP_Y <-
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
   labs(y="Young modulus (MPa)", x="Infill pattern") +
-  coord_cartesian(ylim = c(500, 1500))+
+  coord_cartesian(ylim = c(900, 1250))+
+  theme(legend.position = "none") 
+
+IP_Tensile <- 
+  Fase.I %>% 
+  ggplot(aes(x = IP, y = Tensile.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Tensile Strength (MPa)", x="Infill pattern") +
+  coord_cartesian(ylim = c(40, 60))+
   theme(legend.position = "none") 
 
 
@@ -272,9 +298,16 @@ ID_Y <-
   ggplot(aes(x = ID, y = Young )) +
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( .  ~  ) +
-  labs(y="Young modulus (MPa)", x="Infill density (%)") +
-  coord_cartesian(ylim = c(500, 1500))
+  labs(y="Young modulus (MPa)" , x="Infill density (%)") +
+  coord_cartesian(ylim = c(900, 1250))
 
+ID_Tensile <- 
+  Fase.I %>% 
+  ggplot(aes(x = ID, y = Tensile.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( .  ~  ) +
+  labs(y="Tensile Strength (MPa)", x="Infill density (%)") +
+  coord_cartesian(ylim = c(40, 60))
 
 ## Infill density
 PS <- 
@@ -291,9 +324,17 @@ PS_Y <-
   geom_boxplot(aes(fill=Material)) +
   #facet_grid( Load.max  ~ LH + IP ) +
   labs(y="Young modulus (MPa)", x="Printing speed (mm/s)") +
-  coord_cartesian(ylim = c(500, 1500))
+  coord_cartesian(ylim = c(900, 1250))
   #theme(legend.position = "none")
 
+PS_Tensile <- 
+  Fase.I %>% 
+  ggplot(aes(x = PS, y = Tensile.max )) +
+  geom_boxplot(aes(fill=Material)) +
+  #facet_grid( Load.max  ~ LH + IP ) +
+  labs(y="Tensile Strength (MPa)", x="Printing speed (mm/s)") +
+  coord_cartesian(ylim = c(40, 60))
+  #theme(legend.position = "none")
 
 ```
 
@@ -301,10 +342,11 @@ PS_Y <-
 Plotting the Boxplots
 
 ```{r, fig.width=7, fig.height=7}
-ggarrange(LH, IP, ID , PS,
+ggarrange(#LH, IP, ID , PS,
+          LH_Tensile, IP_Tensile, ID_Tensile , PS_Tensile,
           LH_Y, IP_Y, ID_Y , PS_Y,
           ncol = 4, nrow = 2 ,common.legend = TRUE)
-#ggsave("../Figures/Phase-1-2-correction.jpg", width=10, height=6, dpi = "print")
+#ggsave("Figures/Figure-3b.jpg", width=10, height=6, dpi = "print")
 ```
 
 
@@ -363,6 +405,8 @@ Recycled_anova %>% set_names("Df", "Sum Sq", "Mean Sq", "F value", "Pr(F)") %>%
 
 ## Phase II
 Identifying the Paths
+
+
 ```{r Fase.II}
 # Selecting the Phase II----
 Fase.2 <- files[17:27]
@@ -395,10 +439,33 @@ Fase.II$Material <-
 
 Fase.II <- Fase.II %>% arrange(Material)
 
+# Correcting the Tensile Strength Nov 19/2021 -----
+Fase.II$area <- rep(c(100, 40, 55, 70, 85), 2)  
+Fase.II$area <- Fase.II$area/100
+
+# Adding the factor correction for each data
+Fase.II <-
+ Fase.II %>%
+ mutate(Data = 
+           map2(Data, Fase.II$area , ~ .x %>%
+               mutate ( section = 32 +  ( .y * 33))
+                   )
+        )
+ 
+Fase.II <-
+ Fase.II %>%
+ mutate(Data = 
+           map(Data, ~ .x %>%
+               mutate ( Tensile = (1000 * kN ) / section ,
+                        Strain = mm / 28 )
+                   ))
+
 # Calculating max Values ----
 Fase.II <- 
   Fase.II %>% 
-  mutate(Load.max = map_dbl(Data,  function(df) max(df$kN)),
+  mutate(
+         Load.max = map_dbl(Data,  function(df) max(df$kN)),
+         Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
          )
 
 # Creating final dataframe of Phase II
@@ -407,7 +474,7 @@ Fase.II <-
   separate(Sample, 
            sep = "-",
            into = c("ID", "Material2")) %>% 
-  select(Material, ID, Load.max)
+  select(Material, ID, Load.max, Tensile.max , area)
 
 # As factor the the variables ID
 Fase.II$ID <- as.numeric(Fase.II$ID)
@@ -415,7 +482,7 @@ Fase.II$ID <- as.numeric(Fase.II$ID)
 
 
 The database of `Phase II`
-```{r Table.PhaseI, include=TRUE, layout="l-body-outset"}
+```{r Table.PhaseII, include=TRUE, layout="l-body-outset"}
 Fase.II %>%
   kbl(booktabs = T,
       caption = "Dataframe Phase II",  
@@ -424,41 +491,120 @@ Fase.II %>%
 ```
 
 
+
+```{r Table.PhaseII, include=TRUE}
+table.fase2 <- 
+   Fase.II %>% select(Material:Tensile.max ) %>% 
+   set_names("Material", "Infill Density (%)", "Max Load (kN)", "Tensile Strength (MPa)")
+
+table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+table.fase1$`Tensile Strength (MPa)` <- table.fase1$`Tensile Strength (MPa)` %>% round( digits=2)
+
+#write_csv2(table.fase2, "tables/Phase-2.csv")
+
+
+table.fase2 %>% flextable() %>%
+  set_caption("Results of the Phase I") %>%
+  fontsize(size=8, part = "all") %>% 
+#  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
+  theme_zebra() 
+```
+
 ## Ploting the Graph comparative
 
 ```{r Fig.Fase.II}
+A <- 
 ggplot(Fase.II, aes(x=ID, y=Load.max, col=Material)) + 
   #aes(col=Material),
   geom_point( size=2 ) + 
-  geom_line(data = Fase.II %>% filter(ID < 90), stat="smooth",
-            method = "lm", formula = y ~ x, linetype ="dashed", alpha = 0.8, size= 1) +
-  geom_line(data = Fase.II %>% filter(ID > 65), stat="smooth",
-            method = "lm", formula = y ~ poly(x, 2), linetype ="dotted", alpha = 0.8, size= 1) +
+  
+  # Nov 15/2021
+  geom_line(stat="smooth",
+            method = "lm", formula = y ~ poly(x, 4), alpha = 0.8, size= 1) +
+# stat_regline_equation(label.y = c(1,1.3), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label..)),  formula = y ~ poly(x, 4), inherit.aes = TRUE ) +
+   
+  # geom_line(data = Fase.II %>% filter(ID < 90), stat="smooth",
+  #           method = "lm", formula = y ~ x, linetype ="dashed", alpha = 0.8, size= 1) +
+  # geom_line(data = Fase.II %>% filter(ID > 75), stat="smooth",
+  #           method = "lm", formula = y ~ poly(x, 1), linetype ="dotted", alpha = 0.8, size= 1) +
 #  stat_smooth(data = Fase.II %>% filter(ID < 90) , method = "lm", formula = y ~ x, se=FALSE, aes(alpha=0.5)) +
 #  stat_smooth(data = Fase.II %>% filter(ID > 65) , method = "lm", formula = y ~ x, se=FALSE) +
   #stat_smooth(method = "lm", formula = y ~ poly(x, 2), se=FALSE) +
- #stat_regline_equation(label.y = c(3.9,3.5), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.., ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 2), inherit.aes = TRUE ) +
+ # stat_regline_equation(label.y = c(1,1.3), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.. , ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 4), inherit.aes = TRUE ) +
   
-  # annotate("segment", x = 85, xend = 85, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
+  annotate("segment", x = 85, xend = 85, y = 1.5, yend = 3,  colour = "blue", linetype = "dashed") +
   coord_cartesian(xlim=c(40, 100), ylim=c(1, 4)) + 
   scale_x_continuous(breaks = c(40, 55, 70, 85, 100)) +
   annotate("segment", x = 40, xend = 85, y = 3.4, yend = 3.4, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
-  annotate("segment", x = 70, xend = 100, y = 3.5, yend = 3.5, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
+  annotate("segment", x = 85, xend = 100, y = 3.5, yend = 3.5, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
   # geom_vline(xintercept = 80) +
-  annotate("text", x = c(50, 90), y = 3.6, label = c("Region A", "Region B"))+
+  annotate("text", x = c(50, 93), y = 3.6, label = c("Region A", "Region B"))+
   labs(title="", 
        subtitle="", 
        caption="",
        y="Maximum Load (kN)",
        x="Infill density (%)" ) +
 theme(legend.position="top")
-#ggsave("../Correciones/Phase-2-corrected.jpg", width=5, height=5, dpi = "print")
+#ggsave("Correciones/Phase-2-corrected.jpg", width=5, height=5, dpi = "print")
 
 # Calculating the reductions
 Fase.II %>% group_by(ID) %>% summarise(media = mean(Load.max),                                   
                                        sde = sd(Load.max)) %>% 
   mutate(percentage = (media/3.16)*100)
-#100- (1.84 * 100)/3.16
+#100 - (1.84 * 100)/3.16
+
+
+100 - 58.1
+
+58.1 +41.9
+```
+
+
+```{r}
+B  <- 
+ggplot(Fase.II, aes(x=ID, y=Tensile.max, col=Material)) + 
+  #aes(col=Material),
+  geom_point( size=2 ) + 
+  
+  # Nov 15/2021
+  geom_line(stat="smooth",
+            method = "lm", formula = y ~ poly(x, 3), alpha = 0.8, size= 1) +
+# stat_regline_equation(label.y = c(1,1.3), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label..)),  formula = y ~ poly(x, 4), inherit.aes = TRUE ) +
+   
+  # geom_line(data = Fase.II %>% filter(ID < 90), stat="smooth",
+  #           method = "lm", formula = y ~ x, linetype ="dashed", alpha = 0.8, size= 1) +
+  # geom_line(data = Fase.II %>% filter(ID > 75), stat="smooth",
+  #           method = "lm", formula = y ~ poly(x, 1), linetype ="dotted", alpha = 0.8, size= 1) +
+#  stat_smooth(data = Fase.II %>% filter(ID < 90) , method = "lm", formula = y ~ x, se=FALSE, aes(alpha=0.5)) +
+#  stat_smooth(data = Fase.II %>% filter(ID > 65) , method = "lm", formula = y ~ x, se=FALSE) +
+  #stat_smooth(method = "lm", formula = y ~ poly(x, 2), se=FALSE) +
+ # stat_regline_equation(label.y = c(1,1.3), label.x = c(40,40) , data = Fase.II, aes(x=ID, y=Load.max, label = paste(..eq.label.. , ..adj.rr.label.., sep = '~\n~')),  formula = y ~ poly(x, 4), inherit.aes = TRUE ) +
+  
+  annotate("segment", x = 85, xend = 85, y = 30, yend = 50,  colour = "blue", linetype = "dashed") +
+  coord_cartesian(xlim=c(40, 100), ylim=c(20, 60)) + 
+  scale_x_continuous(breaks = c(40, 55, 70, 85, 100)) +
+  annotate("segment", x = 40, xend = 85, y = 55, yend = 55, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
+  annotate("segment", x = 85, xend = 100, y = 55, yend = 55, colour = "blue", size=0.5, alpha=0.8, arrow= arrow(ends = "both", angle = 30, length = unit(.2,"cm"))) +
+  # geom_vline(xintercept = 80) +
+  annotate("text", x = c(50, 93), y = 58, label = c("Region A", "Region B"))+
+  labs(title="", 
+       subtitle="", 
+       caption="",
+       y="Tensile Strength (MPa)",
+       x="Infill density (%)" ) +
+theme(legend.position="top")
+#ggsave("Correciones/Phase-2-corrected.jpg", width=5, height=5, dpi = "print")
+
+```
+
+
+
+```{r}
+ggarrange(#LH, IP, ID , PS,
+          A,
+          B,
+          ncol = 2, nrow = 1 ,common.legend = TRUE)
+#ggsave("Figures/Figure-4b.jpg", width=10, height=5, dpi = "print")
 ```
 
 
@@ -469,11 +615,8 @@ Identifying the paths
 # Selecting the Phase III----
 Fase.3 <- files[28:57]
 
-# Deleting test repetido Recycled 70-RE
 Fase.3 <- Fase.3[1:30]
 
-# Files missing:
-#
 
 # Reading the Data Fase II ----
 ## Identifying missing data
@@ -502,28 +645,71 @@ Fase.III$Orientation <-
          levels = c("horizontal", "vertical", "canto"),
          labels = c("Horizontal" , "Vertical", "Edgewise"))
 
-
+# Arraning the orde
 Fase.III <- Fase.III %>% arrange(Material)
+
+
+# Adding the factor correction for each data
+Fase.III$area <- c(0.5)
+
+Fase.III <- 
+ Fase.III %>%
+ mutate(Data = 
+           map2(Data, Fase.III$area , ~ .x %>%
+               mutate ( section = 32 +  ( .y * 33))
+                   )
+        )
+ 
+Fase.III <-
+ Fase.III %>%
+ mutate(Data = 
+           map(Data, ~ .x %>%
+               mutate ( Tensile = (1000 * kN ) / section ,
+                        Strain = mm / 28 )
+                   ))
+
 
 # Calculating max Values ----
 Fase.III <- 
   Fase.III %>% 
-  mutate(Load.max = map_dbl(Data,  function(df) max(df$kN)),
+  mutate(
+     Load.max = map_dbl(Data,  function(df) max(df$kN)),
+     Tensile.max = map_dbl(Data,  function(df) max(df$Tensile))
          )
 
 # Creating final dataframe of Phase II
 Fase.III <- 
   Fase.III %>% 
-  select(Material, Orientation, Load.max)
+  select(Material, Orientation, Load.max, Tensile.max)
 ```
 
 The database of `Phase III`
-```{r Table.PhaseII, include=TRUE, layout="l-body-outset"}
+```{r , include=TRUE, layout="l-body-outset"}
 Fase.III %>%
   kbl(booktabs = T,
       caption = "Dataframe Phase III",  
       linesep = "")  %>%
   kable_styling()
+```
+
+
+
+```{r}
+table.fase3 <- 
+   Fase.III %>% select(Material:Tensile.max ) %>% 
+   set_names("Material", "Orientation", "Max Load (kN)", "Tensile Strength (MPa)")
+
+table.fase1$`Max Load (kN)` <- table.fase1$`Max Load (kN)` %>% round( digits=2)
+table.fase1$`Tensile Strength (MPa)` <- table.fase1$`Tensile Strength (MPa)` %>% round( digits=2)
+
+#write_csv2(table.fase3, "tables/Phase-3.csv")
+
+
+table.fase3 %>% flextable() %>%
+  set_caption("Results of the Phase I") %>%
+  fontsize(size=8, part = "all") %>% 
+#  width(j=1:3, width = c(1, 1.5, 1.5)) %>% 
+  theme_zebra() 
 ```
 
 
@@ -545,10 +731,27 @@ Fase.III %>%
   theme(legend.position="top") +
   coord_cartesian(ylim=c(1, 2.25)) +
   scale_y_continuous(limits = c(1, 2.25), breaks = c(1, 1.25, 1.5, 1.75, 2, 2.25))
-ggsave("../Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
+#ggsave("Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
 ```
 
 
+```{r}
+Fase.III %>% 
+  ggplot(aes(x=Orientation, y=Tensile.max, colour = Material, group=Material)) + 
+  geom_point(size=3) +
+  #aes(colour = Material) +
+  stat_summary(fun = mean, geom="line") +
+  stat_summary(fun = mean, geom="crossbar", width=0.5) +
+  labs(title="", 
+       subtitle="", 
+       caption="",
+       y="Tensile Strenght (MPa)",
+       x="Build orientation of the printed sample" ) +
+  theme(legend.position="top") +
+  coord_cartesian(ylim=c(25, 45)) 
+  #scale_y_continuous(limits = c(1, 2.25), breaks = c(1, 1.25, 1.5, 1.75, 2, 2.25))
+# ggsave("Figures/Phase-3.jpg", width=5, height=5, dpi = "print")
+```
 
 
 Reduction of the load values
@@ -557,10 +760,19 @@ Reduction of the load values
 Reduction <- 
   Fase.III %>% 
   group_by(Material,Orientation) %>% 
-  summarise(media = mean(Load.max)) 
+  summarise(media = mean(Tensile.max)
+            #sdt = sd(Tensile.max)
+                     ) 
 
 Reduction <- Reduction %>% pivot_wider(names_from = Material, values_from = media)
-Reduction <- Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ) )
+Reduction <- Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ))
+
+
+
+Reduction <- Reduction %>% mutate(reduction.intra.vir = (100 - max(Virgin)*100/Virgin ) )
+
+Reduction <- Reduction %>% mutate(reduction.intra.rec = (100 - max(Recycled)*100/Recycled ) )
+
 
 Reduction %>% 
   kbl(booktabs = T,
