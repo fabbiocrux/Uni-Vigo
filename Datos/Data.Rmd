@@ -30,6 +30,7 @@ library(ggpubr)
 ## Ggplot Theme setting
 theme_set(theme_bw(base_size = 16, base_family = "Palatino")) 
 
+options(digits = 4)
 ```
 
 First, I look for the paths of all mechanical tests
@@ -760,19 +761,25 @@ Reduction of the load values
 Reduction <- 
   Fase.III %>% 
   group_by(Material,Orientation) %>% 
-  summarise(media = mean(Tensile.max)
+  summarise( media =  mean(Tensile.max) %>% round(digits = 2)
             #sdt = sd(Tensile.max)
                      ) 
 
 Reduction <- Reduction %>% pivot_wider(names_from = Material, values_from = media)
-Reduction <- Reduction %>% mutate(reduction = (100 - Recycled*100/Virgin ))
+
+Reduction <- Reduction %>% mutate(reduction = round((100 - Recycled*100/Virgin ), digits = 2))
+
+100 - (31/27)*100
 
 
 
-Reduction <- Reduction %>% mutate(reduction.intra.vir = (100 - max(Virgin)*100/Virgin ) )
 
-Reduction <- Reduction %>% mutate(reduction.intra.rec = (100 - max(Recycled)*100/Recycled ) )
+Reduction <- Reduction %>% 
+   mutate(reduction.intra.vir = (100 - (Virgin/max(Virgin))*100 ) )
 
+
+Reduction <- Reduction %>% 
+   mutate(reduction.intra.rec = ( (max(Recycled) - Recycled) /max(Recycled) )*100)
 
 Reduction %>% 
   kbl(booktabs = T,
