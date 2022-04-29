@@ -174,7 +174,7 @@ Fase.I.Graphs$LH <-
    ggplot(aes(x = LH, y = Load.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Max Load (kN)", x="Layer heigth\n(mm)") +
+   labs(y="Max Load (kN)", x="Layer height\n(mm)") +
    coord_cartesian(ylim = c(1, 4)) +
    theme(legend.position = "none") 
 
@@ -183,7 +183,7 @@ Fase.I.Graphs$LH_Y <-
    ggplot(aes(x = LH, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Young modulus (MPa)", x="Layer heigth\n(mm)") +
+   labs(y="Young modulus (MPa)", x="Layer height\n(mm)") +
    coord_cartesian(ylim = c(900, 1250))+
    theme(legend.position = "none") 
 
@@ -192,7 +192,7 @@ Fase.I.Graphs$LH_Tensile <-
    ggplot(aes(x = LH, y = Tensile.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Tensile Strength (MPa)", x="Layer heigth\n(mm)") +
+   labs(y="Tensile Strength (MPa)", x="Layer height\n(mm)") +
    coord_cartesian(ylim = c(40, 60))+
    theme(legend.position = "none") 
 
