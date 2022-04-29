@@ -75,7 +75,7 @@ Fase.I <-
                                 Strain = mm / 28 )
    ))
 
-### Function to identify Young Modulus
+### Function to identify Young's Modulus
 Young_mod <- function(df) {
    # Filtering the Dataframe
    df <- df %>% filter(Strain >= 0.0005 & Strain <= 0.035 )
@@ -154,7 +154,7 @@ Fase.I.Graphs$MT_Y <-
    ggplot(aes(x=Material, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Young modulus (MPa)", x="Material type") +
+   labs(y="Young's modulus (MPa)", x="Material type") +
    coord_cartesian(ylim = c(900, 1250))+
    theme(legend.position = "none") 
 
@@ -183,7 +183,7 @@ Fase.I.Graphs$LH_Y <-
    ggplot(aes(x = LH, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Young modulus (MPa)", x="Layer height\n(mm)") +
+   labs(y="Young's modulus (MPa)", x="Layer height\n(mm)") +
    coord_cartesian(ylim = c(900, 1250))+
    theme(legend.position = "none") 
 
@@ -192,7 +192,7 @@ Fase.I.Graphs$LH_Tensile <-
    ggplot(aes(x = LH, y = Tensile.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Tensile Strength (MPa)", x="Layer height\n(mm)") +
+   labs(y="Tensile strength (MPa)", x="Layer height\n(mm)") +
    coord_cartesian(ylim = c(40, 60))+
    theme(legend.position = "none") 
 
@@ -210,7 +210,7 @@ Fase.I.Graphs$IP_Y <-
    ggplot(aes(x = IP, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Young modulus (MPa)", x="Infill pattern") +
+   labs(y="Young's modulus (MPa)", x="Infill pattern") +
    coord_cartesian(ylim = c(900, 1250))+
    theme(legend.position = "none") 
 
@@ -219,7 +219,7 @@ Fase.I.Graphs$IP_Tensile <-
    ggplot(aes(x = IP, y = Tensile.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Tensile Strength (MPa)", x="Infill pattern") +
+   labs(y="Tensile strength (MPa)", x="Infill pattern") +
    coord_cartesian(ylim = c(40, 60))+
    theme(legend.position = "none") 
 
@@ -238,7 +238,7 @@ Fase.I.Graphs$ID_Y <-
    ggplot(aes(x = ID, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Young modulus (MPa)" , x="Infill density\n(%)") +
+   labs(y="Young's modulus (MPa)" , x="Infill density\n(%)") +
    coord_cartesian(ylim = c(900, 1250))
 
 Fase.I.Graphs$ID_Tensile <- 
@@ -246,7 +246,7 @@ Fase.I.Graphs$ID_Tensile <-
    ggplot(aes(x = ID, y = Tensile.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( .  ~  ) +
-   labs(y="Tensile Strength (MPa)", x="Infill density\n(%)") +
+   labs(y="Tensile strength (MPa)", x="Infill density\n(%)") +
    coord_cartesian(ylim = c(40, 60))
 
 ## Infill density
@@ -263,7 +263,7 @@ Fase.I.Graphs$PS_Y <-
    ggplot(aes(x = PS, y = Young )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( Load.max  ~ LH + IP ) +
-   labs(y="Young modulus (MPa)", x="Printing speed\n(mm/s)") +
+   labs(y="Young's modulus (MPa)", x="Printing speed\n(mm/s)") +
    coord_cartesian(ylim = c(900, 1250))
 #theme(legend.position = "none")
 
@@ -272,7 +272,7 @@ Fase.I.Graphs$PS_Tensile <-
    ggplot(aes(x = PS, y = Tensile.max )) +
    geom_boxplot(aes(fill=Material)) +
    #facet_grid( Load.max  ~ LH + IP ) +
-   labs(y="Tensile Strength (MPa)", x="Printing speed\n(mm/s)") +
+   labs(y="Tensile strength (MPa)", x="Printing speed\n(mm/s)") +
    coord_cartesian(ylim = c(40, 60))
 #theme(legend.position = "none")
 
