@@ -202,7 +202,7 @@ The mechanical specimens were manufactured according to the dimensions depicted 
 
 
 ```{r machine, out.width='90%', fig.cap="Equipment used in the study: a) 3D printer, b) Universal testing machine and c) Mechanical sample.", fig.align='center'}
-knitr::include_graphics('Figures/Machine-probeta.jpg')
+knitr::include_graphics('Figures/Figure-1.jpg')
 ```
 
 
@@ -240,7 +240,7 @@ This phase included the printing of 15 specimens of both materials.
 ```{r Methodology, out.width='0.7\\linewidth', fig.cap="Summary of the three phases of the experimental plan.", fig.align='center'}
 
 #download.file("https://raw.githubusercontent.com/fabbiocrux/Figures/main/Metodologies/Methodology-Univigo.svg", "Figures/Methodology.svg")
-knitr::include_graphics('Figures/Methodology.pdf')
+knitr::include_graphics('Figures/Figure-2.pdf')
 
 ```
 
@@ -325,7 +325,7 @@ As a result, it is likely that both modes (in-layer and interlayer fractures) co
 
 
 ```{r fase1, fig.cap='Phase I: screening tests to identify significant factors based on DoE. (a) Tensile sample of the Phase I. (b) Boxplots to identify significant factors based on DoE', fig.subcap=c(' ', ' '), out.width= c('65%', '100%'), fig.ncol=1, fig.align='center'}
-knitr::include_graphics(c('Figures/Probetas-Fase-1.jpg',
+knitr::include_graphics(c('Figures/Figure-3a.jpg',
                           'Figures/Figure-3b.jpg'))
 ```
 
@@ -464,7 +464,7 @@ A total of 10 samples were manufactured.
 knitr::include_graphics(c('Figures/Probetas-Fase-2.jpg',
                         'Correciones/Phase-2-corrected.jpg'))
 ```
-
+ 
 
 Figure \@ref(fig:phase2)a shows the fracture of the specimens tested in *Phase II*. Regarding the fracture, the results were similar to those of the *Phase I* (i.e., more ductile behavior for the recycled PLA specimens). 
 The interesting element in this phase is presented in \@ref(fig:phase2)b where the maximum load versus infill density for both materials is illustrated.
